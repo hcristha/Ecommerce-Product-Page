@@ -16,6 +16,7 @@ header{
     background-color: lightblue;
     box-sizing: border-box;
     width: 100%;
+    padding: 10px;
 
     display: flex;
     flex-flow: row nowrap;
@@ -26,5 +27,18 @@ header{
 nav{
     display: none;
 }
+
+.header__logo{
+    /* width: 180px; */
+}
+
+.header__cart{
+
+}
+
+.header__avatar{
+    width: 35px;
+}
+
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

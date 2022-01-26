@@ -15,29 +15,31 @@ body{
 header{
     box-sizing: border-box;
     max-width: 100%;
-    padding: 10px 25px;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    align-content: flex-start;/*aqui! Como deixar os objetos perto um do outro?*/
-
-    position: relative;
+    padding: 10px 25px;/*flexbox na div separado*/
 }
 
 nav{
     display: none;
 }
 
+.header__options{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.header__menu{
+    /*Como deixar só  a imagem perto do menu?*/
+}
+
 .header__logo{
     width: 150px;
-    /* transform: translateX(-20%); */
-    /* margin-left: -30px; */
 }
 
 .header__cart{
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .header__avatar{

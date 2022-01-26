@@ -15,7 +15,10 @@ body{
 header{
     box-sizing: border-box;
     max-width: 100%;
-    padding: 10px 25px;/*flexbox na div separado*/
+    padding: 10px 25px;/*qual a diferença do padding aqui ou nos filhos?*/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
 nav{
@@ -23,28 +26,41 @@ nav{
 }
 
 .header__options{
+    width: 170px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    align-content: flex-start;
+}
+
+.header__options2{
+    background-color: blue;
+    width: 85px;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__menu{
-    /*Como deixar só  a imagem perto do menu?*/
+  
 }
 
 .header__logo{
-    width: 150px;
 }
 
 .header__cart{
-    /* background-color: blue; */
 }
 
 .header__avatar{
-    width: 35px;
-    align-self: flex-end;
+    width: 30px;
+}
+
+.header__avatar:hover{
+    border-radius: 50%;
+    border: solid 1px var(--color-btn);
 }
 
 main.product{

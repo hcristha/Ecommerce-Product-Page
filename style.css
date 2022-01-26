@@ -15,7 +15,9 @@ body{
 header{
     box-sizing: border-box;
     max-width: 100%;
-    padding: 10px 25px;/*qual a diferença do padding aqui ou nos filhos?*/
+    height: 80px;
+    padding: 10px 25px;
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -26,7 +28,9 @@ nav{
 }
 
 .header__options{
+    /* background-color: lightpink; */
     width: 170px;
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -34,10 +38,9 @@ nav{
 }
 
 .header__options2{
-    background-color: blue;
+    /* background-color: blue; */
     width: 85px;
-    height: 100%;
-    box-sizing: border-box;
+
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -58,7 +61,7 @@ nav{
     width: 30px;
 }
 
-.header__avatar:hover{
+.header__avatar:hover{/*aqui, verificar se o header está parecido*/
     border-radius: 50%;
     border: solid 1px var(--color-btn);
 }

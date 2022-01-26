@@ -15,8 +15,8 @@ body{
 header{
     background-color: lightblue;
     box-sizing: border-box;
-    width: 100%;
-    padding: 10px;
+    max-width: 375px;/*aqui, revisar flexbox e grid*/
+    padding: 10px 25px;
 
     display: flex;
     flex-flow: row nowrap;
@@ -38,6 +38,7 @@ nav{
 
 .header__avatar{
     width: 35px;
+    align-self: flex-end;
 }
 
 .attribution { font-size: 11px; text-align: center; }

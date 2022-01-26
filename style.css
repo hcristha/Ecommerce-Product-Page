@@ -38,12 +38,12 @@ nav{
 }
 
 .header__options2{
-    /* background-color: blue; */
-    width: 85px;
+    background-color: lightpink;
+    width: 100px;
 
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -61,7 +61,7 @@ nav{
     width: 30px;
 }
 
-.header__avatar:hover{/*aqui, verificar se o header está parecido*/
+.header__avatar:hover{
     border-radius: 50%;
     border: solid 1px var(--color-btn);
 }

@@ -1,2 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root{
+    --color-hover-btn: hsl(25, 100%, 94%);
+    --color-btn: hsl(26, 100%, 55%);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 16px;
+}
+
+header{
+    background-color: lightblue;
+    box-sizing: border-box;
+    width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    display: none;
+}
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

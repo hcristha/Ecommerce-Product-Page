@@ -13,15 +13,17 @@ body{
 }
 
 header{
-    background-color: lightblue;
     box-sizing: border-box;
-    max-width: 375px;/*aqui, revisar flexbox e grid*/
+    max-width: 100%;
     padding: 10px 25px;
 
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    align-content: flex-start;/*aqui! Como deixar os objetos perto um do outro?*/
+
+    position: relative;
 }
 
 nav{
@@ -29,17 +31,39 @@ nav{
 }
 
 .header__logo{
-    /* width: 180px; */
+    width: 150px;
+    /* transform: translateX(-20%); */
+    /* margin-left: -30px; */
 }
 
 .header__cart{
-
+    background-color: blue;
 }
 
 .header__avatar{
     width: 35px;
     align-self: flex-end;
 }
+
+main.product{
+    background-color: lightgreen;
+    box-sizing: border-box;
+    width: 100%;
+    /* max-width: 800px; */
+}
+
+div.product__img{
+    background-color: lightseagreen;
+    width: 100%;
+}
+
+.product__img img{
+    width: 200px;
+}
+
+
+
+
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }

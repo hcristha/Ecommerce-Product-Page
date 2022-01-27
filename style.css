@@ -28,6 +28,16 @@ nav{
 }
 
 .header__options{
+    background-color: lightgray;
+    list-style-type: none;
+    width: 100%;
+
+    display: grid;
+    grid-template: auto / auto auto auto auto;
+    justify-content: space-between;
+}
+
+/* .header__options{
     box-sizing: border-box;
     width: 100%;
 
@@ -49,24 +59,23 @@ nav{
     align-items: center;
     justify-content: center;
 
-}
+} */
 
-.header__menu{
-  
+.header__menu{/*aqui*/
+    background-image: url(images/icon-menu.svg);
+    width: 20px;
 }
 
 .header__logo{
+    list-style-image: url(images/logo.svg);
 }
 
 .header__cart{
-    margin-right: 20px;
-
-    position: absolute;
-    right: 0;
+    list-style-image: url(images/icon-cart.svg);
 }
 
 .header__avatar{
-    width: 30px;
+    list-style-image: url(images/image-avatar.png);
 }
 
 .header__avatar:hover{

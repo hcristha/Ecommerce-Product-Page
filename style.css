@@ -28,23 +28,40 @@ nav{
 }
 
 .header__options{
-    /* background-color: lightpink; */
-    width: 170px;
+    background-color: lightgreen;
+    box-sizing: border-box;
+    width: 100%;
 
-    display: flex;
+    /* display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center; */
+    display: grid;
+    grid-template: auto / auto auto auto;
+    justify-content: flex-start;
     align-items: center;
+    grid-gap: 20px;
+
+    position: relative;
 }
 
 .header__options2{
     background-color: lightpink;
+    box-sizing: border-box;
+    padding-right: 10px;
     width: 100px;
+
+    /* display: grid;
+    grid-template: auto / auto;
+    align-content: center;
+    align-items: center;
+    justify-content: flex-end;
+    grid-gap: 10px; */
 
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: space-between;/*aqui, como deixar  avatar parado?*/
+    justify-content: flex-end ;/*aqui, avatar parado*/
 
 }
 
@@ -56,13 +73,14 @@ nav{
 }
 
 .header__cart{
-    background-color: blue;
-    flex-shrink: 0;
+    margin-right: 20px;
+
+    position: absolute;
+    right: 0;
 }
 
 .header__avatar{
     width: 30px;
-    flex-shrink: 0;
 }
 
 .header__avatar:hover{

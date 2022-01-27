@@ -43,8 +43,9 @@ nav{
 
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-between;/*aqui, como deixar  avatar parado?*/
+
 }
 
 .header__menu{
@@ -55,10 +56,13 @@ nav{
 }
 
 .header__cart{
+    background-color: blue;
+    flex-shrink: 0;
 }
 
 .header__avatar{
     width: 30px;
+    flex-shrink: 0;
 }
 
 .header__avatar:hover{

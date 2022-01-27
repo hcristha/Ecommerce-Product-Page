@@ -28,14 +28,9 @@ nav{
 }
 
 .header__options{
-    background-color: lightgreen;
     box-sizing: border-box;
     width: 100%;
 
-    /* display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center; */
     display: grid;
     grid-template: auto / auto auto auto;
     justify-content: flex-start;
@@ -46,22 +41,13 @@ nav{
 }
 
 .header__options2{
-    background-color: lightpink;
     box-sizing: border-box;
-    padding-right: 10px;
-    width: 100px;
-
-    /* display: grid;
-    grid-template: auto / auto;
-    align-content: center;
-    align-items: center;
-    justify-content: flex-end;
-    grid-gap: 10px; */
+    width: 40px;
 
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: flex-end ;/*aqui, avatar parado*/
+    justify-content: center;
 
 }
 

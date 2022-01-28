@@ -28,18 +28,29 @@ header{
 }
 
 nav{
-    background-color: lightpink;
-    width: 350px;
+    background-color: hsl(0, 0%, 100%);
+    width: 200px;
     height: 100%;
-    /* display: none; */
+    padding: 30px;
+    display: none;
+    /*aqui, checar design(e sombra) e funcionamento*/
+
     position: absolute;
     left: 0;
     top: 0;
 }
 
 .menu__links{
-    background-color: lightblue;
-    position: absolute;
+    color: hsl(220, 13%, 13%);
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    margin-top: 25px;
+    list-style-type: none;
+}
+
+li{
+    margin-bottom: 15px;
 }
 
 .header__options{

@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: lightsalmon;
+    /* background-color: lightsalmon; */
     margin: 0;
     padding: 0;
     font-family: 'Kumbh Sans', sans-serif;
@@ -15,30 +15,26 @@ body{
     position: relative;
 }
 
-header{
-    box-sizing: border-box;
-    max-width: 100%;
-    height: 80px;
-    padding: 10px 25px;
+.menu__box{
+    background-color: hsl(0, 0%, 0%);
+    display: none;
+    opacity: 75%;
+    width: 100%;
+    height: 100%;
 
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-
-    position: relative;
+    position: fixed;/*revisar position, entender o que eu fiz*/
+    z-index: 1;
 }
 
 nav{
-    background-color: lightblue;
+    background-color: rgb(255, 255, 255);
     width: 200px;
-    height: 100vmax;
+    height: 100%;
     padding: 30px;
-    /* display: none; */
+    display: none;
 
     position: absolute;
-    /* left: 0;
-    top: 0; */
-    /* z-index: 1; */
+    z-index: 1;
 }
 
 .menu__links{
@@ -59,6 +55,19 @@ li{
     margin-bottom: 15px;
 }
 
+header{
+    box-sizing: border-box;
+    max-width: 100%;
+    height: 80px;
+    padding: 10px 25px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    position: relative;
+}
+
 .header__options{
     /* background-color: lightgray; */
     width: 100%;
@@ -72,18 +81,15 @@ li{
 
 .header__options-menu{
     margin-right: 20px;
-    z-index: -1;
 }
 
 .header__options-logo{
-    z-index: -2;
 }
 
 .header__options-cart{
     margin-right: 20px;
     position: absolute;
     right: 0;
-    z-index: -1;
 }
 
 .header__options2{
@@ -98,7 +104,6 @@ li{
 
 .header__options2-avatar{
     width: 30px;
-    z-index: 0;/*aprendendo z-index*/
 }
 
 .header__options2-avatar:hover{
@@ -120,16 +125,6 @@ div.product__img{
 
 .product__img img{
     width: 200px;
-}
-
-.menu__box{
-    background-color: hsl(0, 0%, 0%);
-    /* display: none; */
-    opacity: 75%;
-    width: 100%;
-    height: 100vmax;
-
-    position: absolute;
 }
 
 .attribution { font-size: 11px; text-align: center; }

@@ -10,6 +10,8 @@ body{
     padding: 0;
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 16px;
+
+    position: relative;
 }
 
 header{
@@ -21,10 +23,23 @@ header{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
+
+    position: relative;
 }
 
 nav{
-    display: none;
+    background-color: lightpink;
+    width: 350px;
+    height: 100%;
+    /* display: none; */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.menu__links{
+    background-color: lightblue;
+    position: absolute;
 }
 
 .header__options{

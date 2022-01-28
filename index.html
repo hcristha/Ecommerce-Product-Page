@@ -11,18 +11,8 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="header__options">
-      <img class="header__options-menu js-header__options-menu" onclick="showMenu()" alt="" src="images/icon-menu.svg">
-      <a href="#"><img class="header__options-logo" alt="" src="images/logo.svg"></a>
-      <img class="header__options-cart js-header__options-cart" alt="" src="images/icon-cart.svg">
-    </div>
-
-    <div class="header__options2">
-      <a href="#" target="_blank"><img class="header__options2-avatar" alt="" src="images/image-avatar.png"></a>
-    </div>
-  </header>
-
+  <div class="menu__box js-menu__box"></div>
+  
   <nav class="menu js-menu">
     <img class="menu__close" alt="" src="images/icon-close.svg">
 
@@ -34,6 +24,18 @@
       <a href="#"><li>Contact</li></a>
     </ul>
   </nav>
+
+  <header class="header">
+    <div class="header__options">
+      <img class="header__options-menu js-header__options-menu" onclick="showMenu()" alt="" src="images/icon-menu.svg">
+      <a href="#"><img class="header__options-logo" alt="" src="images/logo.svg"></a>
+      <img class="header__options-cart js-header__options-cart" alt="" src="images/icon-cart.svg">
+    </div>
+
+    <div class="header__options2">
+      <a href="#" target="_blank"><img class="header__options2-avatar" alt="" src="images/image-avatar.png"></a>
+    </div>
+  </header>
 
   <main class="product">
     <div class="product__img">
@@ -77,7 +79,6 @@
     <p>Challenge by <a href="https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6" target="_blank">Frontend Mentor</a> & 
     Coded by <a href="https://github.com/hcristha" target="_blank">Helen Cristhina</a></p>
   </footer>
-  <div class="menu__box js-menu__box"></div>
   <script src="script.js"></script>
 </body>
 </html>

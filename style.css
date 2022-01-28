@@ -31,14 +31,14 @@ header{
 nav{
     background-color: lightblue;
     width: 200px;
-    height: 100%;
+    height: 100vmax;
     padding: 30px;
-    display: none;
+    /* display: none; */
 
     position: absolute;
-    left: 0;
-    top: 0;
-    z-index: 1;
+    /* left: 0;
+    top: 0; */
+    /* z-index: 1; */
 }
 
 .menu__links{
@@ -72,15 +72,18 @@ li{
 
 .header__options-menu{
     margin-right: 20px;
+    z-index: -1;
 }
 
 .header__options-logo{
+    z-index: -2;
 }
 
 .header__options-cart{
     margin-right: 20px;
     position: absolute;
     right: 0;
+    z-index: -1;
 }
 
 .header__options2{
@@ -95,6 +98,7 @@ li{
 
 .header__options2-avatar{
     width: 30px;
+    z-index: 0;/*aprendendo z-index*/
 }
 
 .header__options2-avatar:hover{
@@ -120,13 +124,12 @@ div.product__img{
 
 .menu__box{
     background-color: hsl(0, 0%, 0%);
-    display: none;
+    /* display: none; */
     opacity: 75%;
     width: 100%;
-    height: 100%;
+    height: 100vmax;
 
     position: absolute;
-    top: 0;
 }
 
 .attribution { font-size: 11px; text-align: center; }

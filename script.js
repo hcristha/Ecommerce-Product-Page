@@ -21,5 +21,9 @@ function showMenu(){
 
 // mostrar carrinho
 function showCart(){
-    
+    let cart = document.querySelector(".js-product__cart");
+    // carrinho vazio
+    let empty = document.createElement("p");
+    empty.innerText = "Your cart is empty";
+    cart.appendChild(empty);// aqui, lógica para o carrinho
 }

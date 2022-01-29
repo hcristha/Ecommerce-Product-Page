@@ -114,7 +114,10 @@ header{
 main.product{
     background-color: lightgreen;
     box-sizing: border-box;
+    overflow: hidden;
+    /* padding: 10px; */
     width: 100%;
+
     position: relative;
 }
 
@@ -122,9 +125,10 @@ main.product{
     background-color: hsl(0, 56%, 35%);
     border-radius: 10px;
     box-sizing: border-box;
-    margin: 10px 10px 20px;
+    margin-top: 10px;
+    margin-left: 10px;
     padding: 20px;
-    width: 375px;/*aqui, largura/margem para o cart*/
+    width: calc(100% - 20px);
     height: 150px;
 
     position: absolute;

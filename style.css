@@ -55,6 +55,7 @@ li{
 }
 
 header{
+    background-color: lightcoral;
     box-sizing: border-box;
     max-width: 100%;
     height: 80px;
@@ -114,14 +115,24 @@ main.product{
     background-color: lightgreen;
     box-sizing: border-box;
     width: 100%;
-    /* max-width: 800px; */
+    position: relative;
 }
+
 .product__cart{
-    background-color: hsl(0, 0%, 100%);
-    border-radius: 25px;
-    margin: 20px 15px; /*aqui, valor para margem*/
-    width: 100%;
+    background-color: hsl(0, 56%, 35%);
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 10px 10px 20px;
+    padding: 20px;
+    width: 375px;/*aqui, largura/margem para o cart*/
     height: 150px;
+
+    position: absolute;
+}
+
+.product__cart h6{
+    margin: 0;
+    padding: 0;
 }
 
 div.product__img{
@@ -130,7 +141,7 @@ div.product__img{
 }
 
 .product__img img{
-    width: 200px;
+    width: 375px;
 }
 
 .attribution { font-size: 11px; text-align: center; }

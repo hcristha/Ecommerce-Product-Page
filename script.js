@@ -24,26 +24,25 @@ function showMenu(){
 var amountItem = document.querySelector(".product__amount-item");
 var c = 0; // contador de cliques começa em 0
 var amountItemPerma;
+// itens no carrinho
+var itemsCart = 0; // itens dentro do carrinho começa em zero
 
-onload = function(){ // serve para exibir quantidades de itens permanente
-    amountItemPerma = JSON.parse(localStorage.getItem("amountItem")); // acessando quantidade de itens salva e tornando-a definitiva
-    if (amountItemPerma === null){ // primeira vez que acessa o site
-        amountItemPerma = 0;
-    }
-    amountItem.innerText = amountItemPerma; // mostrando na tela quantidade de itens definitiva
-    if (amountItemPerma !== 0 && amountItemPerma !== null){ // atualizar contador
-        c = amountItemPerma;
-    }
-
-    // itens do carrinho
-    var itemsCart = 0; // itens dentro do carrinho começa em zero, AQUI! redundância de código?
-
-    // se recarregar a página, pegar itens salvos do carrinho
-    itemsCart = JSON.parse(localStorage.getItem("itemsCart"));
-    if (itemsCart === null){
-        itemsCart = 0;
-    }
+//
+amountItemPerma = JSON.parse(localStorage.getItem("amountItem")); // acessando quantidade de itens salva e tornando-a definitiva
+if (amountItemPerma === null){ // primeira vez que acessa o site
+    amountItemPerma = 0;
 }
+amountItem.innerText = amountItemPerma; // mostrando na tela quantidade de itens definitiva
+if (amountItemPerma !== 0 && amountItemPerma !== null){ // atualizar contador
+    c = amountItemPerma;
+}
+
+// se recarregar a página, pegar itens salvos do carrinho
+itemsCart = JSON.parse(localStorage.getItem("itemsCart"));
+if (itemsCart === null){
+    itemsCart = 0;
+}
+//
 
 // aumentar quantidade de itens
 function increaseAmount(){ // serve para exibir quantidade de itens temporária
@@ -65,20 +64,18 @@ function decreaseAmount(){
 }
 
 function addCart(){
-    if (amountItemPerma === 0){ // se a quantidade permanente de itens for undefined
-        amountItemPerma = JSON.parse(localStorage.getItem("amountItem"));
-    }
-    itemsCart = amountItemPerma; // itens do carrinho recebe a quantidade escolhida pelo usuário
-
+    itemsCart = JSON.parse(amountItem.innerText); // itens do carrinho recebe a quantidade escolhida pelo usuário
+    // atual
+    // se o amountItem atualizar, atualiza também itemsCart na memória
     localStorage.setItem("itemsCart", itemsCart);
 }
 
 // mostrar carrinho
 function showCart(){
-    console.log(itemsCart);
     let cart = document.querySelector(".js-product__cart");
     // se o carrinho estiver vazio, mostrar parágrafo
-    if (itemsCart == 0){
+    console.log(itemsCart);
+    if (itemsCart === 0){
         cart.children[1].innerHTML = "<li>Your cart is empty.</li>";
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens

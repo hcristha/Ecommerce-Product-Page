@@ -19,18 +19,11 @@ function showMenu(){
     });
 }
 
-// mostrar carrinho
-function showCart(){
-    let cart = document.querySelector(".js-product__cart");
-    // carrinho vazio
-    let empty = document.createElement("p");
-    empty.innerText = "Your cart is empty";
-    cart.appendChild(empty);// aqui, lógica para o carrinho
-}
 
-// aumentar quantidade de itens
+// quantidade de itens
 var amountItem = document.querySelector(".product__amount-item");
 var c = 0; // contador de cliques começa em 0
+var amountItemPerma;
 
 onload = function(){ // serve para exibir quantidades de itens permanente
     amountItemPerma = JSON.parse(localStorage.getItem("amountItem")); // acessando quantidade de itens salva e tornando-a definitiva
@@ -43,18 +36,42 @@ onload = function(){ // serve para exibir quantidades de itens permanente
     }
 }
 
-function plusItem(){ // serve para exibir quantidade de itens temporária
-    c += 1; // incrementa a cada clique
+// aumentar quantidade de itens
+function increaseAmount(){ // serve para exibir quantidade de itens temporária
+    c += 1; // contador incrementa a cada clique
     amountItem.innerText = c; // atualizando quantidade de itens
 
-    localStorage.setItem("amountItem", c); // salvar a nova quantidade
+    localStorage.setItem("amountItem", c); // salvando a nova quantidade
 }
-// função diminuir
 
+// diminuir quantidade de itens
+function decreaseAmount(){
+    c -= 1; // contador decrementa até 0 a cada clique
+    if (c < 0){ // se a quantidade de itens for menor que 0
+        c = 0; // sempre vai receber zero caso seja menor que zero
+    }
+    amountItem.innerText = c; // atualizando quantidade de itens
 
-
+    localStorage.setItem("amountItem", c); // salvando a nova quantidade
+}
 
 // adicionar item no carrinho
 function addCart(){
 
+}
+
+
+// mostrar carrinho
+function showCart(){
+    // se o carrinho estiver vazio
+    // mostrar parágrafo vazio
+    if (amountItemPerma == 0){
+        let cart;//aqui
+    }
+
+    let cart = document.querySelector(".js-product__cart");
+    // carrinho vazio
+    let empty = document.createElement("p");
+    empty.innerText = "Your cart is empty";
+    cart.appendChild(empty);// aqui, lógica para o carrinho
 }

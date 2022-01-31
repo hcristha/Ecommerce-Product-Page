@@ -57,27 +57,28 @@ function decreaseAmount(){
 
 var itemsCart = 0; // itens dentro do carrinho começa em zero
 // adicionar item no carrinho
-console.log(amountItemPerma);//aqui! caso seja undefined correção
+
 function addCart(){
-    if (amountItemPerma === undefined){ // se a quantidade permanente de itens for undefined
+    if (amountItemPerma === 0){ // se a quantidade permanente de itens for undefined
         amountItemPerma = JSON.parse(localStorage.getItem("amountItem"));
     }
     itemsCart = amountItemPerma; // itens do carrinho recebe a quantidade escolhida pelo usuário
-    console.log(itemsCart);
+
+    localStorage.setItem("itemsCart", itemsCart);// aqui, salvar quatidades de itens dentro do carrinho
 }
-// aqui, unindo quantidade user e carrinho
 
 // mostrar carrinho
 function showCart(){
     let cart = document.querySelector(".js-product__cart");
     // se o carrinho estiver vazio, mostrar parágrafo
     if (itemsCart == 0){
-        cart.children[1].innerHTML = "<p>Your cart is empty.</p>";
+        cart.children[1].innerHTML = "<li>Your cart is empty.</li>";
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens
     else if(itemsCart >= 1){
+        cart.children[1].innerHTML = "";
         for(let i = 0; i < itemsCart; i++){
-            cart.children[2].innerHTML = "<li>Item 1</li>";
+            cart.children[1].innerHTML += "<li>Item 1</li>";
         }
     }
 

@@ -56,7 +56,8 @@ function decreaseAmount(){
 }
 
 var itemsCart = 0; // itens dentro do carrinho começa em zero
-// adicionar item no carrinho
+var itemsCartPerma;
+itemsCartPerma = JSON.parse(localStorage.getItem("itemsCart")); // aqui, diferente: quantidade que é adicionada no carrinho e que o usuário seleciona, problema: deixar salvo na memória do navegador a quantidade dentro do carrinho
 
 function addCart(){
     if (amountItemPerma === 0){ // se a quantidade permanente de itens for undefined
@@ -64,7 +65,7 @@ function addCart(){
     }
     itemsCart = amountItemPerma; // itens do carrinho recebe a quantidade escolhida pelo usuário
 
-    localStorage.setItem("itemsCart", itemsCart);// aqui, salvar quatidades de itens dentro do carrinho
+    localStorage.setItem("itemsCart", itemsCart);
 }
 
 // mostrar carrinho
@@ -75,7 +76,7 @@ function showCart(){
         cart.children[1].innerHTML = "<li>Your cart is empty.</li>";
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens
-    else if(itemsCart >= 1){
+    else if(itemsCart >= 1 || itemsCartPerma >= 1){
         cart.children[1].innerHTML = "";
         for(let i = 0; i < itemsCart; i++){
             cart.children[1].innerHTML += "<li>Item 1</li>";

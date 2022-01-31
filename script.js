@@ -55,23 +55,25 @@ function decreaseAmount(){
     localStorage.setItem("amountItem", c); // salvando a nova quantidade
 }
 
+var itemsCart = 0; // itens dentro do carrinho começa em zero
 // adicionar item no carrinho
 function addCart(){
-
+    itemsCart = amountItemPerma; // itens do carrinho recebe a quantidade escolhida pelo usuário
 }
 
 
 // mostrar carrinho
 function showCart(){
-    // se o carrinho estiver vazio
-    // mostrar parágrafo vazio
+    let cart = document.querySelector(".js-product__cart");
+    // se o carrinho estiver vazio, mostrar parágrafo
     if (amountItemPerma == 0){
-        let cart;//aqui
+        cart.children[1].innerHTML = "<p>Your cart is empty.</p>";
+    }
+    // se o carrinho tiver de 1 item pra cima mostrar itens
+    if (amountItemPerma >= 1){
+        for(let i = 0; i = amountItemPerma; i++){
+            cart.children[2].innerHTML += "<li>Item 1</li>";
+        }
     }
 
-    let cart = document.querySelector(".js-product__cart");
-    // carrinho vazio
-    let empty = document.createElement("p");
-    empty.innerText = "Your cart is empty";
-    cart.appendChild(empty);// aqui, lógica para o carrinho
 }

@@ -27,3 +27,19 @@ function showCart(){
     empty.innerText = "Your cart is empty";
     cart.appendChild(empty);// aqui, lógica para o carrinho
 }
+
+// aumentar quantidade de itens
+var c = 0; // contador de cliques
+
+function plusItem(){
+    c += 1;
+    let amountItem = document.querySelector(".product__amount-item");
+    amountItem.innerText = c; // atualizando quantidade de itens
+
+    localStorage.setItem("amountItem", c); // aqui, salvar o novo valor e exibir na tela
+}
+
+// adicionar item no carrinho
+function addCart(){
+
+}

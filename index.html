@@ -69,14 +69,14 @@
     </ul>
 
     <div class="product__amount">
-      <img alt="" src="images/icon-minus.svg">
-      <p>0</p>
-      <img alt="" src="images/icon-plus.svg">
+      <img onclick="minusItem()" alt="" src="images/icon-minus.svg">
+      <p class="product__amount-item">0</p>
+      <img onclick="plusItem()" alt="" src="images/icon-plus.svg">
     </div>
 
     <div class="product__cart">
       <img alt="" src="images/icon-cart.svg">
-      <p class="js-product__cart-add">Add to cart</p>
+      <p class="js-product__cart-add" onclick="addCart()">Add to cart</p>
     </div>
   </main>
 

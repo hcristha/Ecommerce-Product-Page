@@ -26,15 +26,22 @@ var c = 0; // contador de cliques começa em 0
 var amountItemPerma;
 
 onload = function(){ // serve para exibir quantidades de itens permanente
-    console.log("Executando...");// aqui, por que não está executando?
     amountItemPerma = JSON.parse(localStorage.getItem("amountItem")); // acessando quantidade de itens salva e tornando-a definitiva
     if (amountItemPerma === null){ // primeira vez que acessa o site
-        console.log("Executando...");
         amountItemPerma = 0;
     }
     amountItem.innerText = amountItemPerma; // mostrando na tela quantidade de itens definitiva
     if (amountItemPerma !== 0 && amountItemPerma !== null){ // atualizar contador
         c = amountItemPerma;
+    }
+
+    // itens do carrinho
+    var itemsCart = 0; // itens dentro do carrinho começa em zero, AQUI! redundância de código?
+
+    // se recarregar a página, pegar itens salvos do carrinho
+    itemsCart = JSON.parse(localStorage.getItem("itemsCart"));
+    if (itemsCart === null){
+        itemsCart = 0;
     }
 }
 
@@ -55,15 +62,6 @@ function decreaseAmount(){
     amountItem.innerText = c; // atualizando quantidade de itens
 
     localStorage.setItem("amountItem", c); // salvando a nova quantidade
-}
-
-// itens do carrinho
-var itemsCart = 0; // itens dentro do carrinho começa em zero
-onload = function(){ // se recarregar a página, pegar itens salvos do carrinho
-    itemsCart = JSON.parse(localStorage.getItem("itemsCart"));
-    if (itemsCart === null){
-        itemsCart = 0;
-    }
 }
 
 function addCart(){

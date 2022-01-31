@@ -60,18 +60,18 @@ var itemsCart = 0; // itens dentro do carrinho começa em zero
 function addCart(){
     itemsCart = amountItemPerma; // itens do carrinho recebe a quantidade escolhida pelo usuário
 }
-
+// aqui, unindo quantidade user e carrinho
 
 // mostrar carrinho
 function showCart(){
     let cart = document.querySelector(".js-product__cart");
     // se o carrinho estiver vazio, mostrar parágrafo
-    if (amountItemPerma == 0){
+    if (itemsCart == 0){
         cart.children[1].innerHTML = "<p>Your cart is empty.</p>";
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens
-    if (amountItemPerma >= 1){
-        for(let i = 0; i = amountItemPerma; i++){
+    if (itemsCart >= 1){
+        for(let i = 0; i = itemsCart; i++){
             cart.children[2].innerHTML += "<li>Item 1</li>";
         }
     }

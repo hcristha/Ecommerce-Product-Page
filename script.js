@@ -26,8 +26,10 @@ var c = 0; // contador de cliques começa em 0
 var amountItemPerma;
 
 onload = function(){ // serve para exibir quantidades de itens permanente
+    console.log("Executando...");// aqui, por que não está executando?
     amountItemPerma = JSON.parse(localStorage.getItem("amountItem")); // acessando quantidade de itens salva e tornando-a definitiva
-    if (amountItemPerma == null){ // primeira vez que acessa o site
+    if (amountItemPerma === null){ // primeira vez que acessa o site
+        console.log("Executando...");
         amountItemPerma = 0;
     }
     amountItem.innerText = amountItemPerma; // mostrando na tela quantidade de itens definitiva
@@ -55,9 +57,14 @@ function decreaseAmount(){
     localStorage.setItem("amountItem", c); // salvando a nova quantidade
 }
 
+// itens do carrinho
 var itemsCart = 0; // itens dentro do carrinho começa em zero
-var itemsCartPerma;
-itemsCartPerma = JSON.parse(localStorage.getItem("itemsCart")); // aqui, diferente: quantidade que é adicionada no carrinho e que o usuário seleciona, problema: deixar salvo na memória do navegador a quantidade dentro do carrinho
+onload = function(){ // se recarregar a página, pegar itens salvos do carrinho
+    itemsCart = JSON.parse(localStorage.getItem("itemsCart"));
+    if (itemsCart === null){
+        itemsCart = 0;
+    }
+}
 
 function addCart(){
     if (amountItemPerma === 0){ // se a quantidade permanente de itens for undefined
@@ -70,13 +77,14 @@ function addCart(){
 
 // mostrar carrinho
 function showCart(){
+    console.log(itemsCart);
     let cart = document.querySelector(".js-product__cart");
     // se o carrinho estiver vazio, mostrar parágrafo
     if (itemsCart == 0){
         cart.children[1].innerHTML = "<li>Your cart is empty.</li>";
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens
-    else if(itemsCart >= 1 || itemsCartPerma >= 1){
+    else if(itemsCart >= 1){
         cart.children[1].innerHTML = "";
         for(let i = 0; i < itemsCart; i++){
             cart.children[1].innerHTML += "<li>Item 1</li>";

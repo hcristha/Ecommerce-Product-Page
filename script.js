@@ -29,15 +29,21 @@ function showCart(){
 }
 
 // aumentar quantidade de itens
-var c = 0; // contador de cliques
+var amountItem = document.querySelector(".product__amount-item");
+var c = 0; // contador de cliques começa em 0
+var amountItemPerma = localStorage.getItem("amountItem"); // acessando quantidade de itens salva e tornando-a definitiva
+amountItem.innerText = amountItemPerma; // mostrando na tela quantidade de itens definitiva
+// aqui, usar onload para exibir só quando a página carregar
 
 function plusItem(){
-    c += 1;
-    let amountItem = document.querySelector(".product__amount-item");
+    c += 1; // incrementa a cada clique
     amountItem.innerText = c; // atualizando quantidade de itens
 
-    localStorage.setItem("amountItem", c); // aqui, salvar o novo valor e exibir na tela
+    localStorage.setItem("amountItem", c); // salvar a nova quantidade
 }
+
+
+
 
 // adicionar item no carrinho
 function addCart(){

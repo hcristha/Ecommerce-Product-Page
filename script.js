@@ -31,15 +31,24 @@ function showCart(){
 // aumentar quantidade de itens
 var amountItem = document.querySelector(".product__amount-item");
 var c = 0; // contador de cliques começa em 0
-var amountItemPerma = localStorage.getItem("amountItem"); // acessando quantidade de itens salva e tornando-a definitiva
-amountItem.innerText = amountItemPerma; // mostrando na tela quantidade de itens definitiva
-// aqui, usar onload para exibir só quando a página carregar
 
 function plusItem(){
     c += 1; // incrementa a cada clique
     amountItem.innerText = c; // atualizando quantidade de itens
 
     localStorage.setItem("amountItem", c); // salvar a nova quantidade
+
+    onload = function(){// aqui, qual diferença do onload dentro ou fora da função?
+        amountItemPerma = JSON.parse(localStorage.getItem("amountItem")); // acessando quantidade de itens salva e tornando-a definitiva
+        if (amountItemPerma == null){ // primeira vez
+            amountItemPerma = 0;
+        }
+        amountItem.innerText = amountItemPerma; // mostrando na tela quantidade de itens definitiva
+    
+        if (amountItemPerma !== 0 && amountItemPerma !== null){ // atualizar contador
+            c = amountItemPerma;
+        }
+    }
 }
 
 

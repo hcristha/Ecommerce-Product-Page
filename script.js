@@ -84,7 +84,7 @@ function showCart(){
         cart.children[1].innerHTML = "<li class='empty'>Your cart is empty.</li>";
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens
-    else if(itemsCart >= 1){ // aqui! estilo do produto dentro da div
+    else if(itemsCart >= 1){ 
         cart.children[1].innerHTML = "";
         for(let i = 0; i < itemsCart; i++){
             cart.children[1].innerHTML += "<li>Item 1</li>";

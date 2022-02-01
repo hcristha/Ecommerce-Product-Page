@@ -125,12 +125,12 @@ main.product{
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
     box-sizing: border-box;
-    display: none;
+    /* display: none; */
     margin-top: 10px;
     margin-left: 10px;
     padding: 20px;
     width: calc(100% - 20px);
-    height: 150px;
+    height: 200px;
 
     position: absolute;
 }
@@ -140,8 +140,19 @@ main.product{
     padding: 0;
 }
 
-.product__cart-items:first-child{/*por que o seletor não está dando certo?*/
-    color: pink;
+.product__cart-items{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+.product__cart-items:first-of-type li{
+    color: rgb(116, 0, 0);
+    /* display: none; */
+    line-height: 150px;
+    /*cor do texto*/
+
 }
 
 div.product__img{

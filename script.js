@@ -81,7 +81,7 @@ function showCart(){
 
     // se o carrinho estiver vazio, mostrar parágrafo
     if (itemsCart === 0){
-        // cart.children[1].innerHTML = "<li>Your cart is empty</li>";
+        cart.children[1].children[0].style.display = "block";
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens
     else if(itemsCart >= 1){

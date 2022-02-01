@@ -69,8 +69,10 @@ function addCart(){
     localStorage.setItem("itemsCart", itemsCart);
 }
 
+var clickCart = 0; // contador de cliques do Cart
 // mostrar carrinho
 function showCart(){
+    clickCart++; // adiciona mais um no contador de cliques do Cart
     let cart = document.querySelector(".js-product__cart");
     cart.style.display = "block"; // irá abrir o cart
     // cart.addEventListener("click", function(){
@@ -79,7 +81,7 @@ function showCart(){
 
     // se o carrinho estiver vazio, mostrar parágrafo
     if (itemsCart === 0){
-        cart.children[1].innerHTML = "<li>Your cart is empty.</li>";
+        // cart.children[1].innerHTML = "<li>Your cart is empty</li>";
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens
     else if(itemsCart >= 1){
@@ -88,8 +90,12 @@ function showCart(){
             cart.children[1].innerHTML += "<li>Item 1</li>";
         }
     }
-    cart.addEventListener("click", function(){// aqui, fechar o cart
+
+    function hideCart(){ // esconder Cart
         cart.style.display = "none";
-        console.log("Zap");
-    });
+    }
+
+    if (clickCart % 2 == 0){ // se o contador for divisível por 2 executar função
+        hideCart(); // esconder Cart
+    }
 }

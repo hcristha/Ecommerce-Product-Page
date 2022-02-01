@@ -140,6 +140,10 @@ main.product{
     padding: 0;
 }
 
+.product__cart-items:first-child{/*por que o seletor não está dando certo?*/
+    color: pink;
+}
+
 div.product__img{
     background-color: lightseagreen;
     width: 100%;

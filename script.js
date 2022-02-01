@@ -23,7 +23,8 @@ function showMenu(){
 // quantidade de itens
 var amountItem = document.querySelector(".product__amount-item");
 var c = 0; // contador de cliques começa em 0
-var amountItemPerma;
+var amountItemPerma; // variável para salvar na memória do navegador a quantidade de itens escolhidas pelo usuário
+
 // itens no carrinho
 var itemsCart = 0; // itens dentro do carrinho começa em zero
 
@@ -37,7 +38,7 @@ if (amountItemPerma !== 0 && amountItemPerma !== null){ // atualizar contador
     c = amountItemPerma;
 }
 
-// se recarregar a página, pegar itens salvos do carrinho
+// pegar itens salvos do carrinho
 itemsCart = JSON.parse(localStorage.getItem("itemsCart"));
 if (itemsCart === null){
     itemsCart = 0;
@@ -64,17 +65,19 @@ function decreaseAmount(){
 }
 
 function addCart(){
-    itemsCart = JSON.parse(amountItem.innerText); // itens do carrinho recebe a quantidade escolhida pelo usuário, AQUI!!!
-    // atual
-    // se o amountItem atualizar, atualiza também itemsCart na memória
+    itemsCart = JSON.parse(amountItem.innerText); // itens do carrinho recebe a quantidade escolhida pelo usuário, se o amountItem atualizar, atualiza também itemsCart na memória
     localStorage.setItem("itemsCart", itemsCart);
 }
 
 // mostrar carrinho
 function showCart(){
     let cart = document.querySelector(".js-product__cart");
+    cart.style.display = "block"; // irá abrir o cart
+    // cart.addEventListener("click", function(){
+    //     cart.style.display = "none";
+    // });
+
     // se o carrinho estiver vazio, mostrar parágrafo
-    console.log(itemsCart);
     if (itemsCart === 0){
         cart.children[1].innerHTML = "<li>Your cart is empty.</li>";
     }
@@ -85,5 +88,8 @@ function showCart(){
             cart.children[1].innerHTML += "<li>Item 1</li>";
         }
     }
-
+    cart.addEventListener("click", function(){// aqui, fechar o cart
+        cart.style.display = "none";
+        console.log("Zap");
+    });
 }

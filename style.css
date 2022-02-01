@@ -5,10 +5,13 @@
     --color-btn: hsl(26, 100%, 55%);
 }
 
+*{
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Kumbh Sans', sans-serif;
     font-size: 16px;
 
     position: relative;
@@ -145,18 +148,29 @@ main.product{
     padding: 0;
     list-style-type: none;
     text-align: center;
+    overflow: auto;
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .product__cart-items .empty{
     color: hsl(219, 9%, 45%);
-    /* display: none; */
     font-weight: 700;
-    line-height: 150px;
-
 }
 
 .product__cart-button{
-    padding: 5px 45%; /*qual valor definir para right/left?*/
+    background-color: var(--color-btn);
+    border-style: none;
+    border-radius: inherit;
+    color:hsl(0, 0%, 100%);
+    font-weight: 700;
+    padding: 20px calc(50% - 30px);
+
+    position: absolute;
+    bottom: 0;/*como fazer respeitar os limites do pai?*/
 }
 
 div.product__img{

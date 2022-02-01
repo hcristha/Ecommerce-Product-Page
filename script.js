@@ -74,14 +74,17 @@ var clickCart = 0; // contador de cliques do Cart
 function showCart(){
     clickCart++; // adiciona mais um no contador de cliques do Cart
     let cart = document.querySelector(".js-product__cart");
+    // let empty = document.querySelector(".js-empty");
+    console.log(empty);
+
     cart.style.display = "block"; // irá abrir o cart
-    // cart.addEventListener("click", function(){
-    //     cart.style.display = "none";
-    // });
 
     // se o carrinho estiver vazio, mostrar parágrafo
     if (itemsCart === 0){
-        cart.children[1].children[0].style.display = "block";
+        empty.style.display = "block";
+        // criar elemento e criar a classe empty
+        let li = document.createElement("li");
+        li.innerText = "Your cart is empty."; // aqui!!!! crindo elemento
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens
     else if(itemsCart >= 1){

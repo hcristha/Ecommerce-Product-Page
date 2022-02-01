@@ -147,11 +147,11 @@ main.product{
     text-align: center;
 }
 
-.product__cart-items:first-of-type li{
-    color: rgb(116, 0, 0);
+.product__cart-items .empty{
+    color: hsl(219, 9%, 45%);
     /* display: none; */
+    font-weight: 700;
     line-height: 150px;
-    /*cor do texto*/
 
 }
 

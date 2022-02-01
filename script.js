@@ -64,7 +64,7 @@ function decreaseAmount(){
 }
 
 function addCart(){
-    itemsCart = JSON.parse(amountItem.innerText); // itens do carrinho recebe a quantidade escolhida pelo usuário
+    itemsCart = JSON.parse(amountItem.innerText); // itens do carrinho recebe a quantidade escolhida pelo usuário, AQUI!!!
     // atual
     // se o amountItem atualizar, atualiza também itemsCart na memória
     localStorage.setItem("itemsCart", itemsCart);

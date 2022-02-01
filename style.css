@@ -125,7 +125,7 @@ main.product{
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
     box-sizing: border-box;
-    /* display: none; */
+    display: none;
     margin-top: 10px;
     margin-left: 10px;
     padding: 20px;

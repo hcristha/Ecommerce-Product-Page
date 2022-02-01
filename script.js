@@ -69,25 +69,22 @@ function addCart(){
     localStorage.setItem("itemsCart", itemsCart);
 }
 
+var cart = document.querySelector(".js-product__cart");
 var clickCart = 0; // contador de cliques do Cart
-// mostrar carrinho
+
+//mostrar carrinho
 function showCart(){
     clickCart++; // adiciona mais um no contador de cliques do Cart
-    let cart = document.querySelector(".js-product__cart");
     // let empty = document.querySelector(".js-empty");
-    console.log(empty);
 
     cart.style.display = "block"; // irá abrir o cart
 
     // se o carrinho estiver vazio, mostrar parágrafo
     if (itemsCart === 0){
-        empty.style.display = "block";
-        // criar elemento e criar a classe empty
-        let li = document.createElement("li");
-        li.innerText = "Your cart is empty."; // aqui!!!! crindo elemento
+        cart.children[1].innerHTML = "<li class='empty'>Your cart is empty.</li>";
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens
-    else if(itemsCart >= 1){
+    else if(itemsCart >= 1){ // aqui! estilo do produto dentro da div
         cart.children[1].innerHTML = "";
         for(let i = 0; i < itemsCart; i++){
             cart.children[1].innerHTML += "<li>Item 1</li>";

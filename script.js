@@ -79,16 +79,18 @@ function showCart(){
 
     cart.style.display = "block"; // irá abrir o cart
 
-    // se o carrinho estiver vazio, mostrar parágrafo
+    // se o carrinho estiver vazio
     if (itemsCart === 0){
-        cart.children[1].innerHTML = "<li class='empty'>Your cart is empty.</li>";
-        cart.children[2].style.display = "none";
+        cart.children[1].innerHTML = "<li class='empty'>Your cart is empty.</li>"; // criar elemento para informar que está vazio
+        cart.children[2].style.display = "none"; // botão desaparecer
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens
-    else if(itemsCart >= 1){ 
+    else if(itemsCart >= 1){
+        cart.children[2].style.display = "block"; // botão aparecer
+
         cart.children[1].innerHTML = "";
         for(let i = 0; i < itemsCart; i++){
-            cart.children[1].innerHTML += "<li>Item 1</li>";
+            cart.children[1].innerHTML += "<li>Item 1</li>"; // aqui! Exibir produtos
         }
     }
 

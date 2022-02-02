@@ -128,12 +128,12 @@ main.product{
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
     box-sizing: border-box;
-    display: none;
+    /* display: none; */
     margin-top: 10px;
     margin-left: 10px;
     padding: 20px;
     width: calc(100% - 20px);
-    height: 200px;
+    height: 250px;
 
     position: absolute;
 }
@@ -144,8 +144,9 @@ main.product{
 }
 
 .product__cart-items{
-    background-color: lightblue;
+    background-color: lightpink;
     box-sizing: border-box;
+    width: calc(100% - 20px);
     height: 60%;
     margin: 0;
     padding: 0;
@@ -167,7 +168,7 @@ main.product{
 
 .product__cart-items .cart-filled-img{
     border-radius: 5px;
-    height: 80px;/*aqui!Ajustando produto, cart pequeno?*/
+    height: 80px;
 }
 
 .product__cart-items .cart-filled{

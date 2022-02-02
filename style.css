@@ -145,6 +145,7 @@ main.product{
 
 .product__cart-items{
     background-color: lightblue;
+    box-sizing: border-box;
     height: 60%;
     margin: 0;
     padding: 0;
@@ -162,6 +163,15 @@ main.product{
     color: hsl(219, 9%, 45%);
     font-weight: 700;
     align-self: flex-end;
+}
+
+.product__cart-items .cart-filled-img{
+    border-radius: 5px;
+    height: 80px;/*aqui!Ajustando produto, cart pequeno?*/
+}
+
+.product__cart-items .cart-filled{
+    color: hsl(219, 9%, 45%);;
 }
 
 .product__cart-button{

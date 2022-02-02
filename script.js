@@ -88,10 +88,11 @@ function showCart(){
     else if(itemsCart >= 1){
         cart.children[2].style.display = "block"; // botão aparecer
 
+
         cart.children[1].innerHTML = "";
-        for(let i = 0; i < itemsCart; i++){
-            cart.children[1].innerHTML += "<li>Item 1</li>"; // aqui! Exibir produtos
-        }
+        cart.children[1].innerHTML += "<img class='cart-filled-img' alt='' src='images/image-product-1-thumbnail.jpg'>";
+        cart.children[1].innerHTML += "<li class='cart-filled'>Fall Limited Edition Sneakers</li>";
+        cart.children[1].innerHTML += `<li class='cart-filled'>$125.00 x ${itemsCart} $${125 * itemsCart}</li>`;
     }
 
     function hideCart(){ // esconder Cart

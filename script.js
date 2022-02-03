@@ -81,17 +81,22 @@ function showCart(){
 
     // se o carrinho estiver vazio
     if (itemsCart === 0){
-        cart.children[1].innerHTML = ""; // limpar conteúdo
-        cart.children[1].children[0].innerHTML = "<li class='empty'>Your cart is empty.</li>"; // criar elemento para informar que está vazio
-        cart.children[2].style.display = "none"; // botão desaparecer
+        cart.children[1].innerHTML = "<ul class='product__cart-items'></ul>"; //limpa conteúdo, cria ul
+        cart.children[1].children[0].innerHTML = "<li class='empty'>Your cart is empty.</li>"; // criar elemento dentro da ul para informar que está vazio
+
+        cart.children[2].style.display = "none"; // botão desaparece
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens
     else if(itemsCart >= 1){
-        // cart.children[1].innerHTML = "";
-        cart.children[1].innerHTML += "<img class='cart-filled-img' alt='' src='images/image-product-1-thumbnail.jpg'>";
+        cart.children[1].innerHTML = "<ul class='product__cart-items'></ul>"; // limpar conteúdo, criar ul
+        // cria elemento que representa o produto, aqui!!! comentando código
         cart.children[1].children[0].innerHTML += "<li class='cart-filled'>Fall Limited Edition Sneakers</li>";
         cart.children[1].children[0].innerHTML += `<li class='cart-filled'>$125.00 x ${itemsCart} $${125 * itemsCart}</li>`;
+
+        cart.children[1].innerHTML += "<img class='cart-filled-img' alt='' src='images/image-product-1-thumbnail.jpg'>";
+
         cart.children[1].innerHTML += "<img class='delete' alt='' src='images/icon-delete.svg'>";
+
         cart.children[2].style.display = "block"; // botão aparecer
     }
 

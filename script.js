@@ -160,3 +160,30 @@ function showCart(){
         hideCart(); // esconder Cart
     }
 }
+
+
+//// imagens
+var img = document.querySelector(".js-product__img-img");
+// imagem anterior
+function previousImg(){
+    img.src = "images/image-product-4.jpg";
+}
+
+// próxima imagem
+var clickNext = 0; // contador de cliques Next
+function nextImg(){
+    clickNext++;
+    console.log(clickNext);// aqui! como mudar img a cada clique?
+    if (clickNext = 1){
+        img.src = "images/image-product-2.jpg";
+    }
+    if (clickNext = 2){
+        img.src = "images/image-product-3.jpg";
+    }
+    if (clickNext = 3){
+        img.src = "images/image-product-4.jpg";
+    }
+    // if (clickNext = 4){
+    //     img.src = "images/image-product-2.jpg";
+    // }
+}

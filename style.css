@@ -226,6 +226,11 @@ div.product__img{
     height: 300px;
 
     position: relative;
+    
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
 }
 
 .product__img img{
@@ -239,14 +244,12 @@ div.product__img{
     background-color: grey;
     width: calc(100% - 20px);
     height: inherit;
-    padding: 0 20px 0 20px;/*aqui! Como mostrar o padding?*/
+    padding: 0 20px;
 
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: space-between;
-
-    position: absolute;
 }
 
 .product__img-icons img{

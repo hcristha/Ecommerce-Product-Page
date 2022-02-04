@@ -65,8 +65,9 @@ function decreaseAmount(){
 }
 
 function addCart(){
-    itemsCart = JSON.parse(amountItem.innerText); // itens do carrinho recebe a quantidade escolhida pelo usuário, se o amountItem atualizar, atualiza também itemsCart na memória
+    itemsCart = amountItem.innerText; // itens do carrinho recebe a quantidade escolhida pelo usuário, se o amountItem atualizar, atualiza também itemsCart na memória
     localStorage.setItem("itemsCart", itemsCart);
+    console.log(itemsCart); // erro? linha 42
 }
 
 var cart = document.querySelector(".js-product__cart");
@@ -85,8 +86,8 @@ function showCart(){
 
         cart.children[2].style.display = "none"; // botão desaparece
 
-        localStorage.setItem("amountItem", JSON.parse(0)); // como fazer amountItem e itemsCart atualizar para não aparecerem novamente no cart?
-        localStorage.setItem("itemsCart", JSON.parse(0));
+        // localStorage.setItem("amountItem", JSON.parse(0)); // como fazer amountItem e itemsCart atualizar para não aparecerem novamente no cart?
+        // localStorage.setItem("itemsCart", JSON.parse(0));
     }
 
     // se o carrinho estiver vazio, mostrar mensagem
@@ -111,9 +112,16 @@ function showCart(){
         // como deletar o produto ?
         let delet = document.querySelector(".js-delete");
         delet.onclick = function(){
-            cartEmpty();
+            cart.children[1].innerHTML = "<ul class='product__cart-items'></ul>"; //limpa conteúdo, cria ul
+            cart.children[1].children[0].innerHTML = "<li class='empty'>Your cart is empty.</li>"; // criar elemento dentro da ul para informar que está vazio
+
+            cart.children[2].style.display = "none"; // botão desaparece
+
+            localStorage.setItem("amountItem", JSON.parse(0)); // como fazer amountItem e itemsCart atualizar para não aparecerem novamente no cart?
+
+            // localStorage.setItem("itemsCart", JSON.parse(0));
+            }
         }
-    }
 
     function hideCart(){ // esconder Cart
         cart.style.display = "none";

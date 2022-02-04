@@ -51,6 +51,7 @@ if (itemsCart === null){
 }
 ////
 
+
 // aumentar quantidade de itens
 function increaseAmount(){ // serve para exibir quantidade de itens temporária
     if (c <= 19){ // contador soma até 20
@@ -72,14 +73,50 @@ function decreaseAmount(){
     localStorage.setItem("amountItem", c); // salvando a nova quantidade
 }
 
+
+// função para adicionar item no carrinho
 function addCart(){
     itemsCart = amountItem.innerText; // itens do carrinho recebe a quantidade escolhida pelo usuário, se o amountItem atualizar, atualiza também itemsCart na memória
     numberCart.innerText = itemsCart; // atualiza número de itens dentro do cart
     localStorage.setItem("itemsCart", itemsCart); // salva a nova quantidade de itens dentro do cart
+    cartFilled();
 }
+
 
 var cart = document.querySelector(".js-product__cart");
 var clickCart = 0; // contador de cliques do Cart
+
+function cartEmpty(){ // função para carrinho vazio
+    cart.children[1].innerHTML = "<ul class='product__cart-info--items'></ul>"; //limpa conteúdo, cria ul
+    cart.children[1].children[0].innerHTML = "<li class='empty'>Your cart is empty.</li>"; // criar elemento dentro da ul para informar que está vazio
+
+    cart.children[2].style.display = "none"; // botão desaparece
+}
+
+function cartFilled(){ // função para carrinho cheio
+    // criar elemento imagem do produto
+    cart.children[1].innerHTML = "<img class='img' alt='' src='images/image-product-1-thumbnail.jpg'>";
+
+    cart.children[1].innerHTML += "<ul class='product__cart-info--items' style='height: 80px;'></ul>"; // limpar conteúdo, criar ul
+    // criar elementos dentro da ul que representam o produto
+    cart.children[1].children[1].innerHTML += "<li class='filled'>Fall Limited Edition Sneakers</li>";
+    cart.children[1].children[1].innerHTML += `<li class='filled'>$125.00 x ${itemsCart} <strong style='color: black'>$${125 * itemsCart}</strong></li>`;
+
+    // criar elemento imagem para remover produto
+    cart.children[1].innerHTML += "<img class='js-delete' alt='' src='images/icon-delete.svg'>";
+
+    cart.children[2].style.display = "block"; // botão aparecer
+
+    // deletar o produto
+    let delet = document.querySelector(".js-delete");
+    delet.onclick = function(){
+        cartEmpty();
+
+        localStorage.setItem("itemsCart", 0); // zerar itens dentro do carrinho
+        itemsCart = JSON.parse(localStorage.getItem("itemsCart")); // atualizar quantidade de itens
+        numberCart.innerText = itemsCart; // atualiza número de itens dentro do cart
+    }
+}
 
 //mostrar carrinho
 function showCart(){
@@ -90,42 +127,14 @@ function showCart(){
 
     cart.style.display = "block"; // irá abrir o cart
 
-    function cartEmpty(){ // função para carrinho vazio
-        cart.children[1].innerHTML = "<ul class='product__cart-info--items'></ul>"; //limpa conteúdo, cria ul
-        cart.children[1].children[0].innerHTML = "<li class='empty'>Your cart is empty.</li>"; // criar elemento dentro da ul para informar que está vazio
-
-        cart.children[2].style.display = "none"; // botão desaparece
-    }
-
     // se o carrinho estiver vazio, mostrar mensagem
     if (itemsCart === 0){
         cartEmpty();
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens
     else if(itemsCart >= 1){
-        // criar elemento imagem do produto
-        cart.children[1].innerHTML = "<img class='img' alt='' src='images/image-product-1-thumbnail.jpg'>";
-
-        cart.children[1].innerHTML += "<ul class='product__cart-info--items'></ul>"; // limpar conteúdo, criar ul
-        // criar elementos dentro da ul que representam o produto
-        cart.children[1].children[1].innerHTML += "<li class='filled'>Fall Limited Edition Sneakers</li>";
-        cart.children[1].children[1].innerHTML += `<li class='filled'>$125.00 x ${itemsCart} $${125 * itemsCart}</li>`;
-
-        // criar elemento imagem para remover produto
-        cart.children[1].innerHTML += "<img class='js-delete' alt='' src='images/icon-delete.svg'>";
-
-        cart.children[2].style.display = "block"; // botão aparecer
-
-        // deletar o produto
-        let delet = document.querySelector(".js-delete");
-        delet.onclick = function(){
-            cartEmpty();
-
-            localStorage.setItem("itemsCart", 0); // zerar itens dentro do carrinho
-            itemsCart = JSON.parse(localStorage.getItem("itemsCart")); // atualizar quantidade de itens
-            numberCart.innerText = itemsCart; // atualiza número de itens dentro do cart
-            }
-        }
+        cartFilled();
+    }
 
     function hideCart(){ // esconder Cart
         cart.style.display = "none";

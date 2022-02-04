@@ -158,9 +158,11 @@ main.product{
 }
 
 .product__cart-info{
+    background-color: lightgreen;
+    height: 120px;
     display: flex;
     flex-flow: row nowrap;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
 }
 
@@ -189,11 +191,12 @@ main.product{
 
 .product__cart-info--items .filled{
     color: hsl(219, 9%, 45%);;
+    text-align: left;
 }
 
 .product__cart-info .img{
     border-radius: 5px;
-    height: 80px;
+    height: 60px;
 }
 
 .product__cart-button{

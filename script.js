@@ -84,7 +84,7 @@ function showCart(){
     cart.style.display = "block"; // irá abrir o cart
 
     function cartEmpty(){ // função para carrinho vazio
-        cart.children[1].innerHTML = "<ul class='product__cart-items'></ul>"; //limpa conteúdo, cria ul
+        cart.children[1].innerHTML = "<ul class='product__cart-info--items'></ul>"; //limpa conteúdo, cria ul
         cart.children[1].children[0].innerHTML = "<li class='empty'>Your cart is empty.</li>"; // criar elemento dentro da ul para informar que está vazio
 
         cart.children[2].style.display = "none"; // botão desaparece
@@ -96,13 +96,13 @@ function showCart(){
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens
     else if(itemsCart >= 1){
-        cart.children[1].innerHTML = "<ul class='product__cart-items'></ul>"; // limpar conteúdo, criar ul
-        // criar elementos dentro da ul que representam o produto
-        cart.children[1].children[0].innerHTML += "<li class='cart-filled'>Fall Limited Edition Sneakers</li>";
-        cart.children[1].children[0].innerHTML += `<li class='cart-filled'>$125.00 x ${itemsCart} $${125 * itemsCart}</li>`;
-
         // criar elemento imagem do produto
-        cart.children[1].innerHTML += "<img class='cart-filled-img' alt='' src='images/image-product-1-thumbnail.jpg'>";
+        cart.children[1].innerHTML = "<img class='img' alt='' src='images/image-product-1-thumbnail.jpg'>";
+
+        cart.children[1].innerHTML += "<ul class='product__cart-info--items'></ul>"; // limpar conteúdo, criar ul
+        // criar elementos dentro da ul que representam o produto
+        cart.children[1].children[1].innerHTML += "<li class='filled'>Fall Limited Edition Sneakers</li>";
+        cart.children[1].children[1].innerHTML += `<li class='filled'>$125.00 x ${itemsCart} $${125 * itemsCart}</li>`;
 
         // criar elemento imagem para remover produto
         cart.children[1].innerHTML += "<img class='js-delete' alt='' src='images/icon-delete.svg'>";

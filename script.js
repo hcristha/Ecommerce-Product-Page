@@ -106,14 +106,13 @@ function showCart(){
         // criar elemento imagem para remover produto
         cart.children[1].innerHTML += "<img class='js-delete' alt='' src='images/icon-delete.svg'>";
 
+        cart.children[2].style.display = "block"; // botão aparecer
+
+        // como deletar o produto ?
         let delet = document.querySelector(".js-delete");
         delet.onclick = function(){
             cartEmpty();
-            console.log(itemsCart);
         }
-        console.log(itemsCart);
-
-        cart.children[2].style.display = "block"; // botão aparecer
     }
 
     function hideCart(){ // esconder Cart

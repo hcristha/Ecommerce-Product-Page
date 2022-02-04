@@ -85,6 +85,10 @@ function addCart(){
 
 
 var cart = document.querySelector(".js-product__cart");
+// cart.onmouseover = function{
+    
+// }
+
 var clickCart = 0; // contador de cliques do Cart
 
 // mudar cursor para elementos ativos
@@ -113,7 +117,7 @@ function cartFilled(){ // função para carrinho cheio
     cart.children[1].children[1].innerHTML += `<li class='filled'>$125.00 x ${itemsCart} <strong style='color: black'>$${125 * itemsCart}</strong></li>`;
 
     // criar elemento imagem para remover produto
-    cart.children[1].innerHTML += "<img class='js-delete' alt='' src='images/icon-delete.svg'>";
+    cart.children[1].innerHTML += "<img class='delet js-delete' alt='' src='images/icon-delete.svg'>";
 
     cart.children[2].style.display = "block"; // botão aparecer
     // numberCart.style.display = "block";

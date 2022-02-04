@@ -41,13 +41,14 @@ if (amountItemPerma !== 0 && amountItemPerma !== null){ // atualizar contador
 
 // pegar itens salvos do carrinho
 itemsCart = JSON.parse(localStorage.getItem("itemsCart"));
-if (itemsCart ==! null || itemsCart !== undefined){
-    numberCart.innerText = itemsCart; // mostrar último número de itens dentro do cart
+if (itemsCart !== null && itemsCart !== undefined && itemsCart !== 0){
+    numberCart.innerText = itemsCart; // último número escolhido pelo usuário vai se tornar ícone acima do cart
+    numberCart.style.display = "block"; // mostrar ícone acima do cart
 }
 
 if (itemsCart === null){
     itemsCart = 0;
-    numberCart.innerText = itemsCart; // número de itens dentro do cart começa em 0
+    numberCart.innerText = itemsCart; // caso não tenha escolhido nenhum valor, o ícone acima da cart recebe zero 
 }
 ////
 
@@ -95,6 +96,14 @@ function cartEmpty(){ // função para carrinho vazio
 }
 
 function cartFilled(){ // função para carrinho cheio
+    if (numberCart == 0){
+        numberCart.style.display = "none"; // esconder ícone acima do cart
+    }
+
+    if (numberCart !== 0){
+        numberCart.style.display = "block"; // mostrar ícone acima do cart
+    }
+
     // criar elemento imagem do produto
     cart.children[1].innerHTML = "<img class='img' alt='' src='images/image-product-1-thumbnail.jpg'>";
 
@@ -107,6 +116,7 @@ function cartFilled(){ // função para carrinho cheio
     cart.children[1].innerHTML += "<img class='js-delete' alt='' src='images/icon-delete.svg'>";
 
     cart.children[2].style.display = "block"; // botão aparecer
+    // numberCart.style.display = "block";
 
     // deletar o produto
     let delet = document.querySelector(".js-delete");
@@ -116,6 +126,7 @@ function cartFilled(){ // função para carrinho cheio
         localStorage.setItem("itemsCart", 0); // zerar itens dentro do carrinho
         itemsCart = JSON.parse(localStorage.getItem("itemsCart")); // atualizar quantidade de itens
         numberCart.innerText = itemsCart; // atualiza número de itens dentro do cart
+        numberCart.style.display = "none"; // mostrar último número de itens como ícone acima do cart
     }
 }
 
@@ -129,7 +140,7 @@ function showCart(){
     cart.style.display = "block"; // irá abrir o cart
 
     // se o carrinho estiver vazio, mostrar mensagem
-    if (itemsCart === 0){
+    if (itemsCart === 0 || itemsCart === null || itemsCart === undefined){
         cartEmpty();
     }
     // se o carrinho tiver de 1 item pra cima mostrar itens

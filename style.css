@@ -161,7 +161,7 @@ main.product{
     justify-content: center;
 }
 
-.product__cart-items .empty{
+.product__cart-items .empty{ /*nomear classes para adicionar parágrafo no cart*/
     color: hsl(219, 9%, 45%);
     font-weight: 700;
     align-self: flex-end;

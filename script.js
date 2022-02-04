@@ -28,7 +28,6 @@ var amountItemPerma; // variável para salvar na memória do navegador a quantid
 // itens no carrinho
 var itemsCart = 0; // itens dentro do carrinho começa em zero
 
-//
 amountItemPerma = JSON.parse(localStorage.getItem("amountItem")); // acessando quantidade de itens salva e tornando-a definitiva
 if (amountItemPerma === null){ // primeira vez que acessa o site
     amountItemPerma = 0;
@@ -40,10 +39,12 @@ if (amountItemPerma !== 0 && amountItemPerma !== null){ // atualizar contador
 
 // pegar itens salvos do carrinho
 itemsCart = JSON.parse(localStorage.getItem("itemsCart"));
+console.log(itemsCart);
+
 if (itemsCart === null){
     itemsCart = 0;
 }
-//
+////
 
 // aumentar quantidade de itens
 function increaseAmount(){ // serve para exibir quantidade de itens temporária
@@ -67,7 +68,6 @@ function decreaseAmount(){
 function addCart(){
     itemsCart = amountItem.innerText; // itens do carrinho recebe a quantidade escolhida pelo usuário, se o amountItem atualizar, atualiza também itemsCart na memória
     localStorage.setItem("itemsCart", itemsCart);
-    console.log(itemsCart); // erro? linha 42
 }
 
 var cart = document.querySelector(".js-product__cart");
@@ -75,6 +75,9 @@ var clickCart = 0; // contador de cliques do Cart
 
 //mostrar carrinho
 function showCart(){
+    itemsCart = JSON.parse(localStorage.getItem("itemsCart"));
+    console.log(itemsCart);
+
     clickCart++; // adiciona mais um no contador de cliques do Cart
     // let empty = document.querySelector(".js-empty");
 
@@ -85,9 +88,6 @@ function showCart(){
         cart.children[1].children[0].innerHTML = "<li class='empty'>Your cart is empty.</li>"; // criar elemento dentro da ul para informar que está vazio
 
         cart.children[2].style.display = "none"; // botão desaparece
-
-        // localStorage.setItem("amountItem", JSON.parse(0)); // como fazer amountItem e itemsCart atualizar para não aparecerem novamente no cart?
-        // localStorage.setItem("itemsCart", JSON.parse(0));
     }
 
     // se o carrinho estiver vazio, mostrar mensagem
@@ -109,17 +109,12 @@ function showCart(){
 
         cart.children[2].style.display = "block"; // botão aparecer
 
-        // como deletar o produto ?
+        // deletar o produto
         let delet = document.querySelector(".js-delete");
         delet.onclick = function(){
-            cart.children[1].innerHTML = "<ul class='product__cart-items'></ul>"; //limpa conteúdo, cria ul
-            cart.children[1].children[0].innerHTML = "<li class='empty'>Your cart is empty.</li>"; // criar elemento dentro da ul para informar que está vazio
+            cartEmpty();
 
-            cart.children[2].style.display = "none"; // botão desaparece
-
-            localStorage.setItem("amountItem", JSON.parse(0)); // como fazer amountItem e itemsCart atualizar para não aparecerem novamente no cart?
-
-            // localStorage.setItem("itemsCart", JSON.parse(0));
+            localStorage.setItem("itemsCart", 0); // zerar itens dentro do carrinho
             }
         }
 

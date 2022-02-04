@@ -95,7 +95,7 @@ header{
     right: 0;
 }
 
-.header__options-cart--number{/*aqui! estilizando*/
+.header__options-cart--number{
     background-color: var(--color-btn);
     border-radius: 15px;
     color: white;

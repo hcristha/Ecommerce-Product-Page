@@ -22,6 +22,7 @@ function showMenu(){
 
 // quantidade de itens
 var amountItem = document.querySelector(".product__amount-item");
+var numberCart = document.querySelector(".header__options-cart--number");
 var c = 0; // contador de cliques começa em 0
 var amountItemPerma; // variável para salvar na memória do navegador a quantidade de itens escolhidas pelo usuário
 
@@ -33,25 +34,31 @@ if (amountItemPerma === null){ // primeira vez que acessa o site
     amountItemPerma = 0;
 }
 amountItem.innerText = amountItemPerma; // mostrando na tela quantidade de itens definitiva
+
 if (amountItemPerma !== 0 && amountItemPerma !== null){ // atualizar contador
     c = amountItemPerma;
 }
 
 // pegar itens salvos do carrinho
 itemsCart = JSON.parse(localStorage.getItem("itemsCart"));
-console.log(itemsCart);
+if (itemsCart ==! null || itemsCart !== undefined){
+    numberCart.innerText = itemsCart; // mostrar último número de itens dentro do cart
+}
 
 if (itemsCart === null){
     itemsCart = 0;
+    numberCart.innerText = itemsCart; // número de itens dentro do cart começa em 0
 }
 ////
 
 // aumentar quantidade de itens
 function increaseAmount(){ // serve para exibir quantidade de itens temporária
-    c += 1; // contador incrementa a cada clique
-    amountItem.innerText = c; // atualizando quantidade de itens
+    if (c <= 19){ // contador soma até 20
+        c += 1; // contador incrementa a cada clique
+        amountItem.innerText = c; // atualizando quantidade de itens
 
-    localStorage.setItem("amountItem", c); // salvando a nova quantidade
+        localStorage.setItem("amountItem", c); // salvando a nova quantidade
+    }
 }
 
 // diminuir quantidade de itens
@@ -67,7 +74,8 @@ function decreaseAmount(){
 
 function addCart(){
     itemsCart = amountItem.innerText; // itens do carrinho recebe a quantidade escolhida pelo usuário, se o amountItem atualizar, atualiza também itemsCart na memória
-    localStorage.setItem("itemsCart", itemsCart);
+    numberCart.innerText = itemsCart; // atualiza número de itens dentro do cart
+    localStorage.setItem("itemsCart", itemsCart); // salva a nova quantidade de itens dentro do cart
 }
 
 var cart = document.querySelector(".js-product__cart");
@@ -75,8 +83,7 @@ var clickCart = 0; // contador de cliques do Cart
 
 //mostrar carrinho
 function showCart(){
-    itemsCart = JSON.parse(localStorage.getItem("itemsCart"));
-    console.log(itemsCart);
+    itemsCart = JSON.parse(localStorage.getItem("itemsCart")); // atualizar quantidade de itens
 
     clickCart++; // adiciona mais um no contador de cliques do Cart
     // let empty = document.querySelector(".js-empty");
@@ -115,6 +122,8 @@ function showCart(){
             cartEmpty();
 
             localStorage.setItem("itemsCart", 0); // zerar itens dentro do carrinho
+            itemsCart = JSON.parse(localStorage.getItem("itemsCart")); // atualizar quantidade de itens
+            numberCart.innerText = itemsCart; // atualiza número de itens dentro do cart
             }
         }
 

@@ -165,35 +165,18 @@ function showCart(){
 //// imagens
 var img = document.querySelector(".js-product__img-img");
 // imagem anterior
-var clickImg = 4;// contador de cliques Previous
-var cont;
-// c de 1 a 4 ou de 4 a 1, se next começa de 1 , se previous começa de 4
 function previousImg(){
-    clickImg--;
-    if (clickImg > 0){
-        img.src = `images/image-product-${clickImg}.jpg`;
-    }
-    if (clickImg < 0){
-        clickImg = 1;
-    }
-    console.log(clickImg);
+
 }
 
 // próxima imagem
-function nextImg(){//aqui! como sincronizar os dois?
-    clickImg1++;
-    if (clickImg = 1){
-        img.src = `images/image-product-${clickImg1}.jpg`;
+var cont = 1;
+function nextImg(){
+    // quando clicar, o contador soma e a imagem muda
+    cont++;
+    
+    if (cont <= 4){//aqui!
+        img.src = `images/image-product-${cont}.jpg`;    
     }
     
-    if (clickImg1 = 2){
-        img.src = `images/image-product-${clickImg1}.jpg`;
-    }
-    if (clickImg1 = 3){
-        img.src = `images/image-product-${clickImg1}.jpg`;
-    }
-    if (clickImg1 = 4){
-        img.src = `images/image-product-${clickImg1}.jpg`;
-    }
-    console.log(clickImg);
 }

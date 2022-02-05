@@ -162,21 +162,49 @@ function showCart(){
 }
 
 
-//// imagens
+// //// imagem para funções: nextImg() e previousImg()
+// var img = document.querySelector(".js-product__img-img");
+// // imagem anterior
+// var previous = 4; // contador começa em 4
+// function previousImg(){
+//     // quando clicar o contador diminui e a imagem muda
+//     if (previous > 1){ // contador só diminui até 2, excluindo o 1 da subtração
+//         previous--;   
+//     }
+    
+//     if (previous > 0){ // se o contador for maior que 0
+//         img.src = `images/image-product-${previous}.jpg`;
+//     }
+//     console.log(previous);
+// }
+
+// // próxima imagem
+// var next = 1; // contador coemça em 1
+// function nextImg(){
+//     // sincronizar contadores?
+//     // quando clicar, o contador soma e a imagem muda
+//     if (next < 4){ // contador só soma até 3, excluindo o 4 da soma
+//         next++; 
+//     }
+    
+//     if (next <= 4){
+//         img.src = `images/image-product-${next}.jpg`;    
+//     }
+//     console.log(next);
+// }
+
+//// imagem para funções: nextImg() e previousImg()
 var img = document.querySelector(".js-product__img-img");
 // imagem anterior
+var click = 0;
 function previousImg(){
-
+    click++
+    // 1 a 4, 1 < 4?? delimitar click
+    console.log(click);
 }
 
 // próxima imagem
-var cont = 1;
 function nextImg(){
-    // quando clicar, o contador soma e a imagem muda
-    cont++;
-    
-    if (cont <= 4){//aqui!
-        img.src = `images/image-product-${cont}.jpg`;    
-    }
-    
+    click++
+    console.log(click);
 }

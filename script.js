@@ -197,21 +197,84 @@ function showCart(){
 
 //// imagem para funções: nextImg() e previousImg()
 var img = document.querySelector(".js-product__img-img");
-var icons = document.querySelector(".product__img-icons");
+var icons = document.querySelector(".js-product__img-icons");
 // imagem anterior
-var click = 5;
+var click = 1;
+var clickP = 5;
 function previousImg(){
-    if (click <= 5 && click > 1){
-        click--;
-        img.src = `images/image-product-${click}.jpg`; 
+    if (clickP >= 2 && clickP <= 5){
+        clickP--;    
+    }
+    
+    if (clickP == 1){
+        img.src = `images/image-product-1.jpg`;
     }
 
-    icons.children[1].addEventListener("click", function(){//aqui! foi até img2 por que?
-        if (click >= 1 && click < 4){
-            click++
-            img.src = `images/image-product-${click}.jpg`;  
-        }
-        
-    });
+    if (clickP == 2){
+        img.src = `images/image-product-2.jpg`;
+    }
 
+    if (clickP == 3){
+        img.src = `images/image-product-3.jpg`;
+    }
+
+    if (clickP == 4){
+        img.src = `images/image-product-4.jpg`;
+    }
+
+    // if (clickP == 5){
+    //     img.src = `images/image-product-1.jpg`;
+    // }
+
+    // if (clickP == 6){
+    //     img.src = `images/image-product-2.jpg`;
+    // }
+
+    // if (clickP == 7){
+    //     img.src = `images/image-product-3.jpg`;
+    // }
+
+    // if (clickP == 8){
+    //     img.src = `images/image-product-4.jpg`;
+    // }
 }
+
+function nextImg(){
+    if (click >= 1 && click < 9){
+        click++;
+        console.log(click);
+    }
+    
+    if (click == 1){
+        img.src = `images/image-product-1.jpg`;
+    }
+
+    if (click == 2){
+        img.src = `images/image-product-2.jpg`;
+    }
+
+    if (click == 3){
+        img.src = `images/image-product-3.jpg`;
+    }
+
+    if (click == 4){
+        img.src = `images/image-product-4.jpg`;
+    }
+
+    if (click == 5){
+        img.src = `images/image-product-1.jpg`;
+    }
+
+    if (click == 6){
+        img.src = `images/image-product-2.jpg`;
+    }
+
+    if (click == 7){
+        img.src = `images/image-product-3.jpg`;
+    }
+
+    if (click == 8){
+        img.src = `images/image-product-4.jpg`;
+    }
+}
+// loop infinito de cliques e mudança de img

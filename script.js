@@ -83,11 +83,8 @@ function addCart(){
     cartFilled();
 }
 
-
+var main = document.querySelector(".js-product");
 var cart = document.querySelector(".js-product__cart");
-// cart.onmouseover = function{
-    
-// }
 
 var clickCart = 0; // contador de cliques do Cart
 
@@ -155,6 +152,10 @@ function showCart(){
     function hideCart(){ // esconder Cart
         cart.style.display = "none";
     }
+
+    // se abrirem o cart e clicarem no texto, fecha o cart
+    if (cart.style.display )// usar boolean para criar condição??
+    main.addEventListener("click", hideCart);
 
     if (clickCart % 2 == 0){ // se o contador for divisível por 2 executar função
         hideCart(); // esconder Cart

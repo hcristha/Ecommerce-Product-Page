@@ -25,7 +25,7 @@ body{
     height: 100%;
 
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 }
 
 nav{
@@ -36,7 +36,7 @@ nav{
     display: none;
 
     position: absolute;
-    z-index: 1;
+    z-index: 2;
 }
 
 .menu__close{
@@ -156,6 +156,7 @@ main.product{
     height: 250px;
 
     position: absolute;
+    z-index: 1;
 }
 
 .product__cart h6{

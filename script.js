@@ -164,37 +164,6 @@ function showCart(){
 }
 
 
-// //// imagem para funções: nextImg() e previousImg()
-// var img = document.querySelector(".js-product__img-img");
-// // imagem anterior
-// var previous = 4; // contador começa em 4
-// function previousImg(){
-//     // quando clicar o contador diminui e a imagem muda
-//     if (previous > 1){ // contador só diminui até 2, excluindo o 1 da subtração
-//         previous--;   
-//     }
-    
-//     if (previous > 0){ // se o contador for maior que 0
-//         img.src = `images/image-product-${previous}.jpg`;
-//     }
-//     console.log(previous);
-// }
-
-// // próxima imagem
-// var next = 1; // contador coemça em 1
-// function nextImg(){
-//     // sincronizar contadores?
-//     // quando clicar, o contador soma e a imagem muda
-//     if (next < 4){ // contador só soma até 3, excluindo o 4 da soma
-//         next++; 
-//     }
-    
-//     if (next <= 4){
-//         img.src = `images/image-product-${next}.jpg`;    
-//     }
-//     console.log(next);
-// }
-
 //// imagem para funções: nextImg() e previousImg()
 // a cada clique a imagem muda para a próxima/anterior
 // clique no icone
@@ -206,30 +175,39 @@ var img = document.querySelector(".js-product__img-img");
 var icons = document.querySelector(".js-product__img-icons");
 // imagem anterior
 var click = 1;
-var clickP = 4;
-function previousImg(){
-    if (clickP >= 2 && clickP <= 4){
-        clickP--;    
-    }
+var clickP = 5;
+// function previousImg(){
+//     if (clickP >= 2 && clickP <= 5){
+//         clickP--;    
+//     }
     
-    console.log(clickP);
-    if (clickP % 2 == 0 || clickP % 1 == 0){
-        img.src = `images/image-product-${clickP}.jpg`;
-    }
-}
+//     img.src = `images/image-product-${clickP}.jpg`;
+//     if (clickP == 1){
+//         clickP = 5;
+//     }
+// }
 
 function nextImg(){
-    if (click >= 1 && click < 4){
+    if (click >= 0 && click < 4){ // contador vai até 4
         click++;
-        console.log(click);
-    }
-
-    console.log(click);
-    if (click % 2 == 0 || click % 1 == 0){
         img.src = `images/image-product-${click}.jpg`;
     }
-    
-    if (click == 4){// aqui! reiniciando cont
-        click == 1;
+
+    if (click == 4){ // reiniciando contador
+        click = 0;
+    }
+
+    icons.children[0].onclick = function(){ // voltar
+        if (click == 0){// aqui! reiniciando contador
+            click = 2;
+        }
+
+        if (click > 0){
+            click--;
+            console.log(click);
+            img.src = `images/image-product-${click}.jpg`;
+        }
+
+        
     }
 }

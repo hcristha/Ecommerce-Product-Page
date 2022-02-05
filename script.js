@@ -196,85 +196,40 @@ function showCart(){
 // }
 
 //// imagem para funções: nextImg() e previousImg()
+// a cada clique a imagem muda para a próxima/anterior
+// clique no icone
+// ident img
+// a img muda p prox ate 4
+// se clicar dnv volta pra img ant
+
 var img = document.querySelector(".js-product__img-img");
 var icons = document.querySelector(".js-product__img-icons");
 // imagem anterior
 var click = 1;
-var clickP = 5;
+var clickP = 4;
 function previousImg(){
-    if (clickP >= 2 && clickP <= 5){
+    if (clickP >= 2 && clickP <= 4){
         clickP--;    
     }
     
-    if (clickP == 1){
-        img.src = `images/image-product-1.jpg`;
+    console.log(clickP);
+    if (clickP % 2 == 0 || clickP % 1 == 0){
+        img.src = `images/image-product-${clickP}.jpg`;
     }
-
-    if (clickP == 2){
-        img.src = `images/image-product-2.jpg`;
-    }
-
-    if (clickP == 3){
-        img.src = `images/image-product-3.jpg`;
-    }
-
-    if (clickP == 4){
-        img.src = `images/image-product-4.jpg`;
-    }
-
-    // if (clickP == 5){
-    //     img.src = `images/image-product-1.jpg`;
-    // }
-
-    // if (clickP == 6){
-    //     img.src = `images/image-product-2.jpg`;
-    // }
-
-    // if (clickP == 7){
-    //     img.src = `images/image-product-3.jpg`;
-    // }
-
-    // if (clickP == 8){
-    //     img.src = `images/image-product-4.jpg`;
-    // }
 }
 
 function nextImg(){
-    if (click >= 1 && click < 9){
+    if (click >= 1 && click < 4){
         click++;
         console.log(click);
     }
+
+    console.log(click);
+    if (click % 2 == 0 || click % 1 == 0){
+        img.src = `images/image-product-${click}.jpg`;
+    }
     
-    if (click == 1){
-        img.src = `images/image-product-1.jpg`;
-    }
-
-    if (click == 2){
-        img.src = `images/image-product-2.jpg`;
-    }
-
-    if (click == 3){
-        img.src = `images/image-product-3.jpg`;
-    }
-
-    if (click == 4){
-        img.src = `images/image-product-4.jpg`;
-    }
-
-    if (click == 5){
-        img.src = `images/image-product-1.jpg`;
-    }
-
-    if (click == 6){
-        img.src = `images/image-product-2.jpg`;
-    }
-
-    if (click == 7){
-        img.src = `images/image-product-3.jpg`;
-    }
-
-    if (click == 8){
-        img.src = `images/image-product-4.jpg`;
+    if (click == 4){// aqui! reiniciando cont
+        click == 1;
     }
 }
-// loop infinito de cliques e mudança de img

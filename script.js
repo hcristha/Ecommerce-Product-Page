@@ -153,9 +153,10 @@ function showCart(){
         cart.style.display = "none";
     }
 
-    // se abrirem o cart e clicarem no texto, fecha o cart
-    if (cart.style.display )// usar boolean para criar condição??
-    main.addEventListener("click", hideCart);
+    // // se abrirem o cart e clicarem no texto, fecha o cart
+    // if (cart.style.display == "block"){
+    //     main.addEventListener("click", hideCart);
+    // }
 
     if (clickCart % 2 == 0){ // se o contador for divisível por 2 executar função
         hideCart(); // esconder Cart
@@ -196,16 +197,21 @@ function showCart(){
 
 //// imagem para funções: nextImg() e previousImg()
 var img = document.querySelector(".js-product__img-img");
+var icons = document.querySelector(".product__img-icons");
 // imagem anterior
-var click = 0;
+var click = 5;
 function previousImg(){
-    click++
-    // 1 a 4, 1 < 4?? delimitar click
-    console.log(click);
-}
+    if (click <= 5 && click > 1){
+        click--;
+        img.src = `images/image-product-${click}.jpg`; 
+    }
 
-// próxima imagem
-function nextImg(){
-    click++
-    console.log(click);
+    icons.children[1].addEventListener("click", function(){//aqui! foi até img2 por que?
+        if (click >= 1 && click < 4){
+            click++
+            img.src = `images/image-product-${click}.jpg`;  
+        }
+        
+    });
+
 }

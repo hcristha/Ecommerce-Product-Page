@@ -136,10 +136,9 @@ header{
 }
 
 main.product{
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     box-sizing: border-box;
     overflow: hidden;
-    /* padding: 10px; */
     width: 100%;
 
     position: relative;
@@ -222,7 +221,6 @@ main.product{
 }
 
 div.product__img{
-    background-color: lightseagreen;
     width: 100%;
     height: 300px;
 

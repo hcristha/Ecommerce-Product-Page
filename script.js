@@ -83,9 +83,7 @@ function addCart(){
     cartFilled();
 }
 
-var main = document.querySelector(".js-product");
 var cart = document.querySelector(".js-product__cart");
-
 var clickCart = 0; // contador de cliques do Cart
 
 // mudar cursor para elementos ativos
@@ -159,18 +157,13 @@ function showCart(){
 }
 
 
-// imagens para funções: nextImg() e previousImg()
-var productImg = document.querySelector(".js-product__img");
+// imagens para função nextImg()
+var img = document.querySelector(".js-product__img-img"); // foto do produto
+var icons = document.querySelector(".js-product__img-icons"); // ícones de voltar e próxima
 
-onload = function(){
-    productImg += '<img class="js-product__img-img" alt="Tênis branco e marrom claro." src="images/image-product-1.jpg">';
+var click = 1; // contador começa em 1
 
-    var img = document.querySelector(".js-product__img-img"); // foto do produto
-    var icons = document.querySelector(".js-product__img-icons"); // ícones de voltar e próxima
-
-    var click = 1; // contador começa em 1
-
-    function nextImg(){ // próxima imagem, AQUI! erro
+function nextImg(){ // próxima imagem
     if (click >= 1 && click < 4){ // contador vai de 1 até 4
         click++; // incrementa
         img.src = `images/image-product-${click}.jpg`; // muda a imagem
@@ -182,5 +175,4 @@ onload = function(){
             img.src = `images/image-product-${click}.jpg`; // muda a imagem
         }
     }
-}
 }

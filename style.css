@@ -242,10 +242,9 @@ div.product__img{
 }
 
 .product__img-icons{
-    background-color: grey;
     width: calc(100% - 20px);
     height: inherit;
-    padding: 0 20px;
+    padding: 0 15px;
 
     display: flex;
     flex-flow: column nowrap;

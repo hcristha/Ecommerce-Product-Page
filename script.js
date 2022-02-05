@@ -153,61 +153,34 @@ function showCart(){
         cart.style.display = "none";
     }
 
-    // // se abrirem o cart e clicarem no texto, fecha o cart
-    // if (cart.style.display == "block"){
-    //     main.addEventListener("click", hideCart);
-    // }
-
     if (clickCart % 2 == 0){ // se o contador for divisível por 2 executar função
         hideCart(); // esconder Cart
     }
 }
 
 
-//// imagem para funções: nextImg() e previousImg()
-// a cada clique a imagem muda para a próxima/anterior
-// clique no icone
-// ident img
-// a img muda p prox ate 4
-// se clicar dnv volta pra img ant
+// imagens para funções: nextImg() e previousImg()
+var productImg = document.querySelector(".js-product__img");
 
-var img = document.querySelector(".js-product__img-img");
-var icons = document.querySelector(".js-product__img-icons");
-// imagem anterior
-var click = 1;
-var clickP = 5;
-// function previousImg(){
-//     if (clickP >= 2 && clickP <= 5){
-//         clickP--;    
-//     }
-    
-//     img.src = `images/image-product-${clickP}.jpg`;
-//     if (clickP == 1){
-//         clickP = 5;
-//     }
-// }
+onload = function(){
+    productImg += '<img class="js-product__img-img" alt="Tênis branco e marrom claro." src="images/image-product-1.jpg">';
 
-function nextImg(){
-    if (click >= 0 && click < 4){ // contador vai até 4
-        click++;
-        img.src = `images/image-product-${click}.jpg`;
+    var img = document.querySelector(".js-product__img-img"); // foto do produto
+    var icons = document.querySelector(".js-product__img-icons"); // ícones de voltar e próxima
+
+    var click = 1; // contador começa em 1
+
+    function nextImg(){ // próxima imagem, AQUI! erro
+    if (click >= 1 && click < 4){ // contador vai de 1 até 4
+        click++; // incrementa
+        img.src = `images/image-product-${click}.jpg`; // muda a imagem
     }
 
-    if (click == 4){ // reiniciando contador
-        click = 0;
-    }
-
-    icons.children[0].onclick = function(){ // voltar
-        if (click == 0){// aqui! reiniciando contador
-            click = 2;
+    icons.children[0].onclick = function(){ // imagem anterior
+        if (click > 1){ // se for maior que 1
+            click--; // decrementa
+            img.src = `images/image-product-${click}.jpg`; // muda a imagem
         }
-
-        if (click > 0){
-            click--;
-            console.log(click);
-            img.src = `images/image-product-${click}.jpg`;
-        }
-
-        
     }
+}
 }

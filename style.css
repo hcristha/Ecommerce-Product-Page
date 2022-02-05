@@ -263,6 +263,20 @@ div.product__img{
     align-self: flex-end;
 }
 
+.product__info{
+    background-color: lightpink;
+    padding: 0 20px;
+}
+
+.product__info h6{
+    color: var(--color-btn);
+    text-transform: uppercase;
+}
+
+.product__info-title{
+    font-size: 2rem;
+}
+
 .product__amount img{
     cursor: pointer;
 }

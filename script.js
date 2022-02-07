@@ -109,7 +109,7 @@ function cartFilled(){ // função para carrinho cheio
     cart.children[1].innerHTML += "<ul class='product__cart-info--items'></ul>"; // limpar conteúdo, criar ul
     // criar elementos dentro da ul que representam o produto
     cart.children[1].children[1].innerHTML += "<li class='filled'>Fall Limited Edition Sneakers</li>";
-    cart.children[1].children[1].innerHTML += `<li class='filled'>$125.00 x ${itemsCart} <strong style='color: black'>$${125 * itemsCart}</strong></li>`;
+    cart.children[1].children[1].innerHTML += `<li class='filled'>$125.00 x ${itemsCart} <strong style='color: black'>$${125.00 * itemsCart}</strong></li>`;
 
     // criar elemento imagem para remover produto
     cart.children[1].innerHTML += "<img class='delet js-delete' alt='' src='images/icon-delete.svg'>";

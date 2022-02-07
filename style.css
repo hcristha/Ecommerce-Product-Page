@@ -264,17 +264,33 @@ div.product__img{
 }
 
 .product__info{
-    background-color: lightpink;
     padding: 0 20px;
 }
 
 .product__info h6{
     color: var(--color-btn);
+    font-size: 1rem;
+    padding: 20px 0;
+    margin: 0;
     text-transform: uppercase;
 }
 
 .product__info-title{
     font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.product__info-desc{
+    color: hsl(219, 9%, 45%);
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.product__price{
+    /*aqui! display*/
 }
 
 .product__amount img{

@@ -307,15 +307,9 @@ div.product__img{
     list-style-type: none;
     margin: 0;
 
-    /* display: flex;
+    display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center; */
-    display: grid;
-    grid-template: auto / 80px auto auto;/*aqui, como deixar 50% perto de 125?*/
-    justify-content: flex-start;
-    justify-items: space-between;
-    align-items: center;
+    justify-content: space-between;/*aqui! como deixar o 50% perto do outro?*/
 }
 
 .product__price li:nth-of-type(1){/*$125.00*/

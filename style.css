@@ -221,7 +221,7 @@ main.product{
 }
 
 .product{
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     box-sizing: border-box;
     overflow: hidden;
     max-width: 500px;
@@ -300,7 +300,7 @@ div.product__img{
 }
 
 .product__price{
-    background-color: lightcoral;
+    /* background-color: lightcoral; */
     box-sizing: border-box;
     height: 50px;
     padding: 0 20px;
@@ -309,7 +309,16 @@ div.product__img{
 
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;/*aqui! como deixar o 50% perto do outro?*/
+    justify-content: space-between;
+}
+
+.product__price div{
+    /* background-color: blue; */
+    width: 9rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 
 .product__price li:nth-of-type(1){/*$125.00*/
@@ -325,7 +334,7 @@ div.product__img{
     padding: 3px 7px;
 }
 
-.product__price li:nth-of-type(3){/*250.00*/
+.product__price li:nth-last-of-type(2){/*250.00*/
     color: hsl(220, 14%, 75%);
     font-size: 0.8rem;
     font-weight: 700;

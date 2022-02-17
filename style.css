@@ -342,7 +342,7 @@ div.product__img{
 }
 
 .product__amount{
-    padding: 0 40px;
+    padding: 0 40px 10px;
 
     display: grid;
     grid-template: auto / auto auto auto;
@@ -369,6 +369,20 @@ div.product__img{
     justify-content: center;
     align-items: center;
     grid-gap: 10px;
+}
+
+.product__add-cart svg{
+    width: 15px;
+    height: 15px;
+}
+
+.product__add-cart svg path{
+    fill: hsl(0, 0%, 100%);
+}
+
+.product__add-cart p{
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
 }
 
 .attribution { font-size: 11px; text-align: center; }

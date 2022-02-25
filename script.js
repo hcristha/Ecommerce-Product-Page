@@ -87,7 +87,10 @@ var cart = document.querySelector(".js-product__cart");
 var clickCart = 0; // contador de cliques do Cart
 
 // mudar cursor para elementos ativos
+let iconCart = document.querySelector(".js-header__options-cart"); // ícone do carrinho
 function cartEmpty(){ // função para carrinho vazio
+    iconCart.style.backgroundColor = "black"; // AQUI! Como deixar ícone do carrinho na cor preto?
+
     cart.children[1].innerHTML = "<ul class='product__cart-info--items' style='align-items: center; justify-content: center; padding: 0; height: 100%;'></ul>"; //limpa conteúdo, cria ul
     cart.children[1].children[0].innerHTML = "<li class='empty'>Your cart is empty.</li>"; // criar elemento dentro da ul para informar que está vazio
 

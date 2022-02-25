@@ -368,16 +368,13 @@ div.product__img{
     grid-template: auto / auto auto;
     justify-content: center;
     align-items: center;
-    grid-gap: 10px;
-}
-
-.product__add-cart svg{
-    width: 15px;
-    height: 15px;
+    grid-gap: 15px;
 }
 
 .product__add-cart svg path{
     fill: hsl(0, 0%, 100%);
+    width: 22px;
+    height: 20px;
 }
 
 .product__add-cart p{
@@ -385,5 +382,12 @@ div.product__img{
     font-weight: 700;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution { 
+    font-size: 0.8rem; 
+    text-align: center;
+    margin-top: 80px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}

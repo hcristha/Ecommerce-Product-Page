@@ -83,16 +83,21 @@ function addCart(){
     cartFilled();
 }
 
-var cart = document.querySelector(".js-product__cart");
-var clickCart = 0; // contador de cliques do Cart
 
+// mudar a cor do carrinho
 var iconCart = document.querySelector(".js-header__options-cart-path"); // ícone do carrinho
 if (itemsCart !== 0){
     iconCart.style.fill = "#69707D"; // se carrinho estiver cheio muda para cor cinza
 }
-// AQUI! qual abordagem melhor para mostrar carrinho da cor preta?
+else{
+    iconCart.style.fill = "#000000"; // se carrinho estiver vazio muda para cor preto
+}
+
+var cart = document.querySelector(".js-product__cart");
+var clickCart = 0; // contador de cliques do Cart
 
 function cartEmpty(){ // função para carrinho vazio
+    iconCart.style.fill = "#000000"; // se carrinho estiver vazio muda para cor preto
     cart.children[1].innerHTML = "<ul class='product__cart-info--items' style='align-items: center; justify-content: center; padding: 0; height: 100%;'></ul>"; //limpa conteúdo, cria ul
     cart.children[1].children[0].innerHTML = "<li class='empty'>Your cart is empty.</li>"; // criar elemento dentro da ul para informar que está vazio
 
@@ -100,6 +105,9 @@ function cartEmpty(){ // função para carrinho vazio
 }
 
 function cartFilled(){ // função para carrinho cheio
+    // AQUI, se o número for 0 não colocar emcima do ícone do carrinho
+    iconCart.style.fill = "#69707D"; // se carrinho estiver cheio muda para cor cinza
+
     if (numberCart == 0){
         numberCart.style.display = "none"; // esconder ícone acima do cart
     }
@@ -161,13 +169,11 @@ function showCart(){
     }
 }
 
-
 // imagens para função nextImg()
 var img = document.querySelector(".js-product__img-img"); // foto do produto
 var icons = document.querySelector(".js-product__img-icons"); // ícones de voltar e próxima
 
 var click = 1; // contador começa em 1
-
 function nextImg(){ // próxima imagem
     if (click >= 1 && click < 4){ // contador vai de 1 até 4
         click++; // incrementa

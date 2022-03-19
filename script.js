@@ -77,12 +77,14 @@ function decreaseAmount(){
 
 // função para adicionar item no carrinho
 function addCart(){
-    itemsCart = amountItem.innerText; // itens do carrinho recebe a quantidade escolhida pelo usuário, se o amountItem atualizar, atualiza também itemsCart na memória
-    numberCart.innerText = itemsCart; // atualiza número de itens dentro do cart
+    itemsCart = JSON.parse(amountItem.innerText); // itens do carrinho recebe a quantidade escolhida pelo usuário, se o amountItem atualizar, atualiza também itemsCart na memória
+    numberCart.innerText = itemsCart; // atualiza ícone do número de itens dentro do cart
+    if (itemsCart == 0){ // se número de ítens dentro do carrinho for 0
+        numberCart.style.display = "none"; // esconde ícone acima do carrinho
+        iconCart.style.fill = "#000000"; // muda a cor do ícone acima do carrinho para preto
+    }
     localStorage.setItem("itemsCart", itemsCart); // salva a nova quantidade de itens dentro do cart
-    console.log(itemsCart);
-    if (JSON.parse(itemsCart) !== 0){ // somente executar função de carrinho cheio se 'itemsCart' for diferente de 0
-        console.log(JSON.parse(itemsCart));
+    if (itemsCart !== 0){ // somente executar função de carrinho cheio se 'itemsCart' for diferente de 0
         cartFilled(); // função carrinho cheio
     }
 }
@@ -109,11 +111,9 @@ function cartEmpty(){ // função para carrinho vazio
 }
 
 function cartFilled(){ // função para carrinho cheio
-    console.log(JSON.parse(numberCart.innerText));
     iconCart.style.fill = "#69707D"; // se carrinho estiver cheio muda para cor cinza
 
-    console.log(numberCart); // AQUI! Bug, em vez de comparar número com número, comparei elemento com número '-'
-    if (numberCart !== 0){
+    if (itemsCart !== 0){
         numberCart.style.display = "block"; // mostrar ícone acima do cart
     }
 

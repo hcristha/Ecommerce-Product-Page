@@ -393,7 +393,7 @@ div.product__img{
     color: hsl(228, 45%, 44%); 
 }
 
-@media screen and (max-width: 312px){
+@media screen and (max-width: 375px){
     .header__options-cart--number{
         /* background-color: var(--color-btn);
         border-radius: 15px;

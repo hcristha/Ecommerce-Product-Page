@@ -200,6 +200,7 @@ main.product{
 .product__cart-info--items .filled{
     color: hsl(219, 9%, 45%);;
     text-align: left;
+    font-size: 1rem;
 }
 
 .product__cart-info .img{
@@ -407,5 +408,51 @@ div.product__img{
         position: absolute;
         top: 0;
         right: 0; */
+    }
+
+    .product__cart-info{
+        /* background-color: lightgreen;
+        height: 120px; */
+        /* font-size: 0.2rem; */
+
+        /* display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center; */
+    }
+    
+    .product__cart-info--items{
+        /* background-color: lightpink;
+        box-sizing: border-box;
+        width: calc(100% - 20px);
+        height: 65px;
+        margin: 0;
+        padding: 5px 0 5px 15px;
+        list-style-type: none;
+        text-align: center;
+        overflow: hidden;
+    
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: flex-start; */
+    }
+    
+    .product__cart-info--items .empty{
+        /* color: hsl(219, 9%, 45%);
+        font-weight: 700;
+        align-self: flex-end; */
+    }
+    
+    .product__cart-info--items .filled{
+        /* color: hsl(219, 9%, 45%);;
+        text-align: left; */
+        font-size: 13px;
+        /*AQUI! Testar essa propriedade no elemento pai para verificar se dá certo, pode ser o flexbox também que não permite diminuir o tamanho da fonte para o que queremos*/
+    }
+    
+    .product__cart-info .img{
+        /* border-radius: 5px;
+        height: 60px; */
     }
 }

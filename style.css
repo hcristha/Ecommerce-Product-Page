@@ -166,7 +166,7 @@ main.product{
 }
 
 .product__cart-info{
-    /* background-color: lightgreen; */
+    background-color: lightgreen;
     height: 120px;
     display: flex;
     flex-flow: row nowrap;
@@ -175,7 +175,7 @@ main.product{
 }
 
 .product__cart-info--items{
-    /* background-color: lightpink; */
+    background-color: lightpink;
     box-sizing: border-box;
     width: calc(100% - 20px);
     height: 65px;

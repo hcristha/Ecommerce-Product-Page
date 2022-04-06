@@ -55,7 +55,7 @@ if (itemsCart === null){
 
 // aumentar quantidade de itens
 function increaseAmount(){ // serve para exibir quantidade de itens temporária
-    if (c <= 19){ // contador soma até 20
+    if (c <= 8){ // contador soma até 9
         c += 1; // contador incrementa a cada clique
         amountItem.innerText = c; // atualizando quantidade de itens
 

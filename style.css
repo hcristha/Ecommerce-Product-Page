@@ -107,7 +107,7 @@ header{
     color: white;
     cursor: pointer;
     display: none;
-    font-size: 0.7rem;
+    font-size: 0.4rem;
     font-weight: 700;
     margin-right: 20px;
     padding: 1px 3px;
@@ -217,7 +217,7 @@ main.product{
     color:hsl(0, 0%, 100%);
     cursor: pointer;
     font-weight: 700;
-    padding: 20px calc(50% - 30px);
+    padding: 20px calc(50% - 35px);
 }
 
 .product{

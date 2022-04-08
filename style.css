@@ -168,6 +168,7 @@ main.product{
 .product__cart-info{
     background-color: lightgreen;
     height: 120px;
+
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -200,7 +201,6 @@ main.product{
 .product__cart-info--items .filled{
     color: hsl(219, 9%, 45%);;
     text-align: left;
-    font-size: 1rem;
 }
 
 .product__cart-info .img{
@@ -436,6 +436,7 @@ div.product__img{
         flex-flow: row wrap;
         align-items: flex-start;
         justify-content: flex-start; */
+        /* font-size: 0.3rem; */
     }
     
     .product__cart-info--items .empty{
@@ -447,7 +448,7 @@ div.product__img{
     .product__cart-info--items .filled{
         /* color: hsl(219, 9%, 45%);;
         text-align: left; */
-        font-size: 13px;
+        /* font-size: 4rem; */
         /*AQUI! Testar essa propriedade no elemento pai para verificar se dá certo, pode ser o flexbox também que não permite diminuir o tamanho da fonte para o que queremos*/
     }
     

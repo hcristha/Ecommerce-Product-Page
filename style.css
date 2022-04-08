@@ -434,7 +434,7 @@ div.product__img{
         display: flex;
         flex-flow: row wrap;
         align-items: flex-start;
-        justify-content: flex-start;
+        justify-content: flex-start;/*AQUI! Como deixar o texto no meio da imagem? product__price li:nth-of-type(1) sempre no final da div?(a partir de 362 width)*/
     }
     
     .product__cart-info--items .empty{

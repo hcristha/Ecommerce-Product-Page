@@ -176,7 +176,7 @@ main.product{
 }
 
 .product__cart-info--items{
-    /* background-color: lightpink; */
+    background-color: lightpink;
     box-sizing: border-box;
     width: calc(100% - 20px);
     height: 65px;
@@ -431,10 +431,10 @@ div.product__img{
         text-align: center;
         overflow: hidden; */
     
-        /* display: flex;
+        display: flex;
         flex-flow: row wrap;
         align-items: flex-start;
-        justify-content: flex-start; */
+        justify-content: flex-start;
     }
     
     .product__cart-info--items .empty{

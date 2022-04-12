@@ -1,3 +1,4 @@
+/*Mobile-first*/
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 :root{
@@ -226,7 +227,7 @@ main.product{
     /* background-color: lightgreen; */
     box-sizing: border-box;
     overflow: hidden;
-    max-width: 500px;
+    max-width: 470px;
 
     display: grid;
     grid-template: auto / auto;
@@ -394,12 +395,40 @@ div.product__img{
     color: hsl(228, 45%, 44%); 
 }
 
-@media screen and (max-width: 375px){
+@media screen and (max-width: 375px){ /*mobile-first, largura até 375px*/
     .header__options-cart--number{
         font-size: 0.7rem;
     }
     
     .product__cart-info--items{
         height: 85px;      
+    }
+}
+
+@media screen and (min-width: 840px){ /*desktop, largura de 840px e acima*/
+    nav{
+        display: block;/*AQUI! Como colocar as opções do NAV lado a lado?*/
+    }
+    
+    .menu__close{
+        cursor: pointer;
+    }
+    
+    .menu__links{
+        color: hsl(220, 13%, 13%);
+        font-weight: 700;
+        margin: 0;
+        padding: 0;
+        margin-top: 25px;
+        list-style-type: none;
+    }
+    
+    .menu__links a, .menu__links a:visited, .menu__links a:link{
+        text-decoration: none;
+        color: hsl(220, 13%, 13%);
+    }
+
+    .header__options-menu{
+        display: none;
     }
 }

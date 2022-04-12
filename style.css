@@ -176,7 +176,7 @@ main.product{
 }
 
 .product__cart-info--items{
-    background-color: lightpink;
+    /* background-color: lightpink; */
     box-sizing: border-box;
     width: calc(100% - 20px);
     height: 65px;
@@ -396,60 +396,10 @@ div.product__img{
 
 @media screen and (max-width: 375px){
     .header__options-cart--number{
-        /* background-color: var(--color-btn);
-        border-radius: 15px;
-        color: white;
-        cursor: pointer;
-        display: none; */
         font-size: 0.7rem;
-        /* font-weight: 700;
-        margin-right: 20px;
-        padding: 1px 3px;
-        position: absolute;
-        top: 0;
-        right: 0; */
-    }
-
-    .product__cart-info{
-        /* background-color: lightgreen;
-        height: 120px; */
-
-        /* display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: center; */
     }
     
     .product__cart-info--items{
-        /* background-color: lightpink;
-        box-sizing: border-box;
-        width: calc(100% - 20px); */
-        height: 85px;
-        /* margin: 0;
-        padding: 5px 0 5px 15px;
-        list-style-type: none;
-        text-align: center;
-        overflow: hidden; */
-    
-        display: flex;
-        flex-flow: row wrap;
-        align-items: flex-start;
-        justify-content: flex-start;/*AQUI! Como deixar o texto no meio da imagem? product__price li:nth-of-type(1) sempre no final da div?(a partir de 362 width)*/
-    }
-    
-    .product__cart-info--items .empty{
-        /* color: hsl(219, 9%, 45%);
-        font-weight: 700;
-        align-self: flex-end; */
-    }
-    
-    .product__cart-info--items .filled{
-        /* color: hsl(219, 9%, 45%);;
-        text-align: left; */
-    }
-    
-    .product__cart-info .img{
-        /* border-radius: 5px;
-        height: 60px; */
+        height: 85px;      
     }
 }

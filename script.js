@@ -81,7 +81,8 @@ function addCart(){
     numberCart.innerText = itemsCart; // atualiza ícone do número de itens dentro do cart
     if (itemsCart == 0){ // se número de ítens dentro do carrinho for 0
         numberCart.style.display = "none"; // esconde ícone acima do carrinho
-        iconCart.style.fill = "#000000"; // muda a cor do ícone acima do carrinho para preto
+        // iconCart.style.fill = "#000000"; // muda a cor do ícone acima do carrinho para preto
+        cartEmpty(); // função de carrrinho vazio
     }
     localStorage.setItem("itemsCart", itemsCart); // salva a nova quantidade de itens dentro do cart
     if (itemsCart !== 0){ // somente executar função de carrinho cheio se 'itemsCart' for diferente de 0

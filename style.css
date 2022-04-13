@@ -479,5 +479,6 @@ div.product__img{
         position: absolute;
         right: 0;
         z-index: 1;
+        /*AQUI! Continuar adaptando para desktop*/
     }
 }

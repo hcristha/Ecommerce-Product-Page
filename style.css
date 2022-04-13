@@ -140,9 +140,9 @@ header{
 }
 
 .product{
+    background-color: lightgreen;
     box-sizing: border-box;
     overflow: hidden;
-    width: 100%;
     max-width: 470px;
 
     display: grid;
@@ -451,5 +451,33 @@ div.product__img{
 
     .header__options-menu{
         display: none;
+    }
+
+    .product{
+        background-color: lightpink;
+        box-sizing: border-box;
+        overflow: hidden;
+        max-width: 100%;
+    
+        display: grid;
+        grid-template: auto / auto;
+    
+        position: relative;
+    }
+
+    .product__cart{
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 10px;
+        box-sizing: border-box;
+        box-shadow: 0 5px 15px 0 hsla(0, 100%, 2%, 0.316);
+        display: block;
+        margin: 10px;
+        padding: 20px;
+        width: 50%;
+        height: 250px;
+    
+        position: absolute;
+        right: 0;
+        z-index: 1;
     }
 }

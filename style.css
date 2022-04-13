@@ -419,7 +419,6 @@ div.product__img{
         position: absolute;
         top: 30px;
         left: 200px;
-        z-index: 2;
     }
     
     .menu__close{
@@ -429,7 +428,6 @@ div.product__img{
     
     .menu__links{
         /* background-color: hsl(167, 100%, 55%); */
-        color: hsl(26, 100%, 55%);
         font-weight: normal;
         margin: 0;
         padding: 0;
@@ -450,7 +448,6 @@ div.product__img{
     }
     
     li{
-        /* color: inherit; */
         margin-bottom: 0;
         height: 50px;
     }
@@ -464,4 +461,73 @@ div.product__img{
     .header__options-menu{
         display: none;
     }
+
+    .product__cart{
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 10px;
+        box-sizing: border-box;
+        box-shadow: 0 5px 15px 0 hsla(0, 100%, 2%, 0.316);
+        display: none;
+        margin: 10px;
+        padding: 20px;
+        width: calc(100% - 20px);
+        height: 250px;
+    
+        position: absolute;
+        z-index: 1;
+    }
+    
+    .product__cart h6{
+        margin: 0;
+        padding: 0;
+        font-size: 1rem;
+    }
+    
+    .product__cart-info{
+        /* background-color: lightgreen; */
+        height: 120px;
+    
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .product__cart-info--items{
+        /* background-color: lightpink; */
+        box-sizing: border-box;
+        width: calc(100% - 20px);
+        height: 65px;
+        margin: 0;
+        padding: 5px 0 5px 15px;
+        list-style-type: none;
+        text-align: center;
+        overflow: hidden;
+    
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .product__cart-info--items .empty{
+        color: hsl(219, 9%, 45%);
+        font-weight: 700;
+        align-self: flex-end;
+    }
+    
+    .product__cart-info--items .filled{
+        color: hsl(219, 9%, 45%);;
+        text-align: left;
+    }
+    
+    .product__cart-info .img{
+        border-radius: 5px;
+        height: 60px;
+    }
+    
+    .product__cart-info .delet{
+        cursor: pointer;
+    }
+    /*AQUI! Editar product__cart para desktop*/
 }

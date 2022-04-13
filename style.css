@@ -407,13 +407,15 @@ div.product__img{
 
 @media screen and (min-width: 840px){ /*desktop, largura de 840px e acima*/
     nav{
-        background-color: rgb(255, 255, 255);
+        /* background-color: rgb(168, 66, 66); */
         width: 400px;
         height: 20px;
         padding: 0;
         display: block;
     
         position: absolute;
+        top: 30px;
+        left: 200px;
         z-index: 2;
     }
     
@@ -423,9 +425,9 @@ div.product__img{
     }
     
     .menu__links{
-        background-color: lightpink;
-        color: hsl(220, 13%, 13%);
-        font-weight: 700;
+        /* background-color: lightpink; */
+        color: hsl(219, 9%, 45%);
+        font-weight: normal;
         margin: 0;
         padding: 0;
         margin-top: 0;
@@ -433,13 +435,19 @@ div.product__img{
 
         display: flex;
         flex-flow: row nowrap;
-        justify-content: space-evenly;/*AQUI! Como deixar as opções depois do logo?*/
+        justify-content: space-evenly;
     }
     
-    .menu__links a, .menu__links a:visited, .menu__links a:link{
-        text-decoration: none;
-        color: hsl(220, 13%, 13%);
+    .menu__links a, .menu__links a:visited{
+        color: hsl(219, 9%, 45%);
     }
+    
+    .menu__links a:visited, .menu__links a:link{
+        text-decoration: none;
+        /* color: hsl(220, 13%, 13%); */
+        /* color: hsl(219, 9%, 45%); */
+    }
+    /*como deixar os links nas cores corretas?*/
     
     li{
         margin-bottom: 0;

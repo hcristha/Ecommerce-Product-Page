@@ -407,25 +407,42 @@ div.product__img{
 
 @media screen and (min-width: 840px){ /*desktop, largura de 840px e acima*/
     nav{
-        display: block;/*AQUI! Como colocar as opções do NAV lado a lado?*/
+        background-color: rgb(255, 255, 255);
+        width: 400px;
+        height: 20px;
+        padding: 0;
+        display: block;
+    
+        position: absolute;
+        z-index: 2;
     }
     
     .menu__close{
         cursor: pointer;
+        display: none;
     }
     
     .menu__links{
+        background-color: lightpink;
         color: hsl(220, 13%, 13%);
         font-weight: 700;
         margin: 0;
         padding: 0;
-        margin-top: 25px;
+        margin-top: 0;
         list-style-type: none;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;/*AQUI! Como deixar as opções depois do logo?*/
     }
     
     .menu__links a, .menu__links a:visited, .menu__links a:link{
         text-decoration: none;
         color: hsl(220, 13%, 13%);
+    }
+    
+    li{
+        margin-bottom: 0;
     }
 
     .header__options-menu{

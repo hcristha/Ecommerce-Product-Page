@@ -139,11 +139,14 @@ header{
     border: solid 1px var(--color-btn);
 }
 
-main.product{
-    /* background-color: lightgreen; */
+.product{
     box-sizing: border-box;
     overflow: hidden;
     width: 100%;
+    max-width: 470px;
+
+    display: grid;
+    grid-template: auto / auto;
 
     position: relative;
 }
@@ -224,18 +227,6 @@ main.product{
     cursor: pointer;
     font-weight: 700;
     padding: 20px calc(50% - 35px);
-}
-
-.product{
-    /* background-color: lightgreen; */
-    box-sizing: border-box;
-    overflow: hidden;
-    max-width: 470px;
-
-    display: grid;
-    grid-template: auto / auto;
-    /* align-items: center;
-    justify-items: center; */
 }
 
 div.product__img{
@@ -461,73 +452,4 @@ div.product__img{
     .header__options-menu{
         display: none;
     }
-
-    .product__cart{
-        background-color: hsl(0, 0%, 100%);
-        border-radius: 10px;
-        box-sizing: border-box;
-        box-shadow: 0 5px 15px 0 hsla(0, 100%, 2%, 0.316);
-        display: none;
-        margin: 10px;
-        padding: 20px;
-        width: calc(100% - 20px);
-        height: 250px;
-    
-        position: absolute;
-        z-index: 1;
-    }
-    
-    .product__cart h6{
-        margin: 0;
-        padding: 0;
-        font-size: 1rem;
-    }
-    
-    .product__cart-info{
-        /* background-color: lightgreen; */
-        height: 120px;
-    
-        display: flex;
-        flex-flow: row nowrap;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .product__cart-info--items{
-        /* background-color: lightpink; */
-        box-sizing: border-box;
-        width: calc(100% - 20px);
-        height: 65px;
-        margin: 0;
-        padding: 5px 0 5px 15px;
-        list-style-type: none;
-        text-align: center;
-        overflow: hidden;
-    
-        display: flex;
-        flex-flow: row wrap;
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-    
-    .product__cart-info--items .empty{
-        color: hsl(219, 9%, 45%);
-        font-weight: 700;
-        align-self: flex-end;
-    }
-    
-    .product__cart-info--items .filled{
-        color: hsl(219, 9%, 45%);;
-        text-align: left;
-    }
-    
-    .product__cart-info .img{
-        border-radius: 5px;
-        height: 60px;
-    }
-    
-    .product__cart-info .delet{
-        cursor: pointer;
-    }
-    /*AQUI! Editar product__cart para desktop*/
 }

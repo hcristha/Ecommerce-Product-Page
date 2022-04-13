@@ -44,13 +44,16 @@ nav{
     cursor: pointer;
 }
 
-.menu__links, .menu__links a{
+.menu__links{
     color: hsl(220, 13%, 13%);
     font-weight: 700;
     margin: 0;
     padding: 0;
     margin-top: 25px;
     list-style-type: none;
+}
+
+.menu__links a{
     text-decoration: none;
 }
 
@@ -407,9 +410,9 @@ div.product__img{
 
 @media screen and (min-width: 840px){ /*desktop, largura de 840px e acima*/
     nav{
-        /* background-color: rgb(168, 66, 66); */
+        /* background-color: hsl(26, 100%, 55%); */
         width: 400px;
-        height: 20px;
+        height: 50px;
         padding: 0;
         display: block;
     
@@ -425,8 +428,8 @@ div.product__img{
     }
     
     .menu__links{
-        /* background-color: lightpink; */
-        color: hsl(219, 9%, 45%);
+        /* background-color: hsl(167, 100%, 55%); */
+        color: hsl(26, 100%, 55%);
         font-weight: normal;
         margin: 0;
         padding: 0;
@@ -439,17 +442,23 @@ div.product__img{
     }
     
     .menu__links a{
-        text-decoration: none;
         color: hsl(219, 9%, 45%);
     }
 
     .menu__links a:visited{
-        color: red;
+        color: hsl(220, 13%, 13%);
     }
-    /*como deixar os links na cor correta?*/
     
     li{
+        /* color: inherit; */
         margin-bottom: 0;
+        height: 50px;
+    }
+
+    li:active{
+        color: hsl(220, 13%, 13%);
+        box-sizing: border-box;
+        border-bottom: 5px solid hsl(26, 100%, 55%);
     }
 
     .header__options-menu{

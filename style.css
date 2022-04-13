@@ -44,17 +44,17 @@ nav{
     cursor: pointer;
 }
 
-.menu__links{
+.menu__links, .menu__links a{
     color: hsl(220, 13%, 13%);
     font-weight: 700;
     margin: 0;
     padding: 0;
     margin-top: 25px;
     list-style-type: none;
+    text-decoration: none;
 }
 
-.menu__links a, .menu__links a:visited, .menu__links a:link{
-    text-decoration: none;
+.menu__links a:visited{
     color: hsl(220, 13%, 13%);
 }
 
@@ -438,16 +438,15 @@ div.product__img{
         justify-content: space-evenly;
     }
     
-    .menu__links a, .menu__links a:visited{
+    .menu__links a{
+        text-decoration: none;
         color: hsl(219, 9%, 45%);
     }
-    
-    .menu__links a:visited, .menu__links a:link{
-        text-decoration: none;
-        /* color: hsl(220, 13%, 13%); */
-        /* color: hsl(219, 9%, 45%); */
+
+    .menu__links a:visited{
+        color: red;
     }
-    /*como deixar os links nas cores corretas?*/
+    /*como deixar os links na cor correta?*/
     
     li{
         margin-bottom: 0;

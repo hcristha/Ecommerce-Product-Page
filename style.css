@@ -11,7 +11,8 @@
 }
 
 body{
-    /*AQUI! Escolher um background img para transição mobile-desktop.*/
+    background-image: url(./images/amy-shamblen-F52I5BtDuhY-unsplash.jpg);
+    background-size: 500px;
     background-color: hsl(26, 100%, 55%);
     margin: 0;
     padding: 0;

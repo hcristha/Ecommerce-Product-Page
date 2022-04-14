@@ -140,10 +140,11 @@ header{
 }
 
 .product{
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     box-sizing: border-box;
     overflow: hidden;
-    max-width: 100%;
+    max-width: 475px;
+    margin: auto;
 
     display: grid;
     grid-template: auto / auto;
@@ -152,21 +153,22 @@ header{
 }
 
 .product__cart{
-    background-color: hsl(0, 0%, 100%);
+    background-color: white;
     border-radius: 10px;
     box-sizing: border-box;
     box-shadow: 0 5px 15px 0 hsla(0, 100%, 2%, 0.316);
-    display: none;
+
+    display: block;
+
     margin: 10px;
     padding: 20px;
-    max-width: 450px;
+    width: calc(100% - 20px);
     height: 250px;
 
     position: absolute;
     z-index: 1;
-
-    /*AQUI! Como transacionar entre os 2 modos? De mobile para desktop de uma maneira suave?*/
 }
+/*AQUI! Ajustar transição mobile-desktop!*/
 
 .product__cart h6{
     margin: 0;
@@ -187,7 +189,7 @@ header{
 .product__cart-info--items{
     /* background-color: lightpink; */
     box-sizing: border-box;
-    width: calc(100% - 20px);
+    width: 100%;
     height: 65px;
     margin: 0;
     padding: 5px 0 5px 15px;

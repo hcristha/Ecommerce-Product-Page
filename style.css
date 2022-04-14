@@ -143,7 +143,7 @@ header{
     background-color: lightgreen;
     box-sizing: border-box;
     overflow: hidden;
-    max-width: 470px;
+    max-width: 100%;
 
     display: grid;
     grid-template: auto / auto;
@@ -159,11 +159,13 @@ header{
     display: none;
     margin: 10px;
     padding: 20px;
-    width: calc(100% - 20px);
+    max-width: 450px;
     height: 250px;
 
     position: absolute;
     z-index: 1;
+
+    /*AQUI! Como transacionar entre os 2 modos? De mobile para desktop de uma maneira suave?*/
 }
 
 .product__cart h6{
@@ -399,7 +401,7 @@ div.product__img{
     }
 }
 
-@media screen and (min-width: 840px){ /*desktop, largura de 840px e acima*/
+@media screen and (min-width: 745px){ /*desktop, largura de 840px e acima*/
     nav{
         /* background-color: hsl(26, 100%, 55%); */
         width: 400px;
@@ -466,19 +468,18 @@ div.product__img{
     }
 
     .product__cart{
-        background-color: hsl(0, 0%, 100%);
+        /* background-color: hsl(0, 0%, 100%);
         border-radius: 10px;
         box-sizing: border-box;
-        box-shadow: 0 5px 15px 0 hsla(0, 100%, 2%, 0.316);
+        box-shadow: 0 5px 15px 0 hsla(0, 100%, 2%, 0.316); */
         display: block;
-        margin: 10px;
-        padding: 20px;
-        width: 50%;
-        height: 250px;
+        /* margin: 10px;
+        padding: 20px;*/
+        width: 450px;
+        /* height: 250px; */
     
-        position: absolute;
+        /* position: absolute; */
         right: 0;
-        z-index: 1;
-        /*AQUI! Continuar adaptando para desktop*/
+        /* z-index: 1; */
     }
 }

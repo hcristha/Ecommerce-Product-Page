@@ -202,7 +202,7 @@ hr{
 }
 
 .product__cart-info{
-    /* background-color: lightyellow; */
+    /* background-color: lightskyblue; */
     padding: 0 20px;
     height: 120px;
 
@@ -215,7 +215,7 @@ hr{
 .product__cart-info--items{
     /* background-color: lightblue; */
     box-sizing: border-box;
-    max-width: 80%;/*AQUI! Confirmar se o valor está adequado para a responsividade*/
+    max-width: 80%;
     height: 65px;
     margin: 0;
     padding: 5px 0 5px 15px;
@@ -427,9 +427,11 @@ div.product__img{
     .header-box__options-cart--number{
         font-size: 0.7rem;
     }
-    
-    .product__cart-info--items{
-        height: 85px;      
+}
+
+@media screen and (min-width: 481px){/*mobile para desktop, AQUI! checar se ordem está correta*/
+    .product{
+        background-color: lightcyan;
     }
 }
 
@@ -488,7 +490,7 @@ div.product__img{
     }
 
     .product{
-        /* background-color: lightpink; */
+        background-color: white;
         box-sizing: border-box;
         overflow: hidden;
         max-width: 100%;

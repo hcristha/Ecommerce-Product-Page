@@ -22,7 +22,7 @@ function showMenu(){
 
 // quantidade de itens
 var amountItem = document.querySelector(".product__amount-item");
-var numberCart = document.querySelector(".header__options-cart--number");
+var numberCart = document.querySelector(".header-box__options-cart--number");
 var c = 0; // contador de cliques começa em 0
 var amountItemPerma; // variável para salvar na memória do navegador a quantidade de itens escolhidas pelo usuário
 
@@ -92,7 +92,7 @@ function addCart(){
 
 
 // mudar a cor do carrinho
-var iconCart = document.querySelector(".js-header__options-cart-path"); // ícone do carrinho
+var iconCart = document.querySelector(".js-header-box__options-cart-path"); // ícone do carrinho
 if (itemsCart !== 0){
     iconCart.style.fill = "#69707D"; // se carrinho estiver cheio muda para cor cinza
 }

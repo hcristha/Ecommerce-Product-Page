@@ -230,10 +230,10 @@ hr{
 }
 
 .product__cart-info--items .empty{
-    background-color: lightpink;
+    /* background-color: lightpink; */
     color: hsl(219, 9%, 45%);
     font-weight: 700;
-    padding-bottom: 30px;/*AQUI! Tornando empty centralizado*/
+    padding-bottom: 25px;
     align-self: flex-end;
 }
 
@@ -488,7 +488,7 @@ div.product__img{
     }
 
     .product{
-        background-color: lightpink;
+        /* background-color: lightpink; */
         box-sizing: border-box;
         overflow: hidden;
         max-width: 100%;
@@ -500,7 +500,7 @@ div.product__img{
     }
 
     .product__cart{
-        background-color: lightcoral;
+        /* background-color: lightcoral; */
         border-radius: 10px;
         box-sizing: border-box;
         box-shadow: 0 5px 15px 0 hsla(0, 100%, 2%, 0.316);

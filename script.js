@@ -105,10 +105,10 @@ var clickCart = 0; // contador de cliques do Cart
 
 function cartEmpty(){ // função para carrinho vazio
     iconCart.style.fill = "#000000"; // se carrinho estiver vazio muda para cor preto
-    cart.children[1].innerHTML = "<ul class='product__cart-info--items' style='align-items: center; justify-content: center; padding: 0; height: 100%;'></ul>"; //limpa conteúdo, cria ul
-    cart.children[1].children[0].innerHTML = "<li class='empty'>Your cart is empty.</li>"; // criar elemento dentro da ul para informar que está vazio
+    cart.children[2].innerHTML = "<ul class='product__cart-info--items' style='align-items: center; justify-content: center; padding: 0; height: 100%;'></ul>"; //limpa conteúdo, cria ul
+    cart.children[2].children[0].innerHTML = "<li class='empty'>Your cart is empty.</li>"; // criar elemento dentro da ul para informar que está vazio
 
-    cart.children[2].style.display = "none"; // botão desaparece
+    cart.children[3].style.display = "none"; // botão desaparece
 }
 
 function cartFilled(){ // função para carrinho cheio
@@ -119,17 +119,17 @@ function cartFilled(){ // função para carrinho cheio
     }
 
     // criar elemento imagem do produto
-    cart.children[1].innerHTML = "<img class='img' alt='' src='images/image-product-1-thumbnail.jpg'>";
+    cart.children[2].innerHTML = "<img class='img' alt='' src='images/image-product-1-thumbnail.jpg'>";
 
-    cart.children[1].innerHTML += "<ul class='product__cart-info--items'></ul>"; // limpar conteúdo, criar ul
+    cart.children[2].innerHTML += "<ul class='product__cart-info--items'></ul>"; // limpar conteúdo, criar ul
     // criar elementos dentro da ul que representam o produto
-    cart.children[1].children[1].innerHTML += "<li class='filled'>Fall Limited Edition Sneakers</li>";
-    cart.children[1].children[1].innerHTML += `<li class='filled'>$125.00 x ${itemsCart} <strong style='color: black'>$${125.00 * itemsCart}</strong></li>`;
+    cart.children[2].children[1].innerHTML += "<li class='filled'>Fall Limited Edition Sneakers</li>";
+    cart.children[2].children[1].innerHTML += `<li class='filled'>$125.00 x ${itemsCart} <strong style='color: black'>$${125.00 * itemsCart}</strong></li>`;
 
     // criar elemento imagem para remover produto
-    cart.children[1].innerHTML += "<img class='delet js-delete' alt='' src='images/icon-delete.svg'>";
+    cart.children[2].innerHTML += "<img class='delet js-delete' alt='' src='images/icon-delete.svg'>";
 
-    cart.children[2].style.display = "block"; // botão aparecer
+    cart.children[3].style.display = "block"; // botão aparecer
     // numberCart.style.display = "block";
 
     // deletar o produto

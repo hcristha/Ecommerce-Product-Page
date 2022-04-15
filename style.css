@@ -202,7 +202,7 @@ hr{
 }
 
 .product__cart-info{
-    /* background-color: lightgreen; */
+    /* background-color: lightyellow; */
     padding: 0 20px;
     height: 120px;
 
@@ -215,7 +215,7 @@ hr{
 .product__cart-info--items{
     /* background-color: lightblue; */
     box-sizing: border-box;
-    width: 100%;
+    max-width: 80%;/*AQUI! Confirmar se o valor está adequado para a responsividade*/
     height: 65px;
     margin: 0;
     padding: 5px 0 5px 15px;

@@ -203,7 +203,7 @@ hr{
 
 .product__cart-info{
     /* background-color: lightgreen; */
-    padding: 0 20px;/*AQUI! Como será feito o padding do button?*/
+    padding: 0 20px;
     height: 120px;
 
     display: flex;
@@ -256,7 +256,9 @@ hr{
     color:hsl(0, 0%, 100%);
     cursor: pointer;
     font-weight: 700;
-    padding: 20px calc(50% - 35px);
+    width: calc(100% - 40px);
+    padding: 15px 0;
+    margin: 0 20px;
 }
 
 div.product__img{
@@ -419,7 +421,7 @@ div.product__img{
     color: hsl(228, 45%, 44%); 
 }
 
-@media screen and (max-width: 375px){ /*mobile-first, largura até 375px*/
+@media screen and (max-width: 374px){ /*mobile-first, largura até 375px*/
     .header-box__options-cart--number{
         font-size: 0.7rem;
     }
@@ -496,10 +498,10 @@ div.product__img{
     }
 
     .product__cart{
-        /* background-color: hsl(0, 0%, 100%);
+        background-color: lightcoral;
         border-radius: 10px;
         box-sizing: border-box;
-        box-shadow: 0 5px 15px 0 hsla(0, 100%, 2%, 0.316); */
+        box-shadow: 0 5px 15px 0 hsla(0, 100%, 2%, 0.316);
         display: block;
         /* margin: 10px;
         padding: 20px;*/
@@ -512,19 +514,19 @@ div.product__img{
     }
 
     .product__cart-info--items{
-        /* background-color: lightpink; */
-        /* box-sizing: border-box;
-        width: 100%; */
-        height: 75px;
+        background-color: lightpink;
+        /* box-sizing: border-box;*/
+        width: 70%;
+        height: 80px;
         /* margin: 0;
         padding: 5px 0 5px 15px;
         list-style-type: none;
         text-align: center;
         overflow: hidden; */
     
-        /* display: flex;
-        flex-flow: row wrap;
+        display: flex;
+        flex-flow: column wrap;
         align-items: flex-start;
-        justify-content: flex-start; */
+        justify-content: flex-start;/*AQUI! Como juntar o nome do product com o preço?*/
     }
 }

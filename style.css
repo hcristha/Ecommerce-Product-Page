@@ -54,7 +54,7 @@ nav{
 }
 
 .menu__links a{
-    color: hsl(220, 13%, 13%);/*AQUI! Corrigindo cor*/
+    color: hsl(220, 13%, 13%);
     text-decoration: none;
 }
 
@@ -459,7 +459,7 @@ div.product__img{
     
     li{
         margin-bottom: 0;
-        height: 50px;
+        height: 55px;
     }
 
     li:active{

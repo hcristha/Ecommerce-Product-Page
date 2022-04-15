@@ -62,7 +62,7 @@ nav{
     color: hsl(220, 13%, 13%);
 }
 
-li{
+.menu__links a li{
     margin-bottom: 15px;
 }
 
@@ -470,12 +470,12 @@ div.product__img{
         color: hsl(220, 13%, 13%);
     }
     
-    li{
+    .menu__links a li{
         margin-bottom: 0;
         height: 55px;
     }
 
-    li:active{
+    .menu__links a li:active{
         color: hsl(220, 13%, 13%);
         box-sizing: border-box;
         border-bottom: 5px solid hsl(26, 100%, 55%);
@@ -514,9 +514,9 @@ div.product__img{
     }
 
     .product__cart-info--items{
-        background-color: lightpink;
-        /* box-sizing: border-box;*/
-        width: 70%;
+        /* background-color: lightpink; */
+        /* box-sizing: border-box;
+        width: 100%; */
         height: 80px;
         /* margin: 0;
         padding: 5px 0 5px 15px;
@@ -525,8 +525,8 @@ div.product__img{
         overflow: hidden; */
     
         display: flex;
-        flex-flow: column wrap;
-        align-items: flex-start;
-        justify-content: flex-start;/*AQUI! Como juntar o nome do product com o preço?*/
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: flex-start;/*AQUI! Como tornar o nome do produto e o preço com um pequeno espaço no meio?*/
     }
 }

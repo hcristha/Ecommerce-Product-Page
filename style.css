@@ -436,6 +436,10 @@ div.product__img{
 }
 
 @media screen and (min-width: 745px){ /*desktop, largura de 745px e acima*/
+    .menu__box{
+        display: none;
+    }
+
     nav{
         /* background-color: hsl(26, 100%, 55%); */
         width: 400px;

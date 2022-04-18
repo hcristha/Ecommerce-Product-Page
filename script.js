@@ -1,29 +1,28 @@
-// AQUI! se o width da tela for menor que 745px
-if (screen.width < 745){
-    console.log("Zap!");
-}
-
 // mostrar menu
-function showMenu(){    
-    let menu = document.querySelector(".js-menu");
-    let box = document.querySelector(".js-menu__box");
-    menu.style.display = "block";
-    box.style.display = "block";
+let menu = document.querySelector(".js-menu");
+let box = document.querySelector(".js-menu__box");
+function showMenu(){
+        menu.style.display = "block";
+        box.style.display = "block";
 
-    // se clicar no "x" dentro do menu, vai fechar menu e box
-    let close = document.querySelector(".menu__close");
-    close.addEventListener("click", function(){
-        menu.style.display = "none";
-        box.style.display = "none";
-    });
+        // se clicar no "x" dentro do menu, vai fechar menu e box
+        let close = document.querySelector(".menu__close");
+        close.addEventListener("click", function(){
+            menu.style.display = "none";
+            box.style.display = "none";
+        });
 
-    // se clicar fora do menu, ou seja, no box transparente, vai fechar tanto menu quanto box
-    box.addEventListener("click", function(){
-        menu.style.display = "none";
-        box.style.display = "none";
-    });
+        // se clicar fora do menu, ou seja, no box transparente, vai fechar tanto menu quanto box
+        box.addEventListener("click", function(){
+            // se a largura da tela for menor que 745px
+            if (screen.width < 745){
+                menu.style.display = "none";
+                box.style.display = "none";
+            }
+        });
 }
 
+// se screen.width estiver > 745px e como display block tornar como display none;
 
 // quantidade de itens
 var amountItem = document.querySelector(".product__amount-item");

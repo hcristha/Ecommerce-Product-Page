@@ -1,5 +1,10 @@
+// AQUI! se o width da tela for menor que 745px
+if (screen.width < 745){
+    console.log("Zap!");
+}
+
 // mostrar menu
-function showMenu(){
+function showMenu(){    
     let menu = document.querySelector(".js-menu");
     let box = document.querySelector(".js-menu__box");
     menu.style.display = "block";

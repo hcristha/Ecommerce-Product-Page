@@ -2,20 +2,21 @@
 let menu = document.querySelector(".js-menu");
 let box = document.querySelector(".js-menu__box");
 
-// quando clica no "menu-box" e a tela estiver igual ou maior a 745px vira display none
-// quando clica no "menu-box" e a tela estiver abaixo de 745px vira display none menu-box e nav
-// box.onclick = function(){
-//     if (screen.width >= 745){
+// verificação 24h
+// quando a screen.width aumenta para >= 745 o box se torna display none
+// quando a screen.width diminui para < 745 o box e o menu se tornam display block
+// function screen(){
+//     if (screen.width >= 745){ // pc
 //         box.style.display = "none";
 //     }
-//     else if (screen.width < 745){
-//         box.style.display = "none";
-//         menu.style.display = "none";
-//     }
-//     console.log("Teste");
+//     else if (screen.width < 745){ // cel
+//         box.style.display = "block";
+//         menu.style.display = "block";
+//     }    
 // }
+// AQUI! screen() em conflito com showMenu()
 
-function showMenu(){
+function showMenu(){ // mobile
         menu.style.display = "block";
         box.style.display = "block";
 
@@ -28,21 +29,12 @@ function showMenu(){
 
         // quando clicar fora do menu, ou seja, no box transparente, vai fechar tanto menu quanto box
         box.addEventListener("click", function(){
-            // // se a largura da tela for menor que 745px
-            // if (screen.width < 745){
-            //     menu.style.display = "none";
-            //     box.style.display = "none";
-            // }
-            // else{box.style.display = "none";}
-            if (screen.width >= 745){
-                box.style.display = "none";
-            }
-            else if (screen.width < 745){
-                box.style.display = "none";
+            // se a largura da tela for menor que 745px
+            if (screen.width < 745){
                 menu.style.display = "none";
+                box.style.display = "none";
             }
-            console.log("Teste");
-            // AQUI! Criar Evento baseado na screen.width!
+            else{box.style.display = "none";}
         });
 }
 

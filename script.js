@@ -1,25 +1,7 @@
-var tela = screen.width;
-console.log(tela);
-if (screen.width == 745){
-    console.log("Teste");
-}
-// QUANDO screen.width estiver > 745px e box como display block tornar como display none;
-
 // mostrar menu
 let menu = document.querySelector(".js-menu");
 let box = document.querySelector(".js-menu__box");
-
-function screen(){
-    if (screen.width < 745){
-        box.style.display = "block";
-    }
-    if (screen.width >= 745){
-        box.style.display = "none";
-    }
-}
-
 function showMenu(){
-        screen();
         menu.style.display = "block";
         box.style.display = "block";
 
@@ -33,11 +15,11 @@ function showMenu(){
         // quando clicar fora do menu, ou seja, no box transparente, vai fechar tanto menu quanto box
         box.addEventListener("click", function(){
             // se a largura da tela for menor que 745px
-            // if (screen.width < 745){
+            if (screen.width < 745){
                 menu.style.display = "none";
                 box.style.display = "none";
-            // }
-            // else{box.style.display = "none";}
+            }
+            else{box.style.display = "none";}
         });
 }
 

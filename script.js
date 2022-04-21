@@ -7,17 +7,14 @@ let options = document.querySelector(".js-header-box__options-menu");
 // basear-se na screen.width para fixar comportamento independente de mobile
 // quando screen.width for >= 745 box terá display none e menu display block
 // O QUE É QUANDO EM JS? IF?
-
-
-if (screen.width >= 745){ // pc
-    box.style.display = "none";
-    menu.style.display = "block";
-    console.log("verify");
-}  
-else{
-    function showMenu(){ // mobile
-                box.style.display = "block";
-                menu.style.display = "block";
+// AQUI! Como desaparecer o box no desktop / aparecer só no mobile?
+ 
+if (screen.width < 745){// 744px abaixo, mobile
+    console.log("w");
+    options.onclick = function(){ // mobile
+        console.log("h");
+        box.style.display = "block";
+        menu.style.display = "block";
 
         // quando clicar no "x" dentro do menu, vai fechar menu e box
         let close = document.querySelector(".menu__close");
@@ -28,13 +25,15 @@ else{
 
         // quando clicar fora do menu, ou seja, no box transparente, vai fechar tanto menu quanto box
         box.addEventListener("click", function(){
-                menu.style.display = "none";
-                box.style.display = "none";
-                if (screen.width >= 745){menu.style.display = "block";};
-                // AQUI! Como desaparecer o box no desktop e aparecer só no mobile?
+            menu.style.display = "none";
+            box.style.display = "none";
         });
     }
 }
+else{ // 745px acima, pc
+    console.log("y");
+    box.style.display = "none";
+} 
 
 // quantidade de itens
 var amountItem = document.querySelector(".product__amount-item");
@@ -117,7 +116,6 @@ else{
 }
 
 var cart = document.querySelector(".js-product__cart");
-var clickCart = 0; // contador de cliques do Cart
 
 function cartEmpty(){ // função para carrinho vazio
     iconCart.style.fill = "#000000"; // se carrinho estiver vazio muda para cor preto
@@ -159,6 +157,8 @@ function cartFilled(){ // função para carrinho cheio
         numberCart.style.display = "none"; // mostrar último número de itens como ícone acima do cart
     }
 }
+
+var clickCart = 0; // contador de cliques do Cart
 
 //mostrar carrinho
 function showCart(){

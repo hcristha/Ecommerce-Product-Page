@@ -1,12 +1,23 @@
 // mostrar menu
 let menu = document.querySelector(".js-menu");
 let box = document.querySelector(".js-menu__box");
+let options = document.querySelector(".js-header-box__options-menu");
 
-function showMenu(){ // mobile
-        if (screen.width < 745){ // se a largura de tela for menor que 745
+// D E S K T O P
+// basear-se na screen.width para fixar comportamento independente de mobile
+// quando screen.width for >= 745 box terá display none e menu display block
+// O QUE É QUANDO EM JS? IF?
+
+
+if (screen.width >= 745){ // pc
+    box.style.display = "none";
+    menu.style.display = "block";
+    console.log("verify");
+}  
+else{
+    function showMenu(){ // mobile
                 box.style.display = "block";
                 menu.style.display = "block";
-        } 
 
         // quando clicar no "x" dentro do menu, vai fechar menu e box
         let close = document.querySelector(".menu__close");
@@ -17,25 +28,13 @@ function showMenu(){ // mobile
 
         // quando clicar fora do menu, ou seja, no box transparente, vai fechar tanto menu quanto box
         box.addEventListener("click", function(){
-            // se a largura da tela for menor que 745px
-            if (screen.width < 745){ // se a largura de tela for menor que 745
                 menu.style.display = "none";
                 box.style.display = "none";
-            }
-            else{box.style.display = "none";}
+                if (screen.width >= 745){menu.style.display = "block";};
+                // AQUI! Como desaparecer o box no desktop e aparecer só no mobile?
         });
-}
-
-// D E S K T O P
-// basear-se na screen.width para fixar comportamento independente de mobile
-// quando screen.width for >= 745 box terá display none e menu display block
-// O QUE É QUANDO EM JS? IF?
-// function screen(){
-    if (screen.width >= 745){ // pc
-        box.style.display = "none";
-        menu.style.display = "block";
     }
-// }
+}
 
 // quantidade de itens
 var amountItem = document.querySelector(".product__amount-item");

@@ -33,6 +33,7 @@ if (screen.width < 745){// 744px abaixo, mobile
 else{ // 745px acima, pc
     console.log("y");
     box.style.display = "none";
+    console.log("x");
 } 
 
 // quantidade de itens

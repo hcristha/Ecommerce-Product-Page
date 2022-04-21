@@ -2,23 +2,11 @@
 let menu = document.querySelector(".js-menu");
 let box = document.querySelector(".js-menu__box");
 
-// verificação 24h
-// quando a screen.width aumenta para >= 745 o box se torna display none
-// quando a screen.width diminui para < 745 o box e o menu se tornam display block
-// function screen(){
-//     if (screen.width >= 745){ // pc
-//         box.style.display = "none";
-//     }
-//     else if (screen.width < 745){ // cel
-//         box.style.display = "block";
-//         menu.style.display = "block";
-//     }    
-// }
-// AQUI! screen() em conflito com showMenu()
-
 function showMenu(){ // mobile
-        menu.style.display = "block";
-        box.style.display = "block";
+        if (screen.width < 745){ // se a largura de tela for menor que 745
+                box.style.display = "block";
+                menu.style.display = "block";
+        } 
 
         // quando clicar no "x" dentro do menu, vai fechar menu e box
         let close = document.querySelector(".menu__close");
@@ -30,13 +18,24 @@ function showMenu(){ // mobile
         // quando clicar fora do menu, ou seja, no box transparente, vai fechar tanto menu quanto box
         box.addEventListener("click", function(){
             // se a largura da tela for menor que 745px
-            if (screen.width < 745){
+            if (screen.width < 745){ // se a largura de tela for menor que 745
                 menu.style.display = "none";
                 box.style.display = "none";
             }
             else{box.style.display = "none";}
         });
 }
+
+// D E S K T O P
+// basear-se na screen.width para fixar comportamento independente de mobile
+// quando screen.width for >= 745 box terá display none e menu display block
+// O QUE É QUANDO EM JS? IF?
+// function screen(){
+    if (screen.width >= 745){ // pc
+        box.style.display = "none";
+        menu.style.display = "block";
+    }
+// }
 
 // quantidade de itens
 var amountItem = document.querySelector(".product__amount-item");

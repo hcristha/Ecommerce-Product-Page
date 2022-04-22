@@ -29,7 +29,7 @@ body{
     z-index: 2;
 }
 
-/* nav{
+nav{
     background-color: hsl(0, 0%, 100%);
     width: 200px;
     height: 100%;
@@ -37,74 +37,6 @@ body{
     display: none;
 
     position: absolute;
-    left: 0;
-    z-index: 2;
-} */
-
-/* .menu__close{
-    cursor: pointer;
-}
-
-.menu__links{
-    color: hsl(220, 13%, 13%);
-    font-weight: 700;
-    margin: 0;
-    padding: 0;
-    margin-top: 25px;
-    list-style-type: none;
-}
-
-.menu__links a{
-    color: hsl(220, 13%, 13%);
-    text-decoration: none;
-}
-
-.menu__links a:visited{
-    color: hsl(220, 13%, 13%);
-}
-
-.menu__links a li{
-    margin-bottom: 15px;
-} */
-
-header{
-    background-color: hsl(0, 0%, 100%);
-}
-
-.header-box{
-    background-color: hsl(0, 0%, 100%);
-    box-sizing: border-box;
-    width: 100%;
-    height: 80px;
-    padding: 10px 0;
-
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-
-    position: relative;
-}
-
-.header-box__options{
-    /* background-color: lightgray; */
-    width: 100%;
-
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-
-    position: relative;
-}
-
-nav{
-    background-color: hsl(0, 0%, 100%);
-    width: 200px;
-    height: 100vh;/*AQUI! Nav dentro ou fora de header?*/
-    padding: 30px;
-    display: none;
-
-    position: absolute;
-    left: 0;
     z-index: 2;
 }
 
@@ -132,6 +64,35 @@ nav{
 
 .menu__links a li{
     margin-bottom: 15px;
+}
+
+header{
+    background-color: hsl(0, 0%, 100%);
+}
+
+.header-box{
+    background-color: hsl(0, 0%, 100%);
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    padding: 10px 25px;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.header-box__options{
+    /* background-color: lightgray; */
+    width: 100%;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    position: relative;
 }
 
 .header-box__options-menu{
@@ -480,37 +441,17 @@ div.product__img{
     }
 
     nav{
-        background-color: hsl(26, 100%, 55%);
+        /* background-color: hsl(26, 100%, 55%); */
         width: 400px;
         height: 50px;
         padding: 0;
         display: block;
     
-        /* position: absolute;
+        position: absolute;
         top: 30px;
-        left: 200px; */
+        left: 200px;
     }
     
-    header{
-        /* background-color: lightblue; */
-        /* margin: 0 2rem; */
-    }
-
-    .header-box{
-        background-color: lightskyblue;
-        padding: 0 7rem;
-        /* box-sizing: border-box;
-        width: 100%;
-        height: 80px;
-        padding: 10px 25px;
-    
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-    
-        position: relative; */
-    }
-
     .menu__close{
         cursor: pointer;
         display: none;
@@ -548,8 +489,43 @@ div.product__img{
         border-bottom: 5px solid hsl(26, 100%, 55%);
     }
 
+    header{
+        /* background-color: lightblue; */
+        /* margin: 0 2rem; */
+    }
+
+    .header-box{
+        /* background-color: lightskyblue; */
+        padding: 0 3.8rem;
+        /* box-sizing: border-box;
+        width: 100%;
+        height: 80px;
+        padding: 10px 25px;
+    
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    
+        position: relative; */
+    }
+
     .header-box__options-menu{
         display: none;
+    }
+
+    .header-box__options-cart--number{
+        /* background-color: var(--color-btn);
+        border-radius: 15px;
+        color: hsl(0, 0%, 100%);
+        cursor: pointer;
+        display: none; */
+        font-size: 0.9rem;
+        /* font-weight: 700;
+        margin-right: 20px;
+        padding: 1px 3px;
+        position: absolute;
+        top: 0;
+        right: 0; */
     }
 
     .product{
@@ -595,5 +571,48 @@ div.product__img{
         flex-flow: row wrap;
         align-items: center;
         justify-content: flex-start;
+    }
+    /*AQUI! Transformar imagem para desktop!*/
+    div.product__img{
+        width: 100%;
+        height: 300px;
+    
+        position: relative;
+        
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .product__img img{
+        width: 100%;
+        height: 100%;
+    
+        position: absolute;
+    }
+    
+    .product__img-icons{
+        width: calc(100% - 20px);
+        height: inherit;
+        padding: 0 15px;
+    
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: space-between;
+    }
+    
+    .product__img-icons img{
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 50%;
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
+        padding: 15px;
+    }
+    
+    .product__img-icons img:nth-of-type(2){
+        align-self: flex-end;
     }
 }

@@ -576,22 +576,33 @@ div.product__img{
     }
     /*AQUI! Transformar imagem para desktop!*/
     div.product__img{
-        width: 100%;
-        height: 500px;
+        width: 600px;
+        height: 600px;
+        padding: 20px;
     
-        position: relative;
+        /* position: relative; */
+        /*AQUI! Comentar todas os códigos iguais ao mobile. PENSAR como o layout desktop pode se aproveitar do layout mobile.*/
         
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         align-items: flex-start;
         justify-content: flex-start;
     }
     
-    .product__img img{
-        width: 300px;
+    .product__img .desktop-main{
+        border-radius: 5%;
+        width: 100%;
         height: 100%;
     
-        position: absolute;
+        position: static;
+    }
+
+    .product__img .desktop{
+        border-radius: 5%;
+        width: 100px;
+        height: 100px;
+
+        position: static;
     }
     
     .product__img-icons{    

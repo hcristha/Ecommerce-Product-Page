@@ -453,17 +453,17 @@ div.product__img{
     }
     
     .menu__close{
-        cursor: pointer;
+        /* cursor: pointer; */
         display: none;
     }
     
     .menu__links{
         /* background-color: hsl(167, 100%, 55%); */
         font-weight: normal;
-        margin: 0;
-        padding: 0;
+        /* margin: 0;
+        padding: 0; */
         margin-top: 0;
-        list-style-type: none;
+        /* list-style-type: none; */
 
         display: flex;
         flex-flow: row nowrap;
@@ -475,7 +475,7 @@ div.product__img{
     }
 
     .menu__links a:visited{
-        color: hsl(220, 13%, 13%);
+        /* color: hsl(220, 13%, 13%); */
     }
     
     .menu__links a li{
@@ -539,15 +539,15 @@ div.product__img{
         grid-gap: 100px;
         /*AQUI! Adaptar para desktop! Vou revisar Grid, volto amanhã!*/
     
-        position: relative;
+        /* position: relative; */
     }
 
     .product__cart{
         /* background-color: lightcoral; */
-        border-radius: 10px;
+
+        /* border-radius: 10px;
         box-sizing: border-box;
         box-shadow: 0 5px 15px 0 hsla(0, 100%, 2%, 0.316);
-        display: none;
         /* margin: 10px;
         padding: 20px;*/
         width: 350px;
@@ -574,7 +574,7 @@ div.product__img{
         align-items: center;
         justify-content: flex-start;
     }
-    /*AQUI! Transformar imagem para desktop!*/
+
     div.product__img{
         width: 600px;
         height: 600px;
@@ -611,16 +611,8 @@ div.product__img{
 
     .product__info{
         background-color: lightskyblue;
-        padding: 0 20px;
+        /* padding: 0 20px; */
         height: 220px;
-    }
-    
-    .product__info h6{
-        color: var(--color-btn);
-        font-size: 1rem;
-        padding: 20px 0;
-        margin: 0;
-        text-transform: uppercase;
     }
     
     .product__info-title{
@@ -639,14 +631,15 @@ div.product__img{
     
     .product__price{
         background-color: lightcoral;
-        box-sizing: border-box;
-        height: 40px;
+        /* box-sizing: border-box; */
+        height: 60px;
         padding: 0 20px;
-        list-style-type: none;
+        /* list-style-type: none; */
         margin: 0;
+        max-width: 200px;
     
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         justify-content: space-between;
     }
     
@@ -707,6 +700,182 @@ div.product__img{
         justify-content: center;
         align-items: center;
         grid-gap: 15px;
+    }
+    
+    .product__add-cart svg path{
+        fill: hsl(0, 0%, 100%);
+        width: 22px;
+        height: 20px;
+    }
+    
+    .product__add-cart p{
+        color: hsl(0, 0%, 100%);
+        font-weight: 700;
+    }
+
+}
+
+@media screen and (min-width: 1440px){/*desktop, largura de 1440px e acima*/
+    .product{
+        /* background-color: hsl(0, 0%, 100%);
+        box-sizing: border-box;
+        overflow: hidden; */
+        max-width: 100%;
+    
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-items: center;
+        /*AQUI! Como fazer product__price, product__amount e product__add ir para baixo de product__info?/
+    
+        /* position: relative; */
+    }
+
+    .product__cart{
+        /* background-color: lightcoral; */
+
+        /* border-radius: 10px;
+        box-sizing: border-box;
+        box-shadow: 0 5px 15px 0 hsla(0, 100%, 2%, 0.316);
+        display: none; */
+        /* margin: 10px;
+        padding: 20px;*/
+        width: 350px;
+        /* height: 250px; */
+    
+        /* position: absolute; */
+        right: 0;
+        /* z-index: 1; */
+    }
+
+    .product__cart-info--items{
+        /* background-color: lightpink; */
+        /* box-sizing: border-box;
+        width: 100%; */
+        height: 80px;
+        /* margin: 0;
+        padding: 5px 0 5px 15px;
+        list-style-type: none;
+        text-align: center;
+        overflow: hidden; */
+    
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    div.product__img{
+        width: 600px;
+        height: 600px;
+        padding: 20px;
+    
+        /* position: relative; */
+        /*AQUI! Comentar todas os códigos iguais ao mobile. PENSAR como o layout desktop pode se aproveitar do layout mobile.*/
+        
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+    
+    .product__img .desktop-main{
+        border-radius: 5%;
+        width: 100%;
+        height: 100%;
+    
+        position: static;
+    }
+
+    .product__img .desktop{
+        border-radius: 5%;
+        width: 100px;
+        height: 100px;
+
+        position: static;
+    }
+    
+    .product__img-icons{    
+        display: none;
+    }
+
+    .product__info{
+        background-color: lightskyblue;
+        /* padding: 0 20px; */
+        height: 220px;
+        max-width: 500px;
+    }
+    
+    .product__info-title{
+        font-size: 2rem;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .product__info-desc{
+        color: hsl(219, 9%, 45%);
+        font-size: 0.9rem;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .product__price{
+        background-color: lightcoral;
+        /* box-sizing: border-box; */
+        height: 60px;
+        padding: 0 20px;
+        /* list-style-type: none; */
+        margin: 0;
+        max-width: 200px;
+    
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    
+    .product__price div{
+        width: 9rem;
+    
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+    
+    .product__price li:nth-of-type(1){/*$125.00*/
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+    
+    .product__price li:nth-of-type(2){/*50%*/
+        color:hsl(26, 100%, 55%);
+        background-color: hsl(25, 100%, 94%);
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 2px 7px;
+    }
+    
+    .product__price > li:nth-of-type(1){/*250.00*/
+        color: hsl(220, 14%, 75%);
+        font-size: 1rem;
+        font-weight: 700;
+        text-decoration: line-through;
+    }
+    
+    .product__amount{
+        background-color: lightpink;
+        /* padding: 0 40px 10px; */
+        max-width: 200px;
+    }
+        
+    .product__amount p{
+        font-weight: 700;
+    }
+    
+    .product__add-cart{
+        border-radius: 10px;
+        margin: 0 20px;
+        max-width: 300px;
     }
     
     .product__add-cart svg path{

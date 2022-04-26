@@ -804,13 +804,15 @@ div.product__img{
     }
 
     .product__info{
-        background-color: lightgreen;
+        /* background-color: lightgreen; */
         width: 450px;
 
         display: grid;
-        grid-template-areas: "a1 a1"
+        /* grid-template-areas: "a1 a1"
                              "a2 a2"
-                             "a3 a4";
+                             "a3 a4"; */
+        grid-template: auto auto auto / 35% auto;
+        /*AQUI! Ajustar tamanho de amount!*/
     }
 
     .product__info--about{
@@ -819,7 +821,9 @@ div.product__img{
         height: 280px;
         max-width: 100%;
 
-        grid-area: a1;
+        grid-column-start: 1;
+        grid-column-end: 3;
+
     }
     
     .product__info--about-title{
@@ -851,7 +855,7 @@ div.product__img{
         flex-flow: row wrap;
         justify-content: space-between;
 
-        grid-area: a2;
+        grid-row-start: 2;
     }
     
     .product__info--price div{
@@ -895,8 +899,7 @@ div.product__img{
         /* display: flex;
         flex-flow: row nowrap;
         justify-items: space-between; */
-        grid-area: a3;
-
+        grid-row-start: 3;
     }
         
     .product__info--amount p{
@@ -908,8 +911,7 @@ div.product__img{
         margin: 0;
         width: 100%;
 
-        grid-area: a4;
-        /*AQUI! Como deixar add-cart perto de amount?*/
+        grid-row-start: 3;
     }
     
     .product__info--add-cart svg path{

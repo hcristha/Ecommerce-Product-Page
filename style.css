@@ -615,7 +615,7 @@ div.product__img{
     }
 
     .product__info--about{
-        background-color: lightskyblue;
+        /* background-color: lightskyblue; */
         /* padding: 0 20px; */
         height: 220px;
     }
@@ -635,7 +635,7 @@ div.product__img{
     }
     
     .product__info--price{
-        background-color: lightcoral;
+        /* background-color: lightcoral; */
         /* box-sizing: border-box; */
         height: 60px;
         padding: 0 20px;
@@ -677,7 +677,7 @@ div.product__img{
     }
     
     .product__info--amount{
-        background-color: lightpink;
+        /* background-color: lightpink; */
         padding: 0 40px 10px;
     
         display: grid;
@@ -731,7 +731,6 @@ div.product__img{
         flex-flow: row wrap;
         align-items: center;
         justify-items: center;
-        /*AQUI! Como fazer product__price, product__amount e product__add ir para baixo de product__info?/
     
         /* position: relative; */
     }
@@ -806,37 +805,41 @@ div.product__img{
 
     .product__info{
         background-color: lightgreen;
-        max-width: 500px;
+        width: 450px;
 
-        /* display: flex;
-        flex-flow: row wrap; */
+        display: grid;
+        grid-template-areas: "a1 a1"
+                             "a2 a2"
+                             "a3 a4";
     }
 
     .product__info--about{
-        background-color: lightskyblue;
+        /* background-color: lightskyblue; */
         /* padding: 0 20px; */
-        height: 320px;
+        height: 280px;
         max-width: 100%;
+
+        grid-area: a1;
     }
     
     .product__info--about-title{
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         padding: 0;
         margin: 0;
     }
     
     .product__info--about-desc{
-        /* background-color: lightyellow; */
+        /* background-color: lightskyblue; */
         color: hsl(219, 9%, 45%);
         font-size: 0.9rem;
         font-weight: 400;
         padding: 0;
         margin: 0;
-        max-width: 380px;
+        max-width: 100%;
     }
     
     .product__info--price{
-        background-color: lightcoral;
+        /* background-color: lightcoral; */
         /* box-sizing: border-box; */
         height: 60px;
         padding: 0 20px;
@@ -847,6 +850,8 @@ div.product__img{
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
+
+        grid-area: a2;
     }
     
     .product__info--price div{
@@ -878,9 +883,9 @@ div.product__img{
     }
     
     .product__info--amount{
-        background-color: lightpink;
+        /* background-color: lightpink; */
         /* padding: 0 40px 10px; */
-        max-width: 120px;/*AQUI! Como deixar add-cart ao lado de amount??*/
+        width: 100px;
 
         /* display: grid;
         grid-template: auto / auto auto auto;
@@ -890,6 +895,7 @@ div.product__img{
         /* display: flex;
         flex-flow: row nowrap;
         justify-items: space-between; */
+        grid-area: a3;
 
     }
         
@@ -899,8 +905,11 @@ div.product__img{
     
     .product__info--add-cart{
         border-radius: 10px;
-        margin: 0 20px;
-        max-width: 300px;
+        margin: 0;
+        width: 100%;
+
+        grid-area: a4;
+        /*AQUI! Como deixar add-cart perto de amount?*/
     }
     
     .product__info--add-cart svg path{

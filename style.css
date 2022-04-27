@@ -715,7 +715,6 @@ div.product__img{
 }
 
 @media screen and (min-width: 950px){/*desktop, largura de 950px e acima*/
-    /*AQUI! Limpar código e revisar!*/
     .product{
         /* background-color: lightskyblue; */
         display: grid;
@@ -847,3 +846,11 @@ div.product__img{
         grid-template: auto auto auto / 40% auto;
     }
 }
+/*
+AQUI! Entendendo justify-content, relção horizontal e vertical.
+      top
+     TEXTO
+left TEXTO  right
+     TEXTO 
+     bottom
+*/

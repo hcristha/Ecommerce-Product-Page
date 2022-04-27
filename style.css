@@ -719,7 +719,9 @@ div.product__img{
         background-color: lightskyblue;
         display: grid;
         grid-template: auto auto / auto auto;
-        /*AQUI! Organizando layout.*/
+        justify-content: center;
+        align-items: flex-end;
+        /*AQUI! Como fazer img ir para baixo?*/
     }
 
     .product__cart{
@@ -735,8 +737,8 @@ div.product__img{
     }
 
     div.product__img{
-        background-color: lightblue;
-        width: 600px;
+        background-color: lightpink;
+        width: 470px;
         height: 600px;
         padding: 0;
         
@@ -770,6 +772,7 @@ div.product__img{
     .product__info{
         background-color: lightgreen;
         width: 465px;
+        height: 400px;
 
         display: grid;
         grid-template: auto auto auto / 40% auto;
@@ -818,6 +821,7 @@ div.product__img{
     .attribution {
         background-color: lightcoral;
         margin: 0;
-        width: 50%;
+
+        grid-column-end: span 2;
     }
 }

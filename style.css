@@ -722,60 +722,29 @@ div.product__img{
 
 @media screen and (min-width: 1440px){/*desktop, largura de 1440px e acima*/
     .product{
-        /* background-color: hsl(0, 0%, 100%);
-        box-sizing: border-box;
-        overflow: hidden; */
-        max-width: 100%;
-    
         display: flex;
         flex-flow: row wrap;
         align-items: center;
         justify-items: center;
-    
-        /* position: relative; */
     }
 
     .product__cart{
         /* background-color: lightcoral; */
-
-        /* border-radius: 10px;
-        box-sizing: border-box;
-        box-shadow: 0 5px 15px 0 hsla(0, 100%, 2%, 0.316);
-        display: none; */
-        /* margin: 10px;
-        padding: 20px;*/
         width: 350px;
-        /* height: 250px; */
-    
-        /* position: absolute; */
-        right: 0;
-        /* z-index: 1; */
+        top: 0;
+        right: 50px;
     }
 
     .product__cart-info--items{
         /* background-color: lightpink; */
-        /* box-sizing: border-box;
-        width: 100%; */
         height: 80px;
-        /* margin: 0;
-        padding: 5px 0 5px 15px;
-        list-style-type: none;
-        text-align: center;
-        overflow: hidden; */
-    
-        display: flex;
-        flex-flow: row wrap;
-        align-items: center;
-        justify-content: flex-start;
     }
 
     div.product__img{
+        /*AQUI! Começar layout imagem*/
         width: 600px;
         height: 600px;
         padding: 0;
-    
-        /* position: relative; */
-        /*AQUI! Comentar todas os códigos iguais ao mobile. PENSAR como o layout desktop pode se aproveitar do layout mobile.*/
         
         display: flex;
         flex-flow: row wrap;
@@ -804,7 +773,7 @@ div.product__img{
     }
 
     .product__info{
-        background-color: lightgreen;
+        /* background-color: lightgreen; */
         width: 465px;
 
         display: grid;
@@ -812,15 +781,11 @@ div.product__img{
     }
 
     .product__info--about{
-        background-color: lightskyblue;
-        /* padding: 0 20px; */
+        /* background-color: lightskyblue; */
         height: 270px;
-        /* max-width: 100%; */
 
         grid-column-start: 1;
         grid-column-end: 3;
-
-        /*AQUI!*/
 
     }
     
@@ -832,78 +797,32 @@ div.product__img{
     
     .product__info--about-desc{
         /* background-color: lightskyblue; */
-        color: hsl(219, 9%, 45%);
         font-size: 0.9rem;
-        font-weight: 400;
         padding: 0;
         margin: 0;
-        max-width: 100%;
     }
     
     .product__info--price{
         /* background-color: lightcoral; */
         margin: 0;
-    
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
 
         grid-row-start: 2;
-    }
-    
-    .product__info--price div{
-        width: 9rem;
-    
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-    }
-    
-    .product__info--price li:nth-of-type(1){/*$125.00*/
-        font-size: 1.3rem;
-        font-weight: 700;
-    }
-    
-    .product__info--price li:nth-of-type(2){/*50%*/
-        color:hsl(26, 100%, 55%);
-        background-color: hsl(25, 100%, 94%);
-        font-size: 1rem;
-        font-weight: 700;
-        padding: 2px 7px;
-    }
-    
-    .product__info--price > li:nth-of-type(1){/*250.00*/
-        color: hsl(220, 14%, 75%);
-        font-size: 1rem;
-        font-weight: 700;
-        text-decoration: line-through;
     }
     
     .product__info--amount{
         /* background-color: lightpink; */
         grid-row-start: 3;
     }
-        
-    .product__info--amount p{
-        font-weight: 700;
-    }
     
     .product__info--add-cart{
-        border-radius: 10px;
         margin: 0;
 
         grid-row-start: 3;
     }
-    
-    .product__info--add-cart svg path{
-        fill: hsl(0, 0%, 100%);
-        width: 22px;
-        height: 20px;
-    }
-    
-    .product__info--add-cart p{
-        color: hsl(0, 0%, 100%);
-        font-weight: 700;
-    }
 
+    .attribution {
+        background-color: lightcoral;
+        margin: 0;
+        width: 50%;
+    }
 }

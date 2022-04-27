@@ -714,12 +714,12 @@ div.product__img{
 
 }
 
-@media screen and (min-width: 1000px){/*desktop, largura de 1000px e acima*/
+@media screen and (min-width: 950px){/*desktop, largura de 950px e acima*/
     .product{
-        background-color: lightskyblue;
+        /* background-color: lightskyblue; */
         display: grid;
         grid-gap: 40px;
-        /* grid-column-gap: 0; */
+        grid-column-gap: 0;
         grid-template: auto auto / auto auto;
         align-items: center;
         justify-content: center;
@@ -738,8 +738,8 @@ div.product__img{
     }
 
     div.product__img{
-        background-color: lightpink;
-        width: 465px;
+        /* background-color: lightpink; */
+        max-width: 465px;
         height: 650px;
         
         display: grid;
@@ -772,10 +772,10 @@ div.product__img{
     }
 
     .product__info{
-        background-color: lightgreen;
+        /* background-color: lightgreen; */
         max-width: 465px;
         height: 400px;
-        padding: 20px;/*AQUI! Revisar o que fiz e ajustar padding.*/
+        padding: 25px;
 
         display: grid;
         grid-template: auto auto auto / 30% auto;
@@ -813,7 +813,7 @@ div.product__img{
     }
     
     .product__info--amount{
-        background-color: lightpink;
+        /* background-color: lightpink; */
         grid-row-start: 3;
         padding: 0 20px;
     }
@@ -825,7 +825,7 @@ div.product__img{
     }
 
     .attribution {
-        background-color: lightcoral;
+        /* background-color: lightcoral; */
         margin: 0;
         /* height: 100px; */
 
@@ -835,12 +835,13 @@ div.product__img{
 
 @media screen and (min-width: 1440px){/*desktop, largura de 1440px e acima*/
     .product{
-        background-color: lightskyblue;
+        /* background-color: lightskyblue; */
         display: grid;
         grid-gap: 40px;
         grid-template: auto auto / auto auto;
         align-items: center;
         justify-content: center;
+        /*AQUI! Limpar código.*/
     }
 
     .product__cart{
@@ -856,7 +857,7 @@ div.product__img{
     }
 
     div.product__img{
-        background-color: lightpink;
+        /* background-color: lightpink; */
         width: 465px;
         height: 650px;
         
@@ -890,7 +891,7 @@ div.product__img{
     }
 
     .product__info{
-        background-color: lightgreen;
+        /* background-color: lightgreen; */
         width: 465px;
         height: 400px;
 
@@ -939,7 +940,7 @@ div.product__img{
     }
 
     .attribution {
-        background-color: lightcoral;
+        /* background-color: lightcoral; */
         margin: 0;
         /* height: 100px; */
 

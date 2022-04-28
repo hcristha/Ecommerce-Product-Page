@@ -760,7 +760,7 @@ div.product__img{
 
     .product__img .desktop{
         border-radius: 5%;
-        border: 1px solid var(--color-btn);
+        /* border: 2px solid var(--color-btn); */
         cursor: pointer;
         width: 100px;
         height: 100px;
@@ -769,8 +769,12 @@ div.product__img{
         position: static;
     }
 
+    .product__img:second-child{
+        /*aqui! Selecionar segundo filho de product__img*/
+    }
+
     .product__img .desktop:hover{
-        /*AQUI! Pensar num modo de essas imgs ficarem com cor branco quase transparente ao passar por cima delas.*/
+        opacity: 0.4;
     }
     
     .product__img-icons{    

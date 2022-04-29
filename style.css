@@ -800,15 +800,29 @@ div.product__img{
         display: none;
     }
 
+    .two:hover{
+        opacity: 0.4;
+    }
+
     .three{
         left: 263px;
         display: none;
+    }
+
+    .three:hover{
+        opacity: 0.4;
     }
 
     .four{
         left: 383px;
         display: none;
     }
+
+    .four:hover{
+        opacity: 0.4;
+    }
+
+    /*AQUI! Por que o hover não funciona nas outras imagens não selecionadas ao clicar numa imagem?*/
     
     .product__img-icons{    
         /* display: none; */

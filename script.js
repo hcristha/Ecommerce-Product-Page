@@ -218,7 +218,6 @@ function showBox1(e){// elemento(img) como argumento
     img2.style.opacity = "1";
     img3.style.opacity = "1";
     img4.style.opacity = "1";
-    // img4.style.hover = "opacity: 0.4";
     // imagem clicada fica opaca
     e.style.opacity = "0.5";
 
@@ -237,8 +236,6 @@ function showBox2(e){// elemento(img) como argumento
     img1.style.opacity = "1";
     img3.style.opacity = "1";
     img4.style.opacity = "1";
-    img4.style.hover = "opacity: 0.4";
-    // AQUI! Por que o hover não está funcionando?
     // imagem clicada fica opaca
     e.style.opacity = "0.5";
 

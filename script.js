@@ -252,19 +252,19 @@ function showBox2(e){// elemento(img) como argumento
     // SIMULANDO HOVER
     //// ao mouse passar por cima da img, img fica opaca
     function hover(){
-        this.style.opacity = "0.4";
+        this.style.opacity = "0.2";
     }
     //// ao mouse sair da img, a img se torna visível
-    function mouseOut(){
-        this.style.opacity = "1";
-    }
+    // function mouseOut(){
+    //     this.style.opacity = "1";
+    // }
 
     img1.addEventListener("mouseover", hover);
-    img1.addEventListener("mouseout", mouseOut);
+    // img1.addEventListener("mouseout", mouseOut);
     img3.addEventListener("mouseover", hover);
-    img3.addEventListener("mouseout", mouseOut);
+    // img3.addEventListener("mouseout", mouseOut);
     img4.addEventListener("mouseover", hover);
-    img4.addEventListener("mouseout", mouseOut);
+    // img4.addEventListener("mouseout", mouseOut);
 }
 
 function showBox3(e){// elemento(img) como argumento
@@ -288,20 +288,21 @@ function showBox3(e){// elemento(img) como argumento
     // SIMULANDO HOVER
     //// ao mouse passar por cima da img, img fica opaca
     function hover(){
-        this.style.opacity = "0.4";
+        this.style.opacity = "0.2";
     }
     //// ao mouse sair da img, a img se torna visível
     function mouseOut(){
-        this.style.opacity = "1";
+        this.style.opacity = "1.0";
+        console.log("Errei!");
     }
 
     img1.addEventListener("mouseover", hover);
-    img1.addEventListener("mouseout", mouseOut);
+    // img1.addEventListener("mouseout", mouseOut);
     img2.addEventListener("mouseover", hover);
-    img2.addEventListener("mouseout", mouseOut);
+    // img2.addEventListener("mouseout", mouseOut);
     img4.addEventListener("mouseover", hover);
-    img4.addEventListener("mouseout", mouseOut);
-    // AQUI! Por que a imagem atual não fica opaca??
+    img4.addEventListener("mouseleave", mouseOut);
+    // AQUI! entender mouseout e mouseleave, pois estão sendo executados mesmo dentro do elemento(quando é clicado);
 }
 
 function showBox4(e){// elemento(img) como argumento
@@ -325,17 +326,17 @@ function showBox4(e){// elemento(img) como argumento
     // SIMULANDO HOVER
     //// ao mouse passar por cima da img, img fica opaca
     function hover(){
-        this.style.opacity = "0.4";
+        this.style.opacity = "0.2";
     }
     //// ao mouse sair da img, a img se torna visível
-    function mouseOut(){
-        this.style.opacity = "1";
-    }
+    // function mouseOut(){
+    //     this.style.opacity = "1";
+    // }
 
     img1.addEventListener("mouseover", hover);
-    img1.addEventListener("mouseout", mouseOut);
+    // img1.addEventListener("mouseout", mouseOut);
     img2.addEventListener("mouseover", hover);
-    img2.addEventListener("mouseout", mouseOut);
+    // img2.addEventListener("mouseout", mouseOut);
     img3.addEventListener("mouseover", hover);
-    img3.addEventListener("mouseout", mouseOut);
+    // img3.addEventListener("mouseout", mouseOut);
 }

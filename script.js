@@ -212,13 +212,45 @@ let one = document.querySelector(".one");
 let two = document.querySelector(".two");
 let three = document.querySelector(".three");
 let four = document.querySelector(".four");
-function showBox(e){
-    console.log(e);
+function showBox1(e){
     //imgs
-    img1.style.opacity = "1";
-    e.style.opacity = "0.5";
+    img1.style.opacity = "1"; // imagem anterior vísivel
+    e.style.opacity = "0.5"; // imagem clicada fica opaca
     //divs
-    one.style.display = "none";
-    two.style.display = "block";
+    one.style.display = "none"; // div anterior some
+    two.style.display = "block"; // div da imagem clicada aparece
+
+    //e + .three{
+    //display: block;
+    //}
+    // AQUI! Ao clicar na img ela ficará fraca e com borda.
+    // Como pegar um elemtno que vem depois?
+}
+
+function showBox2(e){
+    //imgs
+    img1.style.opacity = "1"; // imagem anterior vísivel
+    e.style.opacity = "0.5"; // imagem clicada fica opaca
+    //divs
+    one.style.display = "none"; // div anterior some
+    two.style.display = "block"; // div da imagem clicada aparece
+}
+
+function showBox3(e){
+    //imgs
+    img2.style.opacity = "1"; // imagem anterior vísivel
+    e.style.opacity = "0.5"; // imagem clicada fica opaca
+    //divs
+    two.style.display = "none"; // div anterior some
+    three.style.display = "block"; // div da imagem clicada aparece
+}
+
+function showBox4(e){
+    //imgs
+    img1.style.opacity = "1"; // imagem anterior vísivel
+    e.style.opacity = "0.5"; // imagem clicada fica opaca
+    //divs
+    three.style.display = "none"; // div anterior some
+    four.style.display = "block"; // div da imagem clicada aparece
     // AQUI! Ao clicar na img ela ficará fraca e com borda.
 }

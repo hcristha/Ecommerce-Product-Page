@@ -762,7 +762,6 @@ div.product__img{
 
     .product__img .desktop{
         border-radius: 10%;
-        /* border: 2px solid var(--color-btn); */
         cursor: pointer;
         width: 100px;
         height: 100px;
@@ -775,14 +774,22 @@ div.product__img{
         opacity: 0.4;
     }
 
+    .product__img .desktop:nth-child(2){
+        opacity: 0.5;
+    }
+
     .product__img .desktop-box{
         border-radius: 10%;
-        border: 3px solid orange;
+        border: 2px solid var(--color-btn);
+        box-sizing: border-box;
         cursor: pointer;
         width: 100px;
         height: 100px;
-        background-color: lightpink;
-        /*AQUI! Colocar position absolute*/
+
+        position: absolute;
+        bottom: 20px;
+        left: 23px;
+        /*AQUI! Criar outras div iguais a essa no HTML*/
     }
     
     .product__img-icons{    

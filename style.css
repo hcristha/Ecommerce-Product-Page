@@ -788,12 +788,30 @@ div.product__img{
 
         position: absolute;
         bottom: 20px;
+    }
+
+    .one{
         left: 23px;
-        /*AQUI! Criar outras div iguais a essa no HTML*/
+        display: block;
+    }
+
+    .two{
+        left: 143px;
+        display: none;
+    }
+
+    .three{
+        left: 263px;
+        display: none;
+    }
+
+    .four{
+        left: 383px;
+        display: none;
     }
     
     .product__img-icons{    
-        display: none;
+        /* display: none; */
     }
 
     .product__info{

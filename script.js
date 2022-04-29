@@ -2,12 +2,6 @@
 let menu = document.querySelector(".js-menu");
 let box = document.querySelector(".js-menu__box");
 let options = document.querySelector(".js-header-box__options-menu");
-
-// D E S K T O P
-// basear-se na screen.width para fixar comportamento independente de mobile
-// quando screen.width for >= 745 box terá display none e menu display block
-// O QUE É QUANDO EM JS? IF?
-// AQUI! Como desaparecer o box no desktop / aparecer só no mobile?
  
 if (screen.width < 745){// 744px abaixo, mobile
     console.log("w");
@@ -205,4 +199,26 @@ function nextImg(){ // próxima imagem
             img.src = `images/image-product-${click}.jpg`; // muda a imagem
         }
     }
+}
+
+// DESKTOP IMG
+//// imgs
+let img1 = document.querySelector(".img1");
+let img2 = document.querySelector(".img2");
+let img3 = document.querySelector(".img3");
+let img4 = document.querySelector(".img4");
+//// divs
+let one = document.querySelector(".one");
+let two = document.querySelector(".two");
+let three = document.querySelector(".three");
+let four = document.querySelector(".four");
+function showBox(e){
+    console.log(e);
+    //imgs
+    img1.style.opacity = "1";
+    e.style.opacity = "0.5";
+    //divs
+    one.style.display = "none";
+    two.style.display = "block";
+    // AQUI! Ao clicar na img ela ficará fraca e com borda.
 }

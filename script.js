@@ -246,6 +246,16 @@ function showBox2(e){// elemento(img) como argumento
     four.style.display = "none";
     // div da imagem clicada aparece
     two.style.display = "block";
+
+    // SIMULANDO HOVER
+    // se o mouse passar por cima da img, muda a opacity
+    function hover(i){
+        console.log(i);// mostrou o evento, AQUI! Queremos o target do evento: elemento. E com isso mudar sua opacity;
+    }
+
+    img1.addEventListener("mouseover", hover);
+    img3.addEventListener("mouseover", hover);
+    img4.addEventListener("mouseover", hover);
 }
 
 function showBox3(e){// elemento(img) como argumento

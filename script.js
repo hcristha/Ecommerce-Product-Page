@@ -213,6 +213,7 @@ let two = document.querySelector(".two");
 let three = document.querySelector(".three");
 let four = document.querySelector(".four");
 function showBox1(e){// elemento(img) como argumento
+    console.log(1, e);
     //imgs
     //// imagens não clicadas ficam visiveis
     img2.style.opacity = "1";
@@ -231,13 +232,14 @@ function showBox1(e){// elemento(img) como argumento
 }
 
 function showBox2(e){// elemento(img) como argumento
+    console.log(2, e);
     //imgs
+    // imagem clicada fica opaca
+    e.style.opacity = "0.5";
     //// imagens não clicadas ficam visiveis
     img1.style.opacity = "1";
     img3.style.opacity = "1";
     img4.style.opacity = "1";
-    // imagem clicada fica opaca
-    e.style.opacity = "0.5";
 
     //divs
     //// divs anteriores somem
@@ -266,13 +268,14 @@ function showBox2(e){// elemento(img) como argumento
 }
 
 function showBox3(e){// elemento(img) como argumento
+    console.log(3, e);
     //imgs
+    // imagem clicada fica opaca
+    e.style.opacity = "0.5";
     //// imagens não clicadas ficam visiveis
     img1.style.opacity = "1";
     img2.style.opacity = "1";
     img4.style.opacity = "1";
-    // imagem clicada fica opaca
-    e.style.opacity = "0.5";
 
     //divs
     //// divs anteriores somem
@@ -298,17 +301,18 @@ function showBox3(e){// elemento(img) como argumento
     img2.addEventListener("mouseout", mouseOut);
     img4.addEventListener("mouseover", hover);
     img4.addEventListener("mouseout", mouseOut);
-    /*AQUI! Por a imagem clicada não fica opaca?*/
+    // AQUI! Por que a imagem atual não fica opaca??
 }
 
 function showBox4(e){// elemento(img) como argumento
+    console.log(4, e);
     //imgs
+    // imagem clicada fica opaca
+    e.style.opacity = "0.5";
     //// imagens não clicadas ficam visiveis
     img1.style.opacity = "1";
     img2.style.opacity = "1";
     img3.style.opacity = "1";
-    // imagem clicada fica opaca
-    e.style.opacity = "0.5";
 
     //divs
     //// divs anteriores somem
@@ -317,4 +321,21 @@ function showBox4(e){// elemento(img) como argumento
     three.style.display = "none";
     // div da imagem clicada aparece
     four.style.display = "block";
+
+    // SIMULANDO HOVER
+    //// ao mouse passar por cima da img, img fica opaca
+    function hover(){
+        this.style.opacity = "0.4";
+    }
+    //// ao mouse sair da img, a img se torna visível
+    function mouseOut(){
+        this.style.opacity = "1";
+    }
+
+    img1.addEventListener("mouseover", hover);
+    img1.addEventListener("mouseout", mouseOut);
+    img2.addEventListener("mouseover", hover);
+    img2.addEventListener("mouseout", mouseOut);
+    img3.addEventListener("mouseover", hover);
+    img3.addEventListener("mouseout", mouseOut);
 }

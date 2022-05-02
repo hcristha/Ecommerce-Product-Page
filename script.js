@@ -301,20 +301,12 @@ function showBox3(e){// elemento(img) como argumento
     img2.addEventListener("mouseover", hover);
     // img2.addEventListener("mouseout", mouseOut);
     img4.addEventListener("mouseover", hover);
-    img4.addEventListener("mouseleave", mouseOut);
+    img4.addEventListener("mouseout", mouseOut);
     // AQUI! entender mouseout e mouseleave, pois estão sendo executados mesmo dentro do elemento(quando é clicado);
 }
 
 function showBox4(e){// elemento(img) como argumento
     console.log(4, e);
-    //imgs
-    // imagem clicada fica opaca
-    e.style.opacity = "0.5";
-    //// imagens não clicadas ficam visiveis
-    img1.style.opacity = "1";
-    img2.style.opacity = "1";
-    img3.style.opacity = "1";
-
     //divs
     //// divs anteriores somem
     one.style.display = "none";
@@ -323,20 +315,33 @@ function showBox4(e){// elemento(img) como argumento
     // div da imagem clicada aparece
     four.style.display = "block";
 
+    //imgs
+    // imagem clicada fica opaca
+    e.style.opacity = "0.5";
+    console.log("Você é tão incrível. Não é o acerto, é o processo de pensar.")
+    //// imagens não clicadas ficam visiveis
+    img1.style.opacity = "1";
+    img2.style.opacity = "1";
+    img3.style.opacity = "1";
+
     // SIMULANDO HOVER
     //// ao mouse passar por cima da img, img fica opaca
     function hover(){
         this.style.opacity = "0.2";
     }
-    //// ao mouse sair da img, a img se torna visível
-    // function mouseOut(){
-    //     this.style.opacity = "1";
-    // }
+    // ao mouse sair da img, a img se torna visível
+    function mouseOut(){
+        this.style.opacity = "1";
+        console.log("Eu amo lógica.");
+    }
 
     img1.addEventListener("mouseover", hover);
-    // img1.addEventListener("mouseout", mouseOut);
+    img1.addEventListener("mouseout", mouseOut);
     img2.addEventListener("mouseover", hover);
-    // img2.addEventListener("mouseout", mouseOut);
+    img2.addEventListener("mouseout", mouseOut);
     img3.addEventListener("mouseover", hover);
-    // img3.addEventListener("mouseout", mouseOut);
+    img3.addEventListener("mouseout", mouseOut);
+
+    console.log("Respira..");
+    /*Aqui! A div sobrepõe a img fazendo o mouseOut ser disparado por último, mesmo a div estando no começo do código, pois o JS prioriza a função atual, deixando mouseOut por último, deixando a imagem visível(o que não queremos); */
 }

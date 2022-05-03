@@ -775,7 +775,23 @@ div.product__img{
     }
 
     .product__img .desktop:hover{
-        opacity: 0.4;
+        opacity: 0.35;
+    }
+
+    .img1:hover{
+        opacity: 0.35;
+    }
+
+    .img2:hover{
+        opacity: 0.35;
+    }
+
+    .img3:hover{
+        opacity: 0.35;
+    }
+
+    .img4:hover{
+        opacity: 0.35;
     }
 
     .product__img .desktop-box{
@@ -792,23 +808,24 @@ div.product__img{
 
     .one{
         left: 23px;
-        display: block;
+        visibility: visible;
     }
 
     .two{
         left: 143px;
-        display: none;
+        visibility: hidden;
     }
 
     .three{
         left: 263px;
-        display: none;
+        visibility: hidden;
     }
 
     .four{
         left: 383px;
-        display: none;
+        visibility: hidden;
     }
+    /*AQUI! Investigando: por que hover não está funcionando nas outras img depois de selecionar umas delas? Aprendendo comportamento de 'visibility'.*/
     
     .product__img-icons{    
         /* display: none; */

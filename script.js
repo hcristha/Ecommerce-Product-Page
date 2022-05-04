@@ -208,6 +208,7 @@ let img2 = document.querySelector(".img2");
 let img3 = document.querySelector(".img3");
 let img4 = document.querySelector(".img4");
 //// divs
+let desktopBox = document.getElementsByClassName("desktop-box");
 let one = document.querySelector(".one");
 let two = document.querySelector(".two");
 let three = document.querySelector(".three");
@@ -215,76 +216,85 @@ let four = document.querySelector(".four");
 function showBox1(e){// elemento(img) como argumento
     console.log(1, e);
     //imgs
-    //// imagens não clicadas ficam visiveis
-    img2.style.opacity = "1";
-    img3.style.opacity = "1";
-    img4.style.opacity = "1";
     // imagem clicada fica opaca
-    e.style.opacity = "0.5";
+    e.style.filter = "opacity(50%)";
+    //// imagens não clicadas ficam visiveis
+    img2.style.filter = "opacity(100%)";
+    img3.style.filter = "opacity(100%)";
+    img4.style.filter = "opacity(100%)";
 
     //divs
     //// divs anteriores somem
-    two.style.visibility = "hidden";
-    three.style.visibility = "hidden";
-    four.style.visibility = "hidden";
+    two.style.display = "none";
+    three.style.display = "none";
+    four.style.display = "none";
     // div da imagem clicada aparece
-    one.style.visibility = "visible";
+    one.style.display = "block";
 }
 
 function showBox2(e){// elemento(img) como argumento
-    console.log(2, e);
+    // console.log(2, e);
     //imgs
     //// imagem clicada fica opaca
-    e.style.opacity = "0.5";
+    e.style.filter = "opacity(50%)";
     //// imagens não clicadas ficam visiveis
-    img1.style.opacity = "1";
-    img3.style.opacity = "1";
-    img4.style.opacity = "1";
+    img1.style.filter = "opacity(100%)";
+    img3.style.filter = "opacity(100%)";
+    img4.style.filter = "opacity(100%)";
 
     //divs
     //// divs anteriores somem
-    one.style.visibility = "hidden";
-    three.style.visibility = "hidden";
-    four.style.visibility = "hidden";
+    // one.style.display = "none";
+    // three.style.display = "none";
+    // four.style.display = "none";
     //// div da imagem clicada aparece
-    two.style.visibility = "visible";
-    /*AQUI! Por que o hover não funciona em imagens não selecionadas?*/
+    // two.style.display = "block";
+    // ao clicar na imagem, identificar qual div está com display block e setar como display none, em seguida colocar div da img atual como display block
+    // AQUI! Como pegar o style da div?
+    let d0 = one.style;
+    console.log(d0);
+    let d1 = one.style.display === "block";
+    let d3 = three.style.display === "block";
+    let d4 = four.style.display === "block";
+    if (d1 === true || d3 === true || d4 === true){
+        console.log("Respira");
+    }
 }
 
 function showBox3(e){// elemento(img) como argumento
     console.log(3, e);
     //imgs
     // imagem clicada fica opaca
-    e.style.opacity = "0.5";
+    e.style.filter = "opacity(50%)";
     //// imagens não clicadas ficam visiveis
-    img1.style.opacity = "1";
-    img2.style.opacity = "1";
-    img4.style.opacity = "1";
+    img1.style.filter = "opacity(100%)";
+    img2.style.filter = "opacity(100%)";
+    img4.style.filter = "opacity(100%)";
 
     //divs
     //// divs anteriores somem
-    one.style.visibility = "hidden";
-    two.style.visibility = "hidden";
-    four.style.visibility = "hidden";
+    one.style.display = "none";
+    two.style.display = "none";
+    four.style.display = "none";
     // div da imagem clicada aparece
-    three.style.visibility = "visible";
+    three.style.display = "block";
 }
 
 function showBox4(e){// elemento(img) como argumento
     console.log(4, e);
     //imgs
     // imagem clicada fica opaca
-    e.style.opacity = "0.5";
+    e.style.filter = "opacity(50%)";
     //// imagens não clicadas ficam visiveis
-    img1.style.opacity = "1";
-    img2.style.opacity = "1";
-    img3.style.opacity = "1";
+    img1.style.filter = "opacity(100%)";
+    img2.style.filter = "opacity(100%)";
+    img3.style.filter = "opacity(100%)";
 
     //divs
     //// divs anteriores somem
-    one.style.visibility = "hidden";
-    two.style.visibility = "hidden";
-    three.style.visibility = "hidden";
+    one.style.display = "none";
+    two.style.display = "none";
+    three.style.display = "none";
     // div da imagem clicada aparece
-    four.style.visibility = "visible";
+    four.style.display = "block";
 }

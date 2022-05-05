@@ -778,22 +778,7 @@ div.product__img{
         /* opacity: 0.35; 
         filter: opacity(35%);
     } */
-
-    .img1:hover{
-        filter: opacity(35%);
-    }
-
-    .img2:hover{
-        filter: opacity(35%);
-    }
-
-    .img3:hover{
-        filter: opacity(35%);
-    }
-
-    .img4:hover{
-        filter: opacity(35%);
-    }
+    /*aqui! Tornando o projeto simples, apagando todo código que não for relacionado com .one*/
 
     .product__img .desktop-box{
         border-radius: 10%;
@@ -805,28 +790,9 @@ div.product__img{
 
         position: absolute;
         bottom: 20px;
-    }
-
-    .one{
         left: 23px;
         display: block;
     }
-
-    .two{
-        left: 143px;
-        display: none;
-    }
-
-    .three{
-        left: 263px;
-        display: none;
-    }
-
-    .four{
-        left: 383px;
-        display: none;
-    }
-    /*AQUI! Investigando: por que hover não está funcionando nas outras img depois de selecionar umas delas? Aprendendo comportamento de 'visibility'.*/
     
     .product__img-icons{    
         /* display: none; */

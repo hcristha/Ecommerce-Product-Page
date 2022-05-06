@@ -715,6 +715,63 @@ div.product__img{
 }
 
 @media screen and (min-width: 950px){/*desktop, largura de 950px e acima*/
+    .menu__box{
+        background-color: hsl(0, 0%, 0%);
+        display: block;
+        opacity: 75%;
+        width: 100%;
+        height: 100%;
+    
+        position: fixed;
+        z-index: 4;
+    }
+
+    .lightbox{
+        background-color: lightpink;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 3;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .lightbox__img-main{
+        border-radius: 5%;
+        width: 450px;
+        height: 350px;
+
+        grid-column-end: span 4;
+    }
+
+    .lightbox__img{
+        background-color: lightblue;
+        box-sizing: border-box;
+        width: 500px;
+        height: 150px;
+        padding: 40px;
+
+        display: flex;
+    }
+
+    .lightbox__img-next{
+        width: 60px;
+        height: 60px;
+        border-radius: 10%;
+    }
+
+    .lightbox__img-box{
+        background-color: lightblue;
+        border-radius: 10%;
+        border: 2px solid hsl(26, 100%, 55%);
+        box-sizing: border-box;
+        width: 80px;
+        height: 80px;
+    }
+
     .product{
         /* background-color: lightskyblue; */
         display: grid;
@@ -771,14 +828,12 @@ div.product__img{
     }
 
     .product__img .desktop:nth-child(2){
-        filter: opacity(50%);
+        opacity: 0.5;
     }
 
-    /* .product__img .desktop:hover{
-        /* opacity: 0.35; 
-        filter: opacity(35%);
-    } */
-    /*aqui! Tornando o projeto simples, apagando todo código que não for relacionado com .one*/
+    .product__img .desktop:hover{
+        opacity: 0.35;
+    }
 
     .product__img .desktop-box{
         border-radius: 10%;

@@ -209,21 +209,53 @@ function changeImg1(){
     let img1 = productImg.children[1].getAttribute("src"); // pegando valor do atributo da imagem 1
     img.src = img1; // substituindo valor do atributo da imagem principal para valor do atributo da imagem 1
 }
-// mudar imagens
+// mudar imagem principal
 function changeImg2(currentImg){
     let current = currentImg;
     let source = currentImg.getAttribute("src"); // pegando valor do atributo da imagem clicada
     img.src = source; // substituindo valor do atributo da imagem principal para valor do atributo da imagem atual(clicada)
 
-    let div2 = current.nextElementSibling;
-    div2.style.display = "block";
-    // AQUI! tornar invisíveis as outras divs
-} 
+    // aparecer div acima da img
+    let div2 = current.nextElementSibling; // pegando próximo elemento irmão
+    div2.style.display = "block"; // mostrando divisória da img atual
+    //// sumindo com as outras divs
+    let div1 = productImg.children[2];
+    let div3 = productImg.children[6];
+    let div4 = productImg.children[8];
+    div1.style.display = "none";
+    div3.style.display = "none";
+    div4.style.display = "none";
+
+    // quando já estiver com a div2 por cima da img2 e clicar na div2
+    div2.onclick = function(){
+        let img2 = div2.previousElementSibling;
+        let atr2 = img2.getAttribute("src");
+        img.src = atr2;
+    }
+    // AQUI! Fazer o mesmo script para img 1 e 4, apesar de que o onclick dentro da função parece que não será necessário.
+}
+
 function changeImg3(currentImg){
+    // sem div por cima da img
     let current = currentImg;
     let source = current.getAttribute("src"); // pegando valor do atributo da imagem clicada
     img.src = source; // substituindo valor do atributo da imagem principal para valor do atributo da imagem atual(clicada)
 
+    // aparecer div acima da img
     let div3 = current.nextElementSibling; // pegando próximo elemento irmão
-    div3.style.display = "block";
+    div3.style.display = "block"; // mostrando divisória da img atual
+    //// sumindo com as outras divs
+    let div1 = productImg.children[2];
+    let div2 = productImg.children[4];
+    let div4 = productImg.children[8];
+    div1.style.display = "none";
+    div2.style.display = "none";
+    div4.style.display = "none";
+
+    // quando já estiver com a div3 por cima da img3 e clicar na div3
+    div3.onclick = function(){ 
+        let img3 = div3.previousElementSibling; // elemento irmão anterior
+        let atr3 = img3.getAttribute("src");
+        img.src = atr3; // substituindo imagem principal baseada no novo valor de atributo
+    }
 }

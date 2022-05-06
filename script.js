@@ -203,16 +203,15 @@ function nextImg(){ // próxima imagem
 
 // DESKTOP IMG
 // script lightbox
-// script changeImg()
+// mudar imagem 1
 function changeImg1(){
     let productImg = document.querySelector(".product__img");
-    let img1 = productImg.children[1].getAttribute("src");
-    img.src = img1;
+    let img1 = productImg.children[1].getAttribute("src"); // pegando valor do atributo da imagem 1
+    img.src = img1; // substituindo valor do atributo da imagem principal para valor do atributo da imagem 1
 }
-
 // AQUI! Comentar código até aqui, depois: ao clicar em 1 img a div muda para a img
-
+// mudar imagens
 function changeImg(currentImg){
-    let current = currentImg.getAttribute("src");
-    img.src = current;
+    let current = currentImg.getAttribute("src"); // pegando valor do atributo da imagem clicada
+    img.src = current; // substituindo valor do atributo da imagem principal para valor do atributo da imagem atual(clicada)
 } 

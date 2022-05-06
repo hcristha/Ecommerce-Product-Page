@@ -21,7 +21,7 @@ body{
 .menu__box{
     background-color: hsl(0, 0%, 0%);
     display: none;
-    opacity: 75%;
+    opacity: 0.75%;
     width: 100%;
     height: 100%;
 
@@ -715,7 +715,7 @@ div.product__img{
 }
 
 @media screen and (min-width: 950px){/*desktop, largura de 950px e acima*/
-    .menu__box{
+    /* .menu__box{
         background-color: hsl(0, 0%, 0%);
         display: block;
         opacity: 75%;
@@ -724,19 +724,19 @@ div.product__img{
     
         position: fixed;
         z-index: 4;
-    }
+    } */
 
     .lightbox{
-        background-color: blue;
+        background-color: rgba(0, 0, 0, 0.75);
         width: 100%;
         height: 100%;
         position: fixed;
-        z-index: 3;
+        z-index: 5;
+
         display: flex;
         flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-
     }
 
     .lightbox__img-main{
@@ -748,7 +748,7 @@ div.product__img{
     }
 
     .lightbox__img{
-        background-color: lightgreen;
+        /* background-color: lightgreen; */
         box-sizing: border-box;
         width: 500px;
         height: 150px;
@@ -758,6 +758,8 @@ div.product__img{
         flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
+
+        position: relative;
     }
 
     .lightbox__img-next{
@@ -767,8 +769,8 @@ div.product__img{
         margin-left: 20px;
     }
 
-    .lightbox__img-box{
-        background-color: lightgreen;
+    .lightbox__img--box-border{
+        background-color: rgba(255, 255, 255, 0.448);
         border-radius: 10%;
         border: 2px solid hsl(26, 100%, 55%);
         box-sizing: border-box;
@@ -776,11 +778,29 @@ div.product__img{
         height: 75px;
 
         position: absolute;
-        top: 37.5;
-        left: 5;
+        top: 37px;
+        left: 80px;
     }
 
-    /*AQUI! Como deixar a div embaixo da primeira img-next?*/
+    .lightbox__img-box{
+        background-color: rgba(255, 255, 255, 0.448);
+        border-radius: 10%;
+        box-sizing: border-box;
+        display: block;
+        width: 75px;
+        height: 75px;
+        margin: 55px;
+
+        position: absolute;
+        top: 37px;
+        left: 175px;
+    }
+
+    .lightbox__img-box:hover{
+        margin: 55px;
+        display: none;
+    }
+    /*AQUI! Por que .lightbox__img-box não está aparecendo ao passar o mouse por cima? Dica: display/visibility?editando acima*/
 
     .product{
         /* background-color: lightskyblue; */

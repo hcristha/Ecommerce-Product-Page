@@ -733,14 +733,16 @@ div.product__img{
         position: fixed;
         z-index: 5;
 
-        display: flex;
-        flex-flow: column wrap;
+        display: none;
+        /* flex-flow: column wrap;
         justify-content: center;
         align-items: center;
+     */
     }
 
     .lightbox__img-main{
         border-radius: 5%;
+        display: none;
         width: 470px;
         height: 350px;
 
@@ -748,21 +750,22 @@ div.product__img{
     }
 
     .lightbox__img{
-        /* background-color: lightgreen; */
+        background-color: rgb(14, 85, 14);
         box-sizing: border-box;
         width: 500px;
         height: 150px;
         padding: 40px;
 
-        display: flex;
-        flex-flow: row nowrap;
+        display: none;
+        /* flex-flow: row nowrap;
         justify-content: center;
-        align-items: center;
+        align-items: center; */
 
         position: relative;
     }
 
     .lightbox__img-next{
+        display: none;
         width: 75px;
         height: 75px;
         border-radius: 10%;
@@ -774,6 +777,7 @@ div.product__img{
         border-radius: 10%;
         border: 2px solid hsl(26, 100%, 55%);
         box-sizing: border-box;
+        cursor: pointer;
         width: 75px;
         height: 75px;
 
@@ -786,10 +790,10 @@ div.product__img{
         background-color: rgba(255, 255, 255, 0.448);
         border-radius: 10%;
         box-sizing: border-box;
-        display: block;
+        cursor: pointer;
+        opacity: 0;
         width: 75px;
         height: 75px;
-        margin: 55px;
 
         position: absolute;
         top: 37px;
@@ -797,10 +801,17 @@ div.product__img{
     }
 
     .lightbox__img-box:hover{
-        margin: 55px;
-        display: none;
+        opacity: 1;
     }
-    /*AQUI! Por que .lightbox__img-box não está aparecendo ao passar o mouse por cima? Dica: display/visibility?editando acima*/
+
+    .pos2{
+        left: 270px;
+    }
+
+    .pos3{
+        left: 365px;
+    }
+    /*AQUI! editando acima*/
 
     .product{
         /* background-color: lightskyblue; */

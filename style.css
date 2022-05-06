@@ -837,7 +837,7 @@ div.product__img{
     }
 
     div.product__img{
-        background-color: lightpink;
+        /* background-color: lightpink; */
         max-width: 465px;
         height: 650px;
         
@@ -869,16 +869,13 @@ div.product__img{
         position: static;
     }
 
-    .product__img .desktop:nth-child(2){
-        opacity: 0.5;
-    }
-
     .product__img .desktop:hover{
         opacity: 0.35;
     }
 
     .desktop-box{
         /*AQUI! background-color em RGBA, deixar opacity da img normal*/
+        background-color: rgba(255, 255, 255, 0.448);
         border-radius: 10%;
         border: 2px solid var(--color-btn);
         box-sizing: border-box;
@@ -893,21 +890,18 @@ div.product__img{
     }
 
     .two{
-        background-color: lightgreen;
         left: 143px;
-        /* display: none; */
+        display: none;
     }
 
     .three{
-        background-color: lightblue;
         left: 263px;
-        /* display: none; */
+        display: none;
     }
 
     .four{
-        background-color: lightpink;
         left: 383px;
-        /* display: none; */
+        display: none;
     }
     
     .product__img-icons{    

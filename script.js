@@ -202,7 +202,10 @@ function nextImg(){ // próxima imagem
 }
 
 // DESKTOP IMG
-// img.onclick = function(){
-//     console.log("Are u ready?");
-//     box.style.display = "block";
-// }
+// script lightbox
+// script changeImg()
+function changeImg(a){
+    console.log(a.src);
+    // img.src = a;
+    // AQUI! substituir src da main img
+} 

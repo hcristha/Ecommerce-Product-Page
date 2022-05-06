@@ -13,13 +13,13 @@
 <body>
   <div class="menu__box js-menu__box"></div>
 
-  <!--Desktop, AQUI! Por que os elementos de lightbox estão aparecendo na versão mobile?-->
+  <!--Desktop-->
   <div class="lightbox">
     <!--close-->
     <img alt="icon" src="images/icon-close.svg">
 
     <!--flexbox main img-->
-    <img style="display: none;" class="lightbox__img-main" alt="Tênis branco e marrom claro." src="images/image-product-1.jpg">
+    <img class="lightbox__img-main" alt="Tênis branco e marrom claro." src="images/image-product-1.jpg">
     
     <div class="lightbox__img">
       <img class="lightbox__img-next" alt="Tênis branco e marrom claro." src="images/image-product-1.jpg">
@@ -91,7 +91,7 @@
       <img class="desktop" alt="Tênis branco e marrom claro." src="images/image-product-1.jpg">
       <div class="desktop-box"></div>
 
-      <img class="desktop" alt="Tênis branco e marrom claro." src="images/image-product-2.jpg">
+      <img class="desktop" onclick="changeImg(this)" alt="Tênis branco e marrom claro." src="images/image-product-2.jpg">
 
       <img class="desktop" alt="Tênis branco e marrom claro." src="images/image-product-3.jpg">
 

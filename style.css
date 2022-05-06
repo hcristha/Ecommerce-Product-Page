@@ -29,6 +29,10 @@ body{
     z-index: 2;
 }
 
+.lightbox{
+    display: none;
+}
+
 nav{
     background-color: hsl(0, 0%, 100%);
     width: 200px;
@@ -734,15 +738,14 @@ div.product__img{
         z-index: 5;
 
         display: none;
-        /* flex-flow: column wrap;
+        flex-flow: column wrap;
         justify-content: center;
         align-items: center;
-     */
+    
     }
 
     .lightbox__img-main{
         border-radius: 5%;
-        display: none;
         width: 470px;
         height: 350px;
 
@@ -756,16 +759,15 @@ div.product__img{
         height: 150px;
         padding: 40px;
 
-        display: none;
-        /* flex-flow: row nowrap;
+        display: flex;
+        flex-flow: row nowrap;
         justify-content: center;
-        align-items: center; */
+        align-items: center;
 
         position: relative;
     }
 
     .lightbox__img-next{
-        display: none;
         width: 75px;
         height: 75px;
         border-radius: 10%;

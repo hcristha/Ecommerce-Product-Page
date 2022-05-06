@@ -727,7 +727,7 @@ div.product__img{
     }
 
     .lightbox{
-        background-color: lightpink;
+        background-color: blue;
         width: 100%;
         height: 100%;
         position: fixed;
@@ -741,36 +741,46 @@ div.product__img{
 
     .lightbox__img-main{
         border-radius: 5%;
-        width: 450px;
+        width: 470px;
         height: 350px;
 
         grid-column-end: span 4;
     }
 
     .lightbox__img{
-        background-color: lightblue;
+        background-color: lightgreen;
         box-sizing: border-box;
         width: 500px;
         height: 150px;
         padding: 40px;
 
         display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
     }
 
     .lightbox__img-next{
-        width: 60px;
-        height: 60px;
+        width: 75px;
+        height: 75px;
         border-radius: 10%;
+        margin-left: 20px;
     }
 
     .lightbox__img-box{
-        background-color: lightblue;
+        background-color: lightgreen;
         border-radius: 10%;
         border: 2px solid hsl(26, 100%, 55%);
         box-sizing: border-box;
-        width: 80px;
-        height: 80px;
+        width: 75px;
+        height: 75px;
+
+        position: absolute;
+        top: 37.5;
+        left: 5;
     }
+
+    /*AQUI! Como deixar a div embaixo da primeira img-next?*/
 
     .product{
         /* background-color: lightskyblue; */

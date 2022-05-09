@@ -837,7 +837,7 @@ div.product__img{
     }
 
     div.product__img{
-        /* background-color: lightpink; */
+        background-color: lightpink;
         max-width: 465px;
         height: 650px;
         
@@ -884,18 +884,18 @@ div.product__img{
 
         position: absolute;
         bottom: 20px;
-        left: 22px;
-        display: block;
+        left: 4.5%;
+        display: none;
     }
 
     .two{
-        left: 142px;
-        display: none;
+        left: 28.4%;
+        display: block;
     }
 
     .three{
-        left: 262px;
-        display: none;
+        left: 52%;/*AQUI! Qual unidade de medida relativa é melhor?*/
+        display: block;
     }
 
     .four{

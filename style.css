@@ -778,13 +778,13 @@ div.product__img{
     }
 
     .lightbox__img-next:hover{
-        opacity: 0.35;
+        opacity: 0.5;
     }
 
     .lightbox__img-box{
         background-color: rgba(255, 255, 255, 0.448);
         border-radius: 10%;
-        border: 2px solid var(--color-btn);
+        border: 3px solid var(--color-btn);
         box-sizing: border-box;
         cursor: pointer;
         width: 75px;
@@ -793,22 +793,37 @@ div.product__img{
         position: absolute;
         top: 13px;
         left: 80px;
-        display: block;
     }
 
     .pos2{
         left: 175px;
-        display: none;
+        opacity: 0;
+    }
+
+    .pos2:hover{
+        border: 0;
+        opacity: 1;
     }
 
     .pos3{
         left: 270px;
-        display: none;
+        /* display: none; */
+        opacity: 0;
+    }
+
+    .pos3:hover{
+        border: 0;
+        opacity: 1;
     }
 
     .pos4{
         left: 365px;
-        display: none;/*AQUI! Fazendo mesmo CSS das imagens da versão Desktop, só que agora no lightbox do Desktop!*/
+        opacity: 0;
+    }
+
+    .pos4:hover{
+        border: 0;
+        opacity: 1;
     }
 
     .product{

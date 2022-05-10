@@ -203,15 +203,22 @@ function nextImg(){ // próxima imagem
 // script lightbox
 var ltbxImg = document.querySelector(".lightbox__img-main");
 var lightboxImg = document.querySelector(".lightbox__img");
-function changeLtbx2(currentImg){
-    let current = currentImg;
-    let source = current.getAttribute("src");
+function changeLtbx2(currentDiv){
+    let current = currentDiv;
+    let img2 = current.previousElementSibling;
+    let source = img2.getAttribute("src");
     ltbxImg.src = source;
 
-    let div2 = current.nextElementSibling;
-    div2.style.display = "block";
+    current.style.opacity = "1";
 
-    let div1 = lightboxImg.children[2];// AQUI! Qual índice da div 1?
+    let div1 = lightboxImg.children[1];
+    let div3 = lightboxImg.children[5];
+    let div4 = lightboxImg.children[7];
+    div1.style.opacity = "0.5";
+    // AQUI! Como desaparecer as outras divs sem afetar o hover?
+    // div3.style.display = "none";
+    // div3.style.opacity = "0";
+    // div4.style.display = "0";
 }
 
 function changeLtbx3(currentImg){

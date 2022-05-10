@@ -758,28 +758,26 @@ div.product__img{
         position: relative;
     }
 
-    .lightbox__img--main{
+    .lightbox__img--kit{
+        background-color: lightskyblue;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+
+        display: grid;
+        grid-template: auto auto / auto auto auto auto;
+        justify-items: center; /*AQUI! Grid*/
+
+        position: relative;
+    }
+
+    .lightbox__img--kit-main{
         border-radius: 2%;
         cursor: pointer;
-        width: 420px;
+        width: 430px;
         height: 400px;
 
         grid-column-end: span 4;
-    }
-
-    .lightbox__img--kit{
-        background-color: rgb(14, 85, 14);
-        box-sizing: border-box;
-        width: 100%;
-        height: 100px;
-        padding: 0;/*AQUI! Como deixar o kit ao meio da imagem principal?*/
-
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-
-        position: relative;
     }
 
     .lightbox__img--kit-next{
@@ -788,7 +786,6 @@ div.product__img{
         border-radius: 10%;
         cursor: pointer;
         display: block;
-        margin-left: 20px;
     }
 
     .lightbox__img--icons{

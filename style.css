@@ -747,17 +747,17 @@ div.product__img{
     .lightbox__img-main{
         border-radius: 5%;
         cursor: pointer;
-        width: 470px;
-        height: 350px;
+        width: 450px;
+        height: 430px;
 
         grid-column-end: span 4;
     }
 
     .lightbox__img{
-        background-color: rgb(14, 85, 14);
+        /* background-color: rgb(14, 85, 14); */
         box-sizing: border-box;
         width: 500px;
-        height: 150px;
+        height: 100px;
         padding: 40px;
 
         display: flex;
@@ -784,14 +784,14 @@ div.product__img{
     .lightbox__img-box{
         background-color: rgba(255, 255, 255, 0.448);
         border-radius: 10%;
-        border: 3px solid var(--color-btn);
+        border: 2px solid var(--color-btn);
         box-sizing: border-box;
         cursor: pointer;
         width: 75px;
         height: 75px;
 
         position: absolute;
-        top: 37px;
+        top: 13px;
         left: 80px;
         display: block;
     }

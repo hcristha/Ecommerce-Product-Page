@@ -201,8 +201,34 @@ function nextImg(){ // próxima imagem
 
 // DESKTOP IMG
 // script lightbox
+var ltbxImg = document.querySelector(".lightbox__img-main");
+var lightboxImg = document.querySelector(".lightbox__img");
+function changeLtbx2(currentImg){
+    let current = currentImg;
+    let source = current.getAttribute("src");
+    ltbxImg.src = source;
+
+    let div2 = current.nextElementSibling;
+    div2.style.display = "block";
+
+    let div1 = lightboxImg.children[2];// AQUI! Qual índice da div 1?
+}
+
+function changeLtbx3(currentImg){
+    let current = currentImg;
+    let source = current.getAttribute("src");
+    ltbxImg.src = source;
+}
+
+function changeLtbx4(currentImg){
+    let current = currentImg;
+    let source = current.getAttribute("src");
+    ltbxImg.src = source;
+}
+
+
 // mudar imagem principal
-let productImg = document.querySelector(".product__img");
+var productImg = document.querySelector(".product__img");
 function changeImg1(currentImg){
     let current = currentImg;
     let source = current.getAttribute("src"); // pegando valor do atributo da imagem 1

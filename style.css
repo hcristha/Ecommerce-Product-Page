@@ -744,21 +744,35 @@ div.product__img{
     
     }
 
-    .lightbox__img-main{
-        border-radius: 5%;
+    .lightbox__img{
+        background-color: lightblue;
+        box-sizing: border-box;
+        width: 500px;
+        height: 500px;
+
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+    }
+
+    .lightbox__img--main{
+        border-radius: 2%;
         cursor: pointer;
-        width: 450px;
-        height: 430px;
+        width: 420px;
+        height: 400px;
 
         grid-column-end: span 4;
     }
 
-    .lightbox__img{
-        /* background-color: rgb(14, 85, 14); */
+    .lightbox__img--kit{
+        background-color: rgb(14, 85, 14);
         box-sizing: border-box;
-        width: 500px;
+        width: 100%;
         height: 100px;
-        padding: 40px;
+        padding: 0;/*AQUI! Como deixar o kit ao meio da imagem principal?*/
 
         display: flex;
         flex-flow: row nowrap;
@@ -768,7 +782,7 @@ div.product__img{
         position: relative;
     }
 
-    .lightbox__img-next{
+    .lightbox__img--kit-next{
         width: 75px;
         height: 75px;
         border-radius: 10%;
@@ -777,53 +791,22 @@ div.product__img{
         margin-left: 20px;
     }
 
-    .lightbox__img-next:hover{
-        opacity: 0.5;
-    }
-
-    .lightbox__img-box{
-        background-color: rgba(255, 255, 255, 0.448);
-        border-radius: 10%;
-        border: 3px solid var(--color-btn);
-        box-sizing: border-box;
-        cursor: pointer;
-        width: 75px;
-        height: 75px;
+    .lightbox__img--icons{
+        /* background-color: lightpink; */
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
 
         position: absolute;
-        top: 13px;
-        left: 80px;
+        bottom: 50%;
     }
 
-    .pos2{
-        left: 175px;
-        opacity: 0;
-    }
-
-    .pos2:hover{
-        border: 0;
-        opacity: 1;
-    }
-
-    .pos3{
-        left: 270px;
-        /* display: none; */
-        opacity: 0;
-    }
-
-    .pos3:hover{
-        border: 0;
-        opacity: 1;
-    }
-
-    .pos4{
-        left: 365px;
-        opacity: 0;
-    }
-
-    .pos4:hover{
-        border: 0;
-        opacity: 1;
+    .lightbox__img--icons img{
+        background-color:hsl(0, 0%, 100%);
+        border-radius: 50%;
+        padding: 15px;
     }
 
     .product{

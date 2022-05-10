@@ -18,24 +18,26 @@
     <!--close-->
     <img alt="icon" src="images/icon-close.svg">
 
-    <!--flexbox main img-->
-    <img class="lightbox__img-main" alt="Tênis branco e marrom claro." src="images/image-product-1.jpg">
-    
+    <!--flexbox img-->
     <div class="lightbox__img">
-      <img class="lightbox__img-next" onclick="changeLtbx1(this)" alt="Tênis branco e marrom claro." src="images/image-product-1.jpg">
-      <div class="lightbox__img-box"></div>
+      <img class="lightbox__img--main" alt="Tênis branco e marrom claro." src="images/image-product-1.jpg">
+      
+      <div class="lightbox__img--kit">
+        <img class="lightbox__img--kit-next" onclick="changeLtbx1(this)" alt="Tênis branco e marrom claro." src="images/image-product-1.jpg">
 
-      <img class="lightbox__img-next" alt="Tênis branco e marrom claro." src="images/image-product-2.jpg">
-      <div class="lightbox__img-box pos2" onclick="changeLtbx2(this)" ></div>
+        <img class="lightbox__img--kit-next" onclick="changeLtbx2(this)" alt="Tênis branco e marrom claro." src="images/image-product-2.jpg">
 
-      <img class="lightbox__img-next" onclick="changeLtbx3(this)" alt="Tênis branco e marrom claro." src="images/image-product-3.jpg">
-      <div class="lightbox__img-box pos3"></div>
+        <img class="lightbox__img--kit-next" onclick="changeLtbx3(this)" alt="Tênis branco e marrom claro." src="images/image-product-3.jpg">
 
-      <img class="lightbox__img-next" onclick="changeLtbx4(this)" alt="Tênis branco e marrom claro." src="images/image-product-4.jpg">
-      <div class="lightbox__img-box pos4"></div>
+        <img class="lightbox__img--kit-next" onclick="changeLtbx4(this)" alt="Tênis branco e marrom claro." src="images/image-product-4.jpg">
+      </div>
+
+      <!--flexbox icons-->
+      <div class="lightbox__img--icons">
+        <img alt="icon" src="images/icon-previous.svg">
+        <img alt="icon" src="images/icon-next.svg">
+      </div>
     </div>
-
-    <!--flexbox icons-->
   </div>
   
   <nav class="menu js-menu">

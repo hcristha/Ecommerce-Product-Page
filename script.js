@@ -200,33 +200,23 @@ function nextImg(){ // próxima imagem
 }
 
 // DESKTOP IMG
-// script lightbox
-var ltbxImg = document.querySelector(".lightbox__img-main");
-var lightboxImg = document.querySelector(".lightbox__img");
-function changeLtbx2(currentDiv){
-    let current = currentDiv;
-    let img2 = current.previousElementSibling;
-    let source = img2.getAttribute("src");
+// mostrar lightbox
+var ltbxImg = document.querySelector(".lightbox__img--main");
+function changeLtbx1(currentImg){
+    let current = currentImg;
+    let source = current.getAttribute("src");
     ltbxImg.src = source;
-
-    current.style.opacity = "1";
-
-    let div1 = lightboxImg.children[1];
-    let div3 = lightboxImg.children[5];
-    let div4 = lightboxImg.children[7];
-    div1.style.opacity = "0.5";
-    // AQUI! Como desaparecer as outras divs sem afetar o hover?
-    // div3.style.display = "none";
-    // div3.style.opacity = "0";
-    // div4.style.display = "0";
 }
-
+function changeLtbx2(currentImg){
+    let current = currentImg;
+    let source = current.getAttribute("src");
+    ltbxImg.src = source;
+}
 function changeLtbx3(currentImg){
     let current = currentImg;
     let source = current.getAttribute("src");
     ltbxImg.src = source;
 }
-
 function changeLtbx4(currentImg){
     let current = currentImg;
     let source = current.getAttribute("src");

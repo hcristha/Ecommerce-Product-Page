@@ -3,32 +3,30 @@ let menu = document.querySelector(".js-menu");
 let box = document.querySelector(".js-menu__box");
 let options = document.querySelector(".js-header-box__options-menu");
  
-if (screen.width < 745){// 744px abaixo, mobile
-    console.log("w");
-    options.onclick = function(){ // mobile
-        console.log("h");
-        box.style.display = "block";
-        menu.style.display = "block";
+// if (screen.width < 745){// 744px abaixo, mobile
+//     options.onclick = function(){ // mobile
+//         console.log("h");
+//         box.style.display = "block";
+//         menu.style.display = "block";
 
-        // quando clicar no "x" dentro do menu, vai fechar menu e box
-        let close = document.querySelector(".menu__close");
-        close.addEventListener("click", function(){
-            menu.style.display = "none";
-            box.style.display = "none";
-        });
+//         // quando clicar no "x" dentro do menu, vai fechar menu e box
+//         let close = document.querySelector(".menu__close");
+//         close.addEventListener("click", function(){
+//             menu.style.display = "none";
+//             box.style.display = "none";
+//         });
 
-        // quando clicar fora do menu, ou seja, no box transparente, vai fechar tanto menu quanto box
-        box.addEventListener("click", function(){
-            menu.style.display = "none";
-            box.style.display = "none";
-        });
-    }
-}
-else{ // 745px acima, pc
-    console.log("y");
-    box.style.display = "none";
-    console.log("x");
-} 
+//         // quando clicar fora do menu, ou seja, no box transparente, vai fechar tanto menu quanto box
+//         box.addEventListener("click", function(){
+//             menu.style.display = "none";
+//             box.style.display = "none";
+//         });
+//     }
+// }
+// else{ // 745px acima, pc
+//     console.log("y");
+//     box.style.display = "none";
+// } 
 
 // quantidade de itens
 var amountItem = document.querySelector(".product__amount-item");

@@ -745,23 +745,23 @@ div.product__img{
     }
 
     .lightbox__img{
-        /* background-color: lightblue; */
+        background-color: lightblue;
         box-sizing: border-box;
-        width: 450px;
-        height: 400px;
+        width: 100%;
+        height: 90%;
 
         display: flex;
-        flex-flow: column nowrap;
+        flex-flow: column wrap;
         justify-content: center;
         align-items: center;
         position: relative;
     }
-    /*AQUI 10/05/2022! Renomear classes e continuar seguindo layout*/
+    /*AQUI 11/05/2022! Renomear classes e continuar seguindo layout*/
 
-    .lightbox__img--kit-main{
+    .lightbox__img--main{
         border-radius: 2%;
         cursor: pointer;
-        width: 100%;
+        width: 500px;
         height: 100%;
 
         grid-column-end: span 4;
@@ -775,8 +775,6 @@ div.product__img{
 
         position: absolute;
         bottom: 50%;
-
-        transform: translateY(-50%);
     }
 
     .lightbox__img--icons img{
@@ -786,29 +784,30 @@ div.product__img{
     }
 
     .lightbox__img--kit{
-        /* background-color: lightpink; */
+        background-color: lightpink;
         box-sizing: border-box;
-        width: 100%;
-        height: 100px;
+        width: 500px;
+        height: 500px;
+        padding-top: 20px;
 
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         justify-content: center;
         align-items: center;
 
         position: relative;
     }
 
-    .lightbox__img--kit-next{
-        width: 75px;
-        height: 75px;
+    .lightbox__img--next{
+        width: 65px;
+        height: 65px;
         border-radius: 10%;
         cursor: pointer;
         display: block;
         margin-left: 15px;
     }
     
-    /*acima 10/05/2022*/
+    /*acima 11/05/2022, AQUI! Renomear classes e seguir pensando no layout!*/
 
     .product{
         /* background-color: lightskyblue; */

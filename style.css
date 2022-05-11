@@ -811,18 +811,30 @@ div.product__img{
         stroke: var(--color-btn);
     }
 
-    .lightbox__img--next{
+    .lightbox__img--next{/*AQUI! Por que essas divs afetaram todo o layout?*/
+        /* background-color: red; */
+        display: inline-block;
         width: 75px;
         height: 75px;
         border-radius: 10%;
         cursor: pointer;
-        display: block;
         margin: 20px 0 0 15px;
     }
 
-    .lightbox__img--next:hover{
-        filter: brightness(60%);
-        /*AQUI! Como deixar a img esbranquiçada sem usar opacity?*/
+    .lightbox__img--next .um{
+        background: black url("images/image-product-1.jpg") center/cover no-repeat;
+    }
+
+    .lightbox__img--next .dois{
+        background: black url("images/image-product-2.jpg") center/cover no-repeat;
+    }
+
+    .lightbox__img--next .tres{
+        background: black url("images/image-product-3.jpg") center/cover no-repeat;
+    }
+
+    .lightbox__img--next .quatro{
+        background: black url("images/image-product-4.jpg") center/cover no-repeat;
     }
     
     /*acima 11/05/2022, AQUI! Renomear classes e seguir pensando no layout!*/

@@ -769,7 +769,6 @@ div.product__img{
     .lightbox__img--svg path:hover{
         fill: var(--color-btn);
     }
-    /*AQUI! Active states(divs nas imgs-next) nos elementos de lightbox*/
 
     .lightbox__img--kit{
         /* background-color: lightblue; */
@@ -818,7 +817,12 @@ div.product__img{
         border-radius: 10%;
         cursor: pointer;
         display: block;
-        margin-left: 15px;
+        margin: 20px 0 0 15px;
+    }
+
+    .lightbox__img--next:hover{
+        filter: brightness(60%);
+        /*AQUI! Como deixar a img esbranquiçada sem usar opacity?*/
     }
     
     /*acima 11/05/2022, AQUI! Renomear classes e seguir pensando no layout!*/

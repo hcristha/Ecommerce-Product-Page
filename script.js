@@ -201,7 +201,7 @@ function nextImg(){ // próxima imagem
 
 // DESKTOP IMG
 // mostrar lightbox
-var ltbxImg = document.querySelector(".lightbox__img--main");
+var ltbxImg = document.querySelector(".lightbox__img--kit-main");
 function changeLtbx1(currentImg){
     let current = currentImg;
     let source = current.getAttribute("src");

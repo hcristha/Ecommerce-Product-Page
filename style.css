@@ -738,18 +738,17 @@ div.product__img{
         z-index: 5;
 
         display: flex;
-        flex-flow: column wrap;
+        flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
     
     }
 
-    div.lightbox__img{
+    .lightbox__img{
         background-color: lightpink;
         box-sizing: border-box;
         width: 500px;
-        height: 500px;
-        padding-top: 20px;
+        height: 600px;
 
         display: flex;
         flex-flow: row wrap;
@@ -761,15 +760,20 @@ div.product__img{
 
     div.lightbox__img > img:first-child{
         background-color: lightgreen;
-        /* width: 100px; */
-        align-self: flex-end;/*AQUI! Não deu certo esse comando pois align é vertical e o que precisamos é que o "x" vai pro final do flexbox*/
+        cursor: pointer;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
+    /*AQUI! Active states nos elementos de lightbox*/
 
     .lightbox__img--kit{
         background-color: lightblue;
         box-sizing: border-box;
         width: 100%;
-        height: 90%;
+        height: 450px;
+        margin-top: 40px;
 
         display: flex;
         flex-flow: column wrap;
@@ -777,15 +781,12 @@ div.product__img{
         align-items: center;
         position: relative;
     }
-    /*AQUI 11/05/2022! Renomear classes e continuar seguindo layout*/
 
     .lightbox__img--kit-main{
         border-radius: 2%;
         cursor: pointer;
-        width: 500px;
+        width: 95%;
         height: 100%;
-
-        grid-column-end: span 4;
     }
 
     .lightbox__img--kit-icons{
@@ -801,12 +802,13 @@ div.product__img{
     .lightbox__img--kit-icons img{
         background-color:hsl(0, 0%, 100%);
         border-radius: 50%;
-        padding: 13px;
+        cursor: pointer;
+        padding: 12px;
     }
 
     .lightbox__img--next{
-        width: 65px;
-        height: 65px;
+        width: 75px;
+        height: 75px;
         border-radius: 10%;
         cursor: pointer;
         display: block;

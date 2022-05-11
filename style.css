@@ -745,39 +745,58 @@ div.product__img{
     }
 
     .lightbox__img{
-        background-color: lightblue;
+        /* background-color: lightblue; */
         box-sizing: border-box;
-        width: 500px;
-        height: 500px;
+        width: 450px;
+        height: 400px;
 
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
-
         position: relative;
     }
-
-    .lightbox__img--kit{
-        background-color: lightskyblue;
-        box-sizing: border-box;
-        width: 100%;
-        height: 100%;
-
-        display: grid;
-        grid-template: auto auto / auto auto auto auto;
-        justify-items: center; /*AQUI! Grid*/
-
-        position: relative;
-    }
+    /*AQUI 10/05/2022! Renomear classes e continuar seguindo layout*/
 
     .lightbox__img--kit-main{
         border-radius: 2%;
         cursor: pointer;
-        width: 430px;
-        height: 400px;
+        width: 100%;
+        height: 100%;
 
         grid-column-end: span 4;
+    }
+
+    .lightbox__img--icons{
+        width: 100%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+
+        position: absolute;
+        bottom: 50%;
+
+        transform: translateY(-50%);
+    }
+
+    .lightbox__img--icons img{
+        background-color:hsl(0, 0%, 100%);
+        border-radius: 50%;
+        padding: 13px;
+    }
+
+    .lightbox__img--kit{
+        /* background-color: lightpink; */
+        box-sizing: border-box;
+        width: 100%;
+        height: 100px;
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
     }
 
     .lightbox__img--kit-next{
@@ -786,25 +805,10 @@ div.product__img{
         border-radius: 10%;
         cursor: pointer;
         display: block;
+        margin-left: 15px;
     }
-
-    .lightbox__img--icons{
-        /* background-color: lightpink; */
-        width: 100%;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-
-        position: absolute;
-        bottom: 50%;
-    }
-
-    .lightbox__img--icons img{
-        background-color:hsl(0, 0%, 100%);
-        border-radius: 50%;
-        padding: 15px;
-    }
+    
+    /*acima 10/05/2022*/
 
     .product{
         /* background-color: lightskyblue; */

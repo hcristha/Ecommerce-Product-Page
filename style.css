@@ -744,7 +744,28 @@ div.product__img{
     
     }
 
-    .lightbox__img{
+    div.lightbox__img{
+        background-color: lightpink;
+        box-sizing: border-box;
+        width: 500px;
+        height: 500px;
+        padding-top: 20px;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+    }
+
+    div.lightbox__img > img:first-child{
+        background-color: lightgreen;
+        /* width: 100px; */
+        align-self: flex-end;/*AQUI! Não deu certo esse comando pois align é vertical e o que precisamos é que o "x" vai pro final do flexbox*/
+    }
+
+    .lightbox__img--kit{
         background-color: lightblue;
         box-sizing: border-box;
         width: 100%;
@@ -758,7 +779,7 @@ div.product__img{
     }
     /*AQUI 11/05/2022! Renomear classes e continuar seguindo layout*/
 
-    .lightbox__img--main{
+    .lightbox__img--kit-main{
         border-radius: 2%;
         cursor: pointer;
         width: 500px;
@@ -767,7 +788,7 @@ div.product__img{
         grid-column-end: span 4;
     }
 
-    .lightbox__img--icons{
+    .lightbox__img--kit-icons{
         width: 100%;
         display: flex;
         flex-flow: row nowrap;
@@ -777,25 +798,10 @@ div.product__img{
         bottom: 50%;
     }
 
-    .lightbox__img--icons img{
+    .lightbox__img--kit-icons img{
         background-color:hsl(0, 0%, 100%);
         border-radius: 50%;
         padding: 13px;
-    }
-
-    .lightbox__img--kit{
-        background-color: lightpink;
-        box-sizing: border-box;
-        width: 500px;
-        height: 500px;
-        padding-top: 20px;
-
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: center;
-        align-items: center;
-
-        position: relative;
     }
 
     .lightbox__img--next{

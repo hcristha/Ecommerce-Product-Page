@@ -202,6 +202,10 @@ function nextImg(){ // próxima imagem
 // DESKTOP IMG
 // mostrar lightbox
 var ltbxImg = document.querySelector(".lightbox__img--kit-main");
+function close(svg){
+    console.log(svg.parent);
+}
+
 function changeLtbx2(div){
     console.log(ltbxImg.style);
     // Aqui! Por que não consigo pegar o backgroundImage pelo JS?

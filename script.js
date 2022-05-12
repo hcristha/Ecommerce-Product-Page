@@ -202,25 +202,9 @@ function nextImg(){ // próxima imagem
 // DESKTOP IMG
 // mostrar lightbox
 var ltbxImg = document.querySelector(".lightbox__img--kit-main");
-function changeLtbx1(currentImg){
-    let current = currentImg;
-    let source = current.getAttribute("src");
-    ltbxImg.src = source;
-}
-function changeLtbx2(currentImg){
-    let current = currentImg;
-    let source = current.getAttribute("src");
-    ltbxImg.src = source;
-}
-function changeLtbx3(currentImg){
-    let current = currentImg;
-    let source = current.getAttribute("src");
-    ltbxImg.src = source;
-}
-function changeLtbx4(currentImg){
-    let current = currentImg;
-    let source = current.getAttribute("src");
-    ltbxImg.src = source;
+function changeLtbx2(div){
+    ltbxImg.style.backgroundImage = "url(./images/image-product-4.jpg)";
+    // Aqui! Por que a img não muda?
 }
 
 

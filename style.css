@@ -1,6 +1,10 @@
 /*Mobile-first*/
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
+/* body{
+    background: red;
+} */
+
 :root{
     --color-hover-btn: hsl(25, 100%, 94%);
     --color-btn: hsl(26, 100%, 55%);

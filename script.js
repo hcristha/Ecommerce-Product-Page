@@ -203,8 +203,10 @@ function nextImg(){ // próxima imagem
 // mostrar lightbox
 var ltbxImg = document.querySelector(".lightbox__img--kit-main");
 function changeLtbx2(div){
-    ltbxImg.style.backgroundImage = "url(./images/image-product-4.jpg)";
-    // Aqui! Por que a img não muda?
+    let bg2 = JSON.stringify(div.style.backgroundImage);
+    console.log(bg2);
+    // ltbxImg.style.backgroundImage = "url(./images/image-product-4.jpg)";
+    // Aqui! Por que não consigo pegar o backgroundImage pelo JS?
 }
 
 

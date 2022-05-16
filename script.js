@@ -231,9 +231,16 @@ function ltbxNext(){
     if (ltbxClick < 4){
         ltbxClick++;
     }
-    ltbxImgKit.src = `images/image-product-${ltbxClick}.jpg`;
+    ltbxImgKit.src = `images/image-product-${ltbxClick}.jpg`; // muda imagem
     let ltbxIcons = document.querySelector(".lightbox__img--kit-icons");
-    let ltbxPrevious = ltbxIcons.children[0]; // AQUI! Confirmar se peguei elemento previous e adicionar evento de onclick nele.
+    let ltbxPrevious = ltbxIcons.children[0];
+    // imagem anterior
+    ltbxPrevious.onclick = function(){
+        if (ltbxClick > 1){
+            ltbxClick--;
+        }
+        ltbxImgKit.src = `images/image-product-${ltbxClick}.jpg`; // muda imagem
+    }
 }
 
 // PÁGINA

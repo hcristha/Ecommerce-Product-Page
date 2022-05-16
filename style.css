@@ -501,24 +501,8 @@ div.product__img{
         border-bottom: 5px solid hsl(26, 100%, 55%);
     }
 
-    header{
-        /* background-color: lightblue; */
-        /* margin: 0 2rem; */
-    }
-
     .header-box{
-        /* background-color: lightskyblue; */
         padding: 0 3.8rem;
-        /* box-sizing: border-box;
-        width: 100%;
-        height: 80px;
-        padding: 10px 25px;
-    
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-    
-        position: relative; */
     }
 
     .header-box__options-menu{
@@ -526,18 +510,7 @@ div.product__img{
     }
 
     .header-box__options-cart--number{
-        /* background-color: var(--color-btn);
-        border-radius: 15px;
-        color: hsl(0, 0%, 100%);
-        cursor: pointer;
-        display: none; */
         font-size: 0.9rem;
-        /* font-weight: 700;
-        margin-right: 20px;
-        padding: 1px 3px;
-        position: absolute;
-        top: 0;
-        right: 0; */
     }
 
     .product{
@@ -552,32 +525,13 @@ div.product__img{
     }
 
     .product__cart{
-        /* background-color: lightcoral; */
-
-        /* border-radius: 10px;
-        box-sizing: border-box;
-        box-shadow: 0 5px 15px 0 hsla(0, 100%, 2%, 0.316);
-        display: none; */
-        /* margin: 10px;
-        padding: 20px;*/
         width: 350px;
-        /* height: 250px; */
-    
-        /* position: absolute; */
         right: 0;
-        /* z-index: 1; */
     }
 
     .product__cart-info--items{
-        /* background-color: lightpink; */
-        /* box-sizing: border-box;
-        width: 100%; */
+        width: 100%;
         height: 80px;
-        /* margin: 0;
-        padding: 5px 0 5px 15px;
-        list-style-type: none;
-        text-align: center;
-        overflow: hidden; */
     
         display: flex;
         flex-flow: row wrap;
@@ -617,8 +571,6 @@ div.product__img{
     }
 
     .product__info--about{
-        /* background-color: lightskyblue; */
-        /* padding: 0 20px; */
         height: 220px;
     }
     
@@ -637,11 +589,8 @@ div.product__img{
     }
     
     .product__info--price{
-        /* background-color: lightcoral; */
-        /* box-sizing: border-box; */
         height: 60px;
         padding: 0 20px;
-        /* list-style-type: none; */
         margin: 0;
         max-width: 200px;
     
@@ -679,7 +628,6 @@ div.product__img{
     }
     
     .product__info--amount{
-        /* background-color: lightpink; */
         padding: 0 40px 10px;
     
         display: grid;
@@ -850,8 +798,6 @@ div.product__img{
     .bg4{
         background: black url("images/image-product-4.jpg") center/cover no-repeat;
     }
-    
-    /*acima 11/05/2022, AQUI! Pensar em nome melhores pra classes um, dois e tres, e corrigir JS*/
 
     .product{
         /* background-color: lightskyblue; */
@@ -894,7 +840,6 @@ div.product__img{
         cursor: pointer;
         width: 100%;
         height: 450px;
-        position: static;
 
         grid-column-end: span 4;
     }
@@ -904,47 +849,16 @@ div.product__img{
         cursor: pointer;
         width: 100px;
         height: 100px;
-        display: block;
-
-        position: static;
+        display: inline-block;
     }
 
     .product__img .desktop:hover{
-        opacity: 0.35;
+        opacity: 0.4;
     }
 
-    .desktop-box{
-        background-color: rgba(255, 255, 255, 0.448);
-        border-radius: 10%;
+    .desktop:first-of-type{
         border: 4px solid var(--color-btn);
-        box-sizing: border-box;
-        cursor: pointer;
-        width: 104px;
-        height: 100px;
-
-        position: absolute;
-        bottom: 20px;
-        left: 1.4rem;
-        display: block;
-    }
-
-    .two{
-        left: 8.9rem;
-        display: none;
-    }
-
-    .three{
-        left: 16.4rem;
-        display: none;
-    }
-
-    .four{
-        left: 23.9rem;
-        display: none;
-    }
-    
-    .product__img-icons{    
-        /* display: none; */
+        /*AQUI! Por quê não consigo selecionar apenas a primeira imagem dessa classe?*/
     }
 
     .product__info{

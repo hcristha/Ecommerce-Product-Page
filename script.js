@@ -181,8 +181,8 @@ function showCart(){
 }
 
 // imagens para função nextImg()
-const img = document.querySelector(".js-product__img-img"); // foto do produto
-const icons = document.querySelector(".js-product__img-icons"); // ícones de voltar e próxima
+var img = document.querySelector(".js-product__img-img"); // foto do produto
+var icons = document.querySelector(".js-product__img-icons"); // ícones de voltar e próxima
 
 var click = 1; // contador começa em 1
 function nextImg(){ // próxima imagem
@@ -201,40 +201,42 @@ function nextImg(){ // próxima imagem
 
 // DESKTOP IMG
 // LIGHTBOX
+var ltbx = document.querySelector(".lightbox");
 var ltbxImgKit = document.querySelector(".lightbox__img--kit-main");
-const ltbxClose = document.querySelector(".lightbox__img--svg");
+var ltbxClose = document.querySelector(".lightbox__img--svg");
 // lightbox aparece
 img.onclick = function(){
-    let ltbxImg = ltbxImgKit.parentElement;
-    console.log(ltbxImg);
-    ltbxImg.parentElement.style.display = "flex";
-    // pegar elemento pai lightbox! AQUI :3
+    ltbx.style.display = "flex";
 }
-
 // lightbox desaparece
 ltbxClose.onclick = function(){
-    let ltbxImg = ltbxImgKit.parentElement;
-    ltbxImg.parentElement.style.display = "none";
+    ltbx.style.display = "none";
 }
-
 // ao clicar na img, muda a a imagem principal do Lightbox
 function changeLtbx1(){
     ltbxImgKit.src = "images/image-product-1.jpg";
 }
-
-function changeLtbx2(div){
+function changeLtbx2(){
     ltbxImgKit.src = "images/image-product-2.jpg";
 }
-
 function changeLtbx3(){
     ltbxImgKit.src = "images/image-product-3.jpg";
 }
-
 function changeLtbx4(){
     ltbxImgKit.src = "images/image-product-4.jpg";
 }
+// anterior/próxima imagem lightbox
+var ltbxClick = 1; // contador de cliques do ícone
+function ltbxNext(){
+    if (ltbxClick < 4){
+        ltbxClick++;
+    }
+    ltbxImgKit.src = `images/image-product-${ltbxClick}.jpg`;
+    let ltbxIcons = document.querySelector(".lightbox__img--kit-icons");
+    let ltbxPrevious = ltbxIcons.children[0]; // AQUI! Confirmar se peguei elemento previous e adicionar evento de onclick nele.
+}
 
-// PAGE
+// PÁGINA
 //// mudar imagem principal
 var productImg = document.querySelector(".product__img");
 function changeImg1(currentImg){

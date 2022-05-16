@@ -752,7 +752,7 @@ div.product__img{
     }
 
     .lightbox__img--svg{
-        background-color: lightcoral;
+        /* background-color: lightcoral; */
         cursor: pointer;
         padding: 10px;
         position: absolute;

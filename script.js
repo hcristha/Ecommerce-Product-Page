@@ -2,31 +2,6 @@
 let menu = document.querySelector(".js-menu");
 let box = document.querySelector(".js-menu__box");
 let options = document.querySelector(".js-header-box__options-menu");
- 
-if (screen.width < 745){// 744px abaixo, mobile
-    options.onclick = function(){ // mobile
-        console.log("h");
-        box.style.display = "block";
-        menu.style.display = "block";
-
-        // quando clicar no "x" dentro do menu, vai fechar menu e box
-        let close = document.querySelector(".menu__close");
-        close.addEventListener("click", function(){
-            menu.style.display = "none";
-            box.style.display = "none";
-        });
-
-        // quando clicar fora do menu, ou seja, no box transparente, vai fechar tanto menu quanto box
-        box.addEventListener("click", function(){
-            menu.style.display = "none";
-            box.style.display = "none";
-        });
-    }
-}
-else{ // 745px acima, pc
-    console.log("y");
-    box.style.display = "none";
-} 
 
 // quantidade de itens
 var amountItem = document.querySelector(".product__amount-item");
@@ -204,6 +179,7 @@ function nextImg(){ // próxima imagem
 var ltbx = document.querySelector(".lightbox");
 var ltbxImgKit = document.querySelector(".lightbox__img--kit-main");
 var ltbxClose = document.querySelector(".lightbox__img--svg");
+
 // lightbox aparece
 img.onclick = function(){
     ltbx.style.display = "flex";
@@ -212,6 +188,7 @@ img.onclick = function(){
 ltbxClose.onclick = function(){
     ltbx.style.display = "none";
 }
+
 // ao clicar na img, muda a a imagem principal do Lightbox
 function changeLtbx1(){
     ltbxImgKit.src = "images/image-product-1.jpg";
@@ -227,13 +204,16 @@ function changeLtbx4(){
 }
 // anterior/próxima imagem lightbox
 var ltbxClick = 1; // contador de cliques do ícone
+
 function ltbxNext(){
     if (ltbxClick < 4){
         ltbxClick++;
     }
     ltbxImgKit.src = `images/image-product-${ltbxClick}.jpg`; // muda imagem
+
     let ltbxIcons = document.querySelector(".lightbox__img--kit-icons");
     let ltbxPrevious = ltbxIcons.children[0];
+
     // imagem anterior
     ltbxPrevious.onclick = function(){
         if (ltbxClick > 1){
@@ -246,70 +226,20 @@ function ltbxNext(){
 // PÁGINA
 //// mudar imagem principal
 var productImg = document.querySelector(".product__img");
-function changeImg1(currentImg){
-    let current = currentImg;
-    let source = current.getAttribute("src"); // pegando valor do atributo da imagem 1
-    img.src = source // substituindo valor do atributo da imagem principal para valor do atributo da imagem 1
-
-    //aparecer div acima da img
-    let div1 = current.nextElementSibling; // pegando a div como próximo elemento irmão
-    div1.style.display = "block"; // mostrando div da img atual
-    // //// sumindo com com outras divs
-    let div2 = productImg.children[4];
-    let div3 = productImg.children[6];
-    let div4 = productImg.children[8];
-    div2.style.display = "none";
-    div3.style.display = "none";
-    div4.style.display = "none";
+function changeImg1(){
+    img.src = "images/image-product-1.jpg";
 }
 
-function changeImg2(currentImg){
-    let current = currentImg;
-    let source = currentImg.getAttribute("src"); // pegando valor do atributo da imagem clicada
-    img.src = source; // substituindo valor do atributo da imagem principal para valor do atributo da imagem atual(clicada)
-
-    // aparecer div acima da img
-    let div2 = current.nextElementSibling; // pegando a div como próximo elemento irmão
-    div2.style.display = "block"; // mostrando div da img atual
-    //// sumindo com as outras divs
-    let div1 = productImg.children[2];
-    let div3 = productImg.children[6];
-    let div4 = productImg.children[8];
-    div1.style.display = "none";
-    div3.style.display = "none";
-    div4.style.display = "none";
+function changeImg2(){
+    img.src = "images/image-product-2.jpg";
 }
 
-function changeImg3(currentImg){
-    // sem div por cima da img
-    let current = currentImg;
-    let source = current.getAttribute("src"); // pegando valor do atributo da imagem clicada
-    img.src = source; // substituindo valor do atributo da imagem principal para valor do atributo da imagem atual(clicada)
-
-    // aparecer div acima da img
-    let div3 = current.nextElementSibling; // pegando a div como próximo elemento irmão
-    div3.style.display = "block"; // mostrando div da img atual
-    //// sumindo com as outras divs
-    let div1 = productImg.children[2];
-    let div2 = productImg.children[4];
-    let div4 = productImg.children[8];
-    div1.style.display = "none";
-    div2.style.display = "none";
-    div4.style.display = "none";
+function changeImg3(){
+    img.src = "images/image-product-3.jpg";
 }
 
-function changeImg4(currentImg){
-    let current = currentImg;
-    let source = current.getAttribute("src");
-    img.src = source;
-
-    let div4 = current.nextElementSibling;
-    div4.style.display = "block";
-
-    let div1 = productImg.children[2];
-    let div2 = productImg.children[4];
-    let div3 = productImg.children[6];
-    div1.style.display = "none";
-    div2.style.display = "none";
-    div3.style.display = "none";
+function changeImg4(){
+    img.src = "images/image-product-4.jpg";
 }
+
+// AQUI! Desktop e Mobile prontos! Agora é unir os dois modos da maneira mais responsiva possível :3

@@ -181,8 +181,8 @@ function showCart(){
 }
 
 // imagens para função nextImg()
-var img = document.querySelector(".js-product__img-img"); // foto do produto
-var icons = document.querySelector(".js-product__img-icons"); // ícones de voltar e próxima
+const img = document.querySelector(".js-product__img-img"); // foto do produto
+const icons = document.querySelector(".js-product__img-icons"); // ícones de voltar e próxima
 
 var click = 1; // contador começa em 1
 function nextImg(){ // próxima imagem
@@ -200,18 +200,42 @@ function nextImg(){ // próxima imagem
 }
 
 // DESKTOP IMG
-// mostrar lightbox
-var ltbxImg = document.querySelector(".lightbox__img--kit-main");
-function close(svg){
-    console.log(svg.parent);
+// LIGHTBOX
+var ltbxImgKit = document.querySelector(".lightbox__img--kit-main");
+const ltbxClose = document.querySelector(".lightbox__img--svg");
+// lightbox aparece
+img.onclick = function(){
+    let ltbxImg = ltbxImgKit.parentElement;
+    console.log(ltbxImg);
+    ltbxImg.parentElement.style.display = "flex";
+    // pegar elemento pai lightbox! AQUI :3
+}
+
+// lightbox desaparece
+ltbxClose.onclick = function(){
+    let ltbxImg = ltbxImgKit.parentElement;
+    ltbxImg.parentElement.style.display = "none";
+}
+
+// ao clicar na img, muda a a imagem principal do Lightbox
+function changeLtbx1(){
+    ltbxImgKit.src = "images/image-product-1.jpg";
 }
 
 function changeLtbx2(div){
-    console.log(ltbxImg.style);
-    // Aqui! Por que não consigo pegar o backgroundImage pelo JS?
+    ltbxImgKit.src = "images/image-product-2.jpg";
 }
 
-// mudar imagem principal
+function changeLtbx3(){
+    ltbxImgKit.src = "images/image-product-3.jpg";
+}
+
+function changeLtbx4(){
+    ltbxImgKit.src = "images/image-product-4.jpg";
+}
+
+// PAGE
+//// mudar imagem principal
 var productImg = document.querySelector(".product__img");
 function changeImg1(currentImg){
     let current = currentImg;

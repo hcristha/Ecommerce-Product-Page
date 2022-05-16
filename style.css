@@ -730,7 +730,7 @@ div.product__img{
         position: fixed;
         z-index: 5;
 
-        display: flex;
+        display: none;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
@@ -752,6 +752,7 @@ div.product__img{
     }
 
     .lightbox__img--svg{
+        background-color: lightcoral;
         cursor: pointer;
         padding: 10px;
         position: absolute;
@@ -786,6 +787,7 @@ div.product__img{
 
     .lightbox__img--kit-icons{
         width: 100%;
+        cursor: pointer;
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;

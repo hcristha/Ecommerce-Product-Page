@@ -510,8 +510,8 @@ div.product__img{
         max-width: 100%;
     
         display: grid;
-        grid-template: auto auto / auto auto;
-        /* grid-column-gap: 0; */
+        grid-template: auto auto / auto 40%;
+        grid-gap: 1rem;
         align-items: center;
         justify-content: center;
     }
@@ -533,8 +533,9 @@ div.product__img{
     }
 
     div.product__img{
-        background-color: lightblue;
+        /* background-color: lightblue; */
         height: 650px;
+        padding: 0;
         
         display: grid;
         grid-gap: 20px;
@@ -549,14 +550,14 @@ div.product__img{
         border-radius: 5%;
         cursor: pointer;
         width: 100%;
-        height: 400px;
+        height: 100%;
     
         position: static;
 
         grid-column-end: span 4;
     }
 
-    .product__img .desktop{
+    .product__img .desktop{/*AQUI! Revisando o que fiz até aqui.*/
         background: black url("images/image-product-1.jpg") center/cover no-repeat;
         border-radius: 15%;
         display: inline-block;
@@ -602,28 +603,35 @@ div.product__img{
     }
 
     .product__info{
-        background-color: lightcoral;
+        /* background-color: lightcoral; */
+        /* width: 100%; */
         height: 500px;
-        padding: 25px;
+        padding: 0;
 
         display: grid;
-        grid-template: auto auto auto / 30% auto;
+        grid-template: auto auto auto / 40% auto;
+        align-content: center;
+        justify-content: center;
     }
 
     .product__info--about{
         /* background-color: lightgreen; */
-        height: 270px;
+        /* height: 270px; */
 
         padding: 0;
+        margin: 0;
+
+        grid-column-start: 1;
+        grid-column-end: 3;
     }
     
     .product__info--about-title{
-        font-size: 2rem;
+        font-size: 2.3rem;
         padding: 0;
         margin: 0;
     }
     
-    .product__info--about--about-desc{
+    .product__info--about-desc{
         color: hsl(219, 9%, 45%);
         font-size: 0.9rem;
         font-weight: 400;
@@ -633,14 +641,17 @@ div.product__img{
     
     /*AQUI. Copiar código do max-width 950px, depois comparar e adaptar se preciso*/
     .product__info--price{
+        /* background-color: lightblue; */
         height: 60px;
-        padding: 0 20px;
+        padding: 0;
         margin: 0;
         max-width: 200px;
     
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
+
+        grid-row-start: 2;
     }
     
     .product__info--price div{
@@ -672,12 +683,15 @@ div.product__img{
     }
     
     .product__info--amount{
-        padding: 0 40px 10px;
+        /* background-color: lightgreen; */
+        padding: 0 20px;
     
         display: grid;
         grid-template: auto / auto auto auto;
         justify-content: space-between;
         align-items: center;
+
+        grid-row-start: 3;
     }
     
     .product__info--amount img{
@@ -686,19 +700,22 @@ div.product__img{
     
     .product__info--amount p{
         font-weight: 700;
+        font-size: 1.5rem;
     }
     
     .product__info--add-cart{
         background-color: var(--color-btn);
         border-radius: 10px;
         cursor: pointer;
-        margin: 0 20px;
+        margin: 0;
     
         display: grid;
         grid-template: auto / auto auto;
         justify-content: center;
         align-items: center;
         grid-gap: 15px;
+
+        grid-row-start: 3;
     }
     
     .product__info--add-cart svg path{
@@ -710,6 +727,12 @@ div.product__img{
     .product__info--add-cart p{
         color: hsl(0, 0%, 100%);
         font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    .attribution{
+        margin: 0;
+        grid-column-end: span 2;
     }
 
 }
@@ -891,6 +914,18 @@ div.product__img{
         width: 100px;
         height: 100px;
         display: inline-block;
+    }
+
+    .product__img .bcg2{
+        background: black url("images/image-product-2.jpg") center/cover no-repeat;
+    }
+
+    .product__img .bcg3{
+        background: black url("images/image-product-3.jpg") center/cover no-repeat;
+    }
+
+    .product__img .bcg4{
+        background: black url("images/image-product-4.jpg") center/cover no-repeat;
     }
 
     /* AQUI! Desktop e Mobile prontos! Agora é unir os dois modos da maneira mais responsiva possível :3*/

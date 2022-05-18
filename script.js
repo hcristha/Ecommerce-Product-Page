@@ -2,6 +2,17 @@
 let menu = document.querySelector(".js-menu");
 let box = document.querySelector(".js-menu__box");
 let options = document.querySelector(".js-header-box__options-menu");
+options.onclick = function(){
+    menu.style.display = "block";
+    box.style.display = "block";
+
+    // desaparecer menu
+    menu.children[0].addEventListener("click", function(){
+        menu.style.display = "none";
+        box.style.display = "none";
+    });
+}
+/*AQUI! Confirmando se as funcionalidades JS estão funcionando em ambos Workflows*/
 
 // quantidade de itens
 var amountItem = document.querySelector(".product__amount-item");

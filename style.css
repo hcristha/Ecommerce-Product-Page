@@ -55,9 +55,8 @@ nav{
 .menu__links{
     color: hsl(220, 13%, 13%);
     font-weight: 700;
-    margin: 0;
+    margin: 25px 0 0 0;
     padding: 0;
-    margin-top: 25px;
     list-style-type: none;
 }
 
@@ -469,12 +468,13 @@ div.product__img{
     
     .menu__links{
         font-weight: normal;
-        margin-top: 0;
+        margin: 0;
 
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-evenly;
     }
+    /*AQUI! Verificando códigos repetidos!! 18/05/2022*/
     
     .menu__links a{
         color: hsl(219, 9%, 45%);

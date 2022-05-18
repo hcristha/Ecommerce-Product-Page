@@ -1,7 +1,7 @@
 // mostrar menu
-let menu = document.querySelector(".js-menu");
-let box = document.querySelector(".js-menu__box");
-let options = document.querySelector(".js-header-box__options-menu");
+var menu = document.querySelector(".js-menu");
+var box = document.querySelector(".js-menu__box");
+var options = document.querySelector(".js-header-box__options-menu");
 options.onclick = function(){
     menu.style.display = "block";
     box.style.display = "block";
@@ -11,6 +11,11 @@ options.onclick = function(){
         menu.style.display = "none";
         box.style.display = "none";
     });
+
+    // se eu clicar no box, ele desaparece
+    box.onclick = function(){
+        box.style.display = "none";
+    }
 }
 
 // quantidade de itens

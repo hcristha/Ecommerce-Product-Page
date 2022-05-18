@@ -12,7 +12,6 @@ options.onclick = function(){
         box.style.display = "none";
     });
 }
-/*AQUI! Confirmando se as funcionalidades JS estão funcionando em ambos Workflows*/
 
 // quantidade de itens
 var amountItem = document.querySelector(".product__amount-item");

@@ -434,6 +434,72 @@ div.product__img{
 }
 
 @media screen and (min-width: 481px){/* transição mobile para desktop*/
+    .lightbox{
+        display: none;
+    
+    }
+
+    .lightbox__img{
+        display: none;
+    }
+
+    .lightbox__img--svg{
+        display: none;
+    }
+    
+    .lightbox__img--svg path:hover{
+        display: none;
+    }
+
+    .lightbox__img--kit{
+        display: none;
+    }
+
+    .lightbox__img--kit-main{
+        display: none;
+    }
+
+    .lightbox__img--kit-icons{
+        display: none;
+    }
+
+    .lightbox__img--kit-icons svg{
+        display: none;
+    }
+
+    .lightbox__img--kit-icons svg:hover path{
+        display: none;
+    }
+
+    .lightbox__img--next{
+        display: none;
+    }
+
+    .lightbox__img--next::after{
+        display: none;
+    }
+
+    .lightbox__img--next:hover::after{
+        display: none;
+    }
+
+    .bg1::after{
+        display: none;
+    }
+
+    .bg2{
+        display: none;
+    }
+
+   .bg3{
+        display: none;
+    }
+
+    .bg4{
+        display: none;
+    }
+    /*SIMPLIFICAR DINÂMICA DO MENU-BOX E LIGHTBOX \OOOO/ DEU CERTO!!!!!!!!!!!*/
+
     .product{
         background-color: hsl(25, 100%, 94%);
     }

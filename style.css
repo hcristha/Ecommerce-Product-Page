@@ -433,7 +433,8 @@ div.product__img{
     }
 }
 
-@media screen and (min-width: 481px){/* transição mobile para desktop*/
+@media screen and (min-width: 50px){/*Mobile: não aparecer o lightbox, mesmo depois de ativado em Desktop e diminuido o width para Mobile*/
+    /*AQUI! Por que só o lightbox com display: block não desaparece a imagem? Por que preciso setar todos os elementos filhos como display: block??? '-' revisar código e verificar motivo.*/
     .lightbox{
         display: none;
     
@@ -498,8 +499,9 @@ div.product__img{
     .bg4{
         display: none;
     }
-    /*SIMPLIFICAR DINÂMICA DO MENU-BOX E LIGHTBOX \OOOO/ DEU CERTO!!!!!!!!!!!*/
+}
 
+@media screen and (min-width: 481px){/* transição mobile para desktop*/
     .product{
         background-color: hsl(25, 100%, 94%);
     }
@@ -876,4 +878,3 @@ div.product__img{
         grid-template: auto auto auto / 40% auto;
     }
 }
-/*Código enxuto!!! :D*/

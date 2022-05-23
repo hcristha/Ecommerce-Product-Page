@@ -1,4 +1,4 @@
-// mostrar menu
+// MOBILE: mostrar menu
 var menu = document.querySelector(".js-menu");
 var box = document.querySelector(".js-menu__box");
 var options = document.querySelector(".js-header-box__options-menu");
@@ -144,7 +144,7 @@ function cartFilled(){ // função para carrinho cheio
 
 var clickCart = 0; // contador de cliques do Cart
 
-//mostrar carrinho
+// mostrar carrinho
 function showCart(){
     itemsCart = JSON.parse(localStorage.getItem("itemsCart")); // atualizar quantidade de itens
 
@@ -171,7 +171,7 @@ function showCart(){
     }
 }
 
-// imagens para função nextImg()
+// MOBILE: próxima imagem
 var img = document.querySelector(".js-product__img-img"); // foto do produto
 var icons = document.querySelector(".js-product__img-icons"); // ícones de voltar e próxima
 

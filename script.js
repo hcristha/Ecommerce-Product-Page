@@ -3,16 +3,17 @@ var menu = document.querySelector(".js-menu");
 var box = document.querySelector(".js-menu__box");
 var options = document.querySelector(".js-header-box__options-menu");
 options.onclick = function(){
+    // mostrar menu e box
     menu.style.display = "block";
     box.style.display = "block";
 
-    // desaparecer menu
+    // ao clicar ícone x, desaparecer menu
     menu.children[0].addEventListener("click", function(){
         menu.style.display = "none";
         box.style.display = "none";
     });
 
-    // se eu clicar no box, ele desaparece
+    // ao clicar no box, ele some
     box.onclick = function(){
         box.style.display = "none";
     }
@@ -190,33 +191,36 @@ function nextImg(){ // próxima imagem
 }
 
 // DESKTOP IMG
-// LIGHTBOX
+//// LIGHTBOX
 var ltbx = document.querySelector(".lightbox");
 var ltbxImgKit = document.querySelector(".lightbox__img--kit-main");
 var ltbxClose = document.querySelector(".lightbox__img--svg");
 
 // lightbox aparece
 img.onclick = function(){
-    ltbx.style.display = "flex";
+    if (screen.width >= 746){ // aparecer lightbox apenas em Desktop
+        ltbx.style.display = "flex";
+    }
 }
-// lightbox desaparece
+// ao clicar no ícone x, lightbox desaparece
 ltbxClose.onclick = function(){
     ltbx.style.display = "none";
 }
 
 // ao clicar na img, muda a a imagem principal do Lightbox
 function changeLtbx1(){
-    ltbxImgKit.src = "images/image-product-1.jpg";
+    ltbxImgKit.src = "images/image-product-1.jpg"; // muda img
 }
 function changeLtbx2(){
-    ltbxImgKit.src = "images/image-product-2.jpg";
+    ltbxImgKit.src = "images/image-product-2.jpg"; // muda img
 }
 function changeLtbx3(){
-    ltbxImgKit.src = "images/image-product-3.jpg";
+    ltbxImgKit.src = "images/image-product-3.jpg"; // muda img
 }
 function changeLtbx4(){
-    ltbxImgKit.src = "images/image-product-4.jpg";
+    ltbxImgKit.src = "images/image-product-4.jpg"; // muda img
 }
+
 // anterior/próxima imagem lightbox
 var ltbxClick = 1; // contador de cliques do ícone
 
@@ -227,7 +231,7 @@ function ltbxNext(){
     ltbxImgKit.src = `images/image-product-${ltbxClick}.jpg`; // muda imagem
 
     let ltbxIcons = document.querySelector(".lightbox__img--kit-icons");
-    let ltbxPrevious = ltbxIcons.children[0];
+    let ltbxPrevious = ltbxIcons.children[0]; // ícone previous
 
     // imagem anterior
     ltbxPrevious.onclick = function(){
@@ -238,23 +242,20 @@ function ltbxNext(){
     }
 }
 
-// PÁGINA
-//// mudar imagem principal
-var productImg = document.querySelector(".product__img");
+//// PÁGINA DESKTOP
+////// mudar imagem principal da página
 function changeImg1(){
-    img.src = "images/image-product-1.jpg";
+    img.src = "images/image-product-1.jpg"; // muda img
 }
 
 function changeImg2(){
-    img.src = "images/image-product-2.jpg";
+    img.src = "images/image-product-2.jpg"; // muda img
 }
 
 function changeImg3(){
-    img.src = "images/image-product-3.jpg";
+    img.src = "images/image-product-3.jpg"; // muda img
 }
 
 function changeImg4(){
-    img.src = "images/image-product-4.jpg";
+    img.src = "images/image-product-4.jpg"; // muda img
 }
-
-// AQUI! Desktop e Mobile prontos! Agora é unir os dois modos da maneira mais responsiva possível :3

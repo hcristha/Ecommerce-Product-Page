@@ -26,7 +26,7 @@ body{
     height: 100%;
 
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 }
 
 .lightbox{
@@ -41,7 +41,7 @@ nav{
     display: none;
 
     position: absolute;
-    z-index: 1;
+    z-index: 2;
 }
 
 .menu__close{
@@ -434,69 +434,12 @@ div.product__img{
 }
 
 @media screen and (min-width: 50px){/*Mobile: não aparecer o lightbox, mesmo depois de ativado em Desktop e diminuido o width para Mobile*/
-    /*AQUI! Por que só o lightbox com display: block não desaparece a imagem? Por que preciso setar todos os elementos filhos como display: block??? '-' revisar código e verificar motivo.*/
     .lightbox{
         display: none;
     
     }
 
     .lightbox__img{
-        display: none;
-    }
-
-    .lightbox__img--svg{
-        display: none;
-    }
-    
-    .lightbox__img--svg path:hover{
-        display: none;
-    }
-
-    .lightbox__img--kit{
-        display: none;
-    }
-
-    .lightbox__img--kit-main{
-        display: none;
-    }
-
-    .lightbox__img--kit-icons{
-        display: none;
-    }
-
-    .lightbox__img--kit-icons svg{
-        display: none;
-    }
-
-    .lightbox__img--kit-icons svg:hover path{
-        display: none;
-    }
-
-    .lightbox__img--next{
-        display: none;
-    }
-
-    .lightbox__img--next::after{
-        display: none;
-    }
-
-    .lightbox__img--next:hover::after{
-        display: none;
-    }
-
-    .bg1::after{
-        display: none;
-    }
-
-    .bg2{
-        display: none;
-    }
-
-   .bg3{
-        display: none;
-    }
-
-    .bg4{
         display: none;
     }
 }
@@ -507,7 +450,7 @@ div.product__img{
     }
 }
 
-@media screen and (min-width: 745px){ /*desktop, largura de 745px e acima*/
+@media screen and (min-width: 746px){ /*desktop, largura de 746px e acima*/
     .menu__box{
         display: none;
     }
@@ -642,6 +585,7 @@ div.product__img{
         position: absolute;
         top: 30px;
         left: 200px;
+        z-index: 1;
     }
     
     .menu__close{
@@ -685,7 +629,7 @@ div.product__img{
     }
 
     .product{
-        background-color: hsl(0, 0%, 100%);
+        background-color:hsl(0, 0%, 100%);
         max-width: 100%;
     
         display: grid;

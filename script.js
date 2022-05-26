@@ -173,7 +173,7 @@ function showCart(){
 
 // MOBILE: próxima imagem
 var img = document.querySelector(".js-product__img-img"); // foto do produto
-var icons = document.querySelector(".js-product__img-icons"); // ícones de voltar e próxima
+var icons = document.querySelector(".js-product__img-icons"); // ícones de voltar e próxima // AQUI, verificar onde essa variável é usada, possivel let
 
 var click = 1; // contador começa em 1
 function nextImg(){ // próxima imagem

@@ -80,7 +80,6 @@ function addCart(){
     numberCart.innerText = itemsCart; // atualiza ícone do número de itens dentro do cart
     if (itemsCart == 0){ // se número de ítens dentro do carrinho for 0
         numberCart.style.display = "none"; // esconde ícone acima do carrinho
-        // iconCart.style.fill = "#000000"; // muda a cor do ícone acima do carrinho para preto
         cartEmpty(); // função de carrrinho vazio
     }
     localStorage.setItem("itemsCart", itemsCart); // salva a nova quantidade de itens dentro do cart
@@ -128,7 +127,6 @@ function cartFilled(){ // função para carrinho cheio
     cart.children[2].innerHTML += "<img class='delet js-delete' alt='' src='images/icon-delete.svg'>";
 
     cart.children[3].style.display = "block"; // botão aparecer
-    // numberCart.style.display = "block";
 
     // deletar o produto
     let delet = document.querySelector(".js-delete");
@@ -149,7 +147,6 @@ function showCart(){
     itemsCart = JSON.parse(localStorage.getItem("itemsCart")); // atualizar quantidade de itens
 
     clickCart++; // adiciona mais um no contador de cliques do Cart
-    // let empty = document.querySelector(".js-empty");
 
     cart.style.display = "block"; // irá abrir o cart
 
@@ -173,10 +170,11 @@ function showCart(){
 
 // MOBILE: próxima imagem
 var img = document.querySelector(".js-product__img-img"); // foto do produto
-var icons = document.querySelector(".js-product__img-icons"); // ícones de voltar e próxima // AQUI, verificar onde essa variável é usada, possivel let
 
 var click = 1; // contador começa em 1
 function nextImg(){ // próxima imagem
+    let icons = document.querySelector(".js-product__img-icons"); // ícones de voltar e próxima
+
     if (click >= 1 && click < 4){ // contador vai de 1 até 4
         click++; // incrementa
         img.src = `images/image-product-${click}.jpg`; // muda a imagem
@@ -227,8 +225,8 @@ var ltbxClick = 1; // contador de cliques do ícone
 function ltbxNext(){
     if (ltbxClick < 4){
         ltbxClick++;
+        ltbxImgKit.src = `images/image-product-${ltbxClick}.jpg`; // muda imagem
     }
-    ltbxImgKit.src = `images/image-product-${ltbxClick}.jpg`; // muda imagem
 
     let ltbxIcons = document.querySelector(".lightbox__img--kit-icons");
     let ltbxPrevious = ltbxIcons.children[0]; // ícone previous
@@ -237,8 +235,8 @@ function ltbxNext(){
     ltbxPrevious.onclick = function(){
         if (ltbxClick > 1){
             ltbxClick--;
+            ltbxImgKit.src = `images/image-product-${ltbxClick}.jpg`; // muda imagem
         }
-        ltbxImgKit.src = `images/image-product-${ltbxClick}.jpg`; // muda imagem
     }
 }
 

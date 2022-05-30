@@ -20,8 +20,8 @@ options.onclick = function(){
 }
 
 // quantidade de itens
-var amountItem = document.querySelector(".product__amount-item");
-var numberCart = document.querySelector(".header-box__options-cart--number");
+var amountItem = document.querySelector(".js-product__info--amount-n");
+var numberCart = document.querySelector(".js-header-box__options-cart--number"); // AQUI, CORRIGINDO NOMES DAS JS CLASSES
 var c = 0; // contador de cliques começa em 0
 var amountItemPerma; // variável para salvar na memória do navegador a quantidade de itens escolhidas pelo usuário
 

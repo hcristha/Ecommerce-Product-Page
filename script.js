@@ -21,7 +21,7 @@ options.onclick = function(){
 
 // quantidade de itens
 var amountItem = document.querySelector(".js-product__info--amount-n");
-var numberCart = document.querySelector(".js-header-box__options-cart--number"); // AQUI, CORRIGINDO NOMES DAS JS CLASSES
+var numberCart = document.querySelector(".js-header-box__options-cart--number");
 var c = 0; // contador de cliques começa em 0
 var amountItemPerma; // variável para salvar na memória do navegador a quantidade de itens escolhidas pelo usuário
 
@@ -190,9 +190,9 @@ function nextImg(){ // próxima imagem
 
 // DESKTOP IMG
 //// LIGHTBOX
-var ltbx = document.querySelector(".lightbox");
-var ltbxImgKit = document.querySelector(".lightbox__img--kit-main");
-var ltbxClose = document.querySelector(".lightbox__img--svg");
+var ltbx = document.querySelector(".js-lightbox");
+var ltbxImgKit = document.querySelector(".js-lightbox__img--kit-main");
+var ltbxClose = document.querySelector(".js-lightbox__img--svg");
 
 // lightbox aparece
 img.onclick = function(){
@@ -228,7 +228,7 @@ function ltbxNext(){
         ltbxImgKit.src = `images/image-product-${ltbxClick}.jpg`; // muda imagem
     }
 
-    let ltbxIcons = document.querySelector(".lightbox__img--kit-icons");
+    let ltbxIcons = document.querySelector(".js-lightbox__img--kit-icons");
     let ltbxPrevious = ltbxIcons.children[0]; // ícone previous
 
     // imagem anterior

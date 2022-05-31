@@ -19,9 +19,8 @@ body{
 }
 
 .menu__box{
-    background-color: hsl(0, 0%, 0%);
+    background-color: hsl(0, 0%, 0%, 0.75);
     display: none;
-    opacity: 0.75;
     width: 100%;
     height: 100%;
 
@@ -51,7 +50,7 @@ nav{
 .menu__links{
     color: hsl(220, 13%, 13%);
     font-weight: 700;
-    margin: 25px 0 0 0;
+    margin-top: 25px;
     padding: 0;
     list-style-type: none;
 }
@@ -83,12 +82,9 @@ header{
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
-
-    position: relative;
 }
 
 .header-box__options{
-    /* background-color: lightgray; */
     width: 100%;
 
     display: flex;
@@ -126,7 +122,6 @@ header{
 }
 
 .header-box__options2{
-    /* background-color: lightgreen; */
     width: 40px;
 
     display: flex;
@@ -151,19 +146,14 @@ hr{
     height: 1px;
     width: 100%;
     margin: 0;
-    margin-top: 0px;
     margin-top: 5px;
 }
 
 .product{
     background-color: hsl(0, 0%, 100%);
     box-sizing: border-box;
-    overflow: hidden;
     max-width: 480px;
     margin: auto;
-
-    display: grid;
-    grid-template: auto / auto;
 
     position: relative;
 }
@@ -198,11 +188,9 @@ hr{
     height: 1px;
     width: 100%;
     margin: 0;
-    margin-top: 0px;
 }
 
-.product__cart-info{
-    /* background-color: lightskyblue; */
+.product__cart-info{/*AQUI! Revisando código CSS*/
     padding: 0 20px;
     height: 120px;
 

@@ -18,7 +18,7 @@ body{
     position: relative;
 }
 
-.menu__box{
+.js-menu__box{
     background-color: hsla(0, 0%, 0%, 0.75);
     display: none;
     width: 100%;
@@ -28,7 +28,7 @@ body{
     z-index: 2;
 }
 
-.lightbox{
+.js-lightbox{
     display: none;
 }
 
@@ -94,7 +94,7 @@ header{
     position: relative;
 }
 
-.header-box__options-menu{
+.js-header-box__options-menu{
     margin-right: 20px;
     cursor: pointer;
 }
@@ -106,7 +106,7 @@ header{
     right: 0;
 }
 
-.header-box__options-cart--number{
+.js-header-box__options-cart--number{
     background-color: var(--color-btn);
     border-radius: 15px;
     color: hsl(0, 0%, 100%);
@@ -158,7 +158,7 @@ hr{
     position: relative;
 }
 
-.product__cart{
+.js-product__cart{
     background-color: hsl(0, 0%, 100%);
     border-radius: 10px;
     box-sizing: border-box;
@@ -175,13 +175,13 @@ hr{
     z-index: 1;
 }
 
-.product__cart h6{
+.js-product__cart h6{
     margin: 0;
     padding: 20px;
     font-size: 1rem;
 }
 
-.product__cart hr{
+.js-product__cart hr{
     background-color: hsl(220, 14%, 75%);
     border-style: solid;
     border-width: 0;
@@ -271,7 +271,7 @@ div.product__img{
     display: none;
 }
 
-.product__img-icons{
+.js-product__img-icons{
     width: calc(100% - 20px);
     height: inherit;
     padding: 0 15px;
@@ -282,7 +282,7 @@ div.product__img{
     align-items: space-between;
 }
 
-.product__img-icons img{
+.js-product__img-icons img{
     background-color: hsl(0, 0%, 100%);
     border-radius: 50%;
     cursor: pointer;
@@ -291,7 +291,7 @@ div.product__img{
     padding: 15px;
 }
 
-.product__img-icons img:nth-of-type(2){
+.js-product__img-icons img:nth-of-type(2){
     align-self: flex-end;
 }
 
@@ -411,13 +411,13 @@ div.product__img{
 }
 
 @media screen and (max-width: 374px){ /*Mobile-first, largura até 374px*/
-    .header-box__options-cart--number{
+    .js-header-box__options-cart--number{
         font-size: 0.7rem;
     }
 }
 
 @media screen and (min-width: 50px){/*Mobile: não aparecer o lightbox, mesmo depois de ativado em Desktop e diminuido o width para Mobile*/
-    .lightbox{
+    .js-lightbox{
         display: none;
     
     }
@@ -434,11 +434,11 @@ div.product__img{
 }
 
 @media screen and (min-width: 746px){ /*Desktop, largura de 746px e acima*/
-    .menu__box{
+    .js-menu__box{
         display: none;
     }
 
-    .lightbox{
+    .js-lightbox{
         background-color: rgba(0, 0, 0, 0.75);
         width: 100%;
         height: 100%;
@@ -464,7 +464,7 @@ div.product__img{
         position: relative;
     }
 
-    .lightbox__img--svg{
+    .js-lightbox__img--svg{
         cursor: pointer;
         padding: 10px;
         position: absolute;
@@ -472,7 +472,7 @@ div.product__img{
         right: 10px;
     }
     
-    .lightbox__img--svg path:hover{
+    .js-lightbox__img--svg path:hover{
         fill: var(--color-btn);
     }
 
@@ -488,14 +488,14 @@ div.product__img{
         position: relative;
     }
 
-    .lightbox__img--kit-main{
+    .js-lightbox__img--kit-main{
         border-radius: 2%;
         cursor: pointer;
         width: 93%;
         height: 100%;
     }
 
-    .lightbox__img--kit-icons{
+    .js-lightbox__img--kit-icons {
         width: 100%;
         cursor: pointer;
         display: flex;
@@ -505,14 +505,14 @@ div.product__img{
         position: absolute;
     }
 
-    .lightbox__img--kit-icons svg{
+    .js-lightbox__img--kit-icons svg{
         background-color:hsl(0, 0%, 100%);
         border-radius: 50%;
         cursor: pointer;
         padding: 12px;
     }
 
-    .lightbox__img--kit-icons svg:hover path{
+    .js-lightbox__img--kit-icons svg:hover path{
         stroke: var(--color-btn);
     }
 
@@ -601,11 +601,11 @@ div.product__img{
         padding: 0 3.8rem;
     }
 
-    .header-box__options-menu{
+    .js-header-box__options-menu{
         display: none;
     }
 
-    .header-box__options-cart--number{
+    .js-header-box__options-cart--number{
         font-size: 0.9rem;
     }
 
@@ -620,13 +620,13 @@ div.product__img{
         justify-content: center;
     }
 
-    .product__cart{
+    .js-product__cart{
         width: 350px;
         right: 0;
         top: 0;
     }
 
-    .product__cart-info--items{
+    .js-product__cart-info--items{
         width: 100%;
         height: 80px;
     
@@ -700,7 +700,7 @@ div.product__img{
         background: black url("images/image-product-4.jpg") center/cover no-repeat;
     }
     
-    .product__img-icons{    
+    .js-product__img-icons{    
         display: none;
     }
 
@@ -773,7 +773,7 @@ div.product__img{
         grid-template: auto auto / auto auto;
     }
 
-    .product__cart{
+    .js-product__cart{
         right: 50px;
     }
 
@@ -804,13 +804,13 @@ div.product__img{
     }
 }
 
-/*       08/06/2022
+/*       09/06/2022
     1. REVISAR CONTEÚDO JS ok
     1.1 REVISAR CÓDIGO JS ok
 
     2. REVISAR CONTÉUDO CSS ok
     2.1 REVISAR CÓDIGO CSS ok
 
-    3. REVISAR CONTEÚDO HTML AQUI
+    3. REVISAR CONTEÚDO HTML ok
     3.1 REVISAR CÓDIGO HTML
 */

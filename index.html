@@ -12,22 +12,22 @@
 </head>
 <body>
   <!--mobile menu box-->
-  <div class="menu__box js-menu__box"></div>
+  <div class="js-menu__box"></div>
 
   <!--desktop lightbox-->
-  <div class="lightbox js-lightbox">
+  <div class="js-lightbox">
     <div class="lightbox__img">
       <!--button close-->
-      <svg class="lightbox__img--svg js-lightbox__img--svg" width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+      <svg class="js-lightbox__img--svg" width="14" height="15" xmlns="http://www.w3.org/2000/svg">
         <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/>
       </svg>
 
       <!--flexbox img-->
       <div class="lightbox__img--kit">
-        <img class="lightbox__img--kit-main js-lightbox__img--kit-main" alt="Tênis branco e marrom claro." src="images/image-product-1.jpg">
+        <img class="js-lightbox__img--kit-main" alt="Tênis branco e marrom claro." src="images/image-product-1.jpg">
 
         <!--flexbox icons-->
-        <div class="lightbox__img--kit-icons js-lightbox__img--kit-icons">
+        <div class="js-lightbox__img--kit-icons">
           <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
             <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
           </svg>
@@ -48,7 +48,7 @@
     </div>
   </div>
   
-  <nav class="menu js-menu">
+  <nav class="js-menu">
     <img class="menu__close" alt="" src="images/icon-close.svg">
 
     <ul class="menu__links">
@@ -63,7 +63,7 @@
   <header>
     <div class="header-box">
       <div class="header-box__options">
-        <img class="header-box__options-menu js-header-box__options-menu" alt="" src="images/icon-menu.svg">
+        <img class="js-header-box__options-menu" alt="" src="images/icon-menu.svg">
         
         <a href="#6"><img class="header-box__options-logo" alt="" src="images/logo.svg"></a>
 
@@ -71,7 +71,7 @@
           <path class="js-header-box__options-cart-path" d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#000000" fill-rule="nonzero"/>
         </svg>
 
-        <p class="header-box__options-cart--number js-header-box__options-cart--number" onclick="showCart()"></p>
+        <p class="js-header-box__options-cart--number" onclick="showCart()"></p>
       </div>
 
       <div class="header-box__options2">
@@ -82,7 +82,7 @@
   </header>
 
   <main class="product">
-    <div class="product__cart js-product__cart">
+    <div class="js-product__cart">
       <h6>Cart</h6>
       <hr>
 
@@ -96,7 +96,7 @@
     </div>
 
     <div class="product__img">
-      <img class="desktop-main js-product__img-img"  alt="Tênis branco e marrom claro." src="images/image-product-1.jpg">
+      <img class="js-product__img-img desktop-main"  alt="Tênis branco e marrom claro." src="images/image-product-1.jpg">
 
       <div class="desktop bcg1" onclick="changeImg1()" alt="Tênis branco e marrom claro." src="images/image-product-1.jpg"></div>
 
@@ -106,7 +106,7 @@
 
       <div class="desktop bcg4" onclick="changeImg4()" alt="Tênis branco e marrom claro." src="images/image-product-4.jpg"></div>
 
-      <div class="product__img-icons js-product__img-icons">
+      <div class="js-product__img-icons">
         <img alt="" src="images/icon-previous.svg">
         <img onclick="nextImg()" alt="" src="images/icon-next.svg">
       </div>
@@ -121,7 +121,7 @@
       </div>
 
       <ul class="product__info--price">
-        <div><!--repensar se é apropriado uma div dentro de ul-->
+        <div>
           <li>$125.00</li>
           <li>50%</li>
         </div>
@@ -146,6 +146,7 @@
       <p>Challenge by <a href="https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6" target="_blank">Frontend Mentor</a></p>
       <p>Coded by <a href="https://github.com/hcristha" target="_blank">Helen Cristhina</a></p>
     </footer>
+    <!--verificar se todos os alt icon estão vazios-->
   </main>
   <script src="./script.js"></script>
 </body>

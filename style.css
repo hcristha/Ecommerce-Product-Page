@@ -592,7 +592,7 @@ div.product__img{
         height: 55px;
     }
 
-    .menu__links a li:active{
+    .menu__links a li:hover{
         color: hsl(220, 13%, 13%);
         border-bottom: 5px solid hsl(26, 100%, 55%);
     }

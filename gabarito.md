@@ -15,6 +15,8 @@
 * Compulsão - Ansiedade/Pressa - Desprazer --> **CURA: RELAXAR >3<**
 
 **Soluções**
+
 * CSS:
 gap(lacuna) - posso usar em Flexbox
+
 transparent(color) - macete para usar em 'border' e não forçar o layout

@@ -17,6 +17,9 @@
 ## **Soluções**
 
 ### CSS:
+sass!
 gap(lacuna) - posso usar em Flexbox
 
 transparent(color) - macete para usar em 'border' e não forçar o layout
+
+video - 14:13(parte que ele vai fazer o menu)

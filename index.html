@@ -11,42 +11,8 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <!--mobile menu box-->
+  <!-- mobile menu box (talvez deletar esse elemento e criar o box de menu em menu???  10/06/2022)-->
   <div class="js-menu__box"></div>
-
-  <!--desktop lightbox-->
-  <div class="js-lightbox">
-    <div class="lightbox__img">
-      <!--button close-->
-      <svg class="js-lightbox__img--svg" width="14" height="15" xmlns="http://www.w3.org/2000/svg">
-        <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/>
-      </svg>
-
-      <!--flexbox img-->
-      <div class="lightbox__img--kit">
-        <img class="js-lightbox__img--kit-main" alt="White and light brown tennis." src="images/image-product-1.jpg">
-
-        <!--flexbox icons-->
-        <div class="js-lightbox__img--kit-icons">
-          <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
-            <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
-          </svg>
-
-          <svg onclick="ltbxNext()" width="13" height="18" xmlns="http://www.w3.org/2000/svg">
-            <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
-          </svg>
-        </div>
-      </div>
-      
-      <div class="lightbox__img--next bg1" onclick="changeLtbx1()"></div>
-
-      <div class="lightbox__img--next bg2" onclick="changeLtbx2()"></div>
-
-      <div class="lightbox__img--next bg3" onclick="changeLtbx3()"></div>
-
-      <div class="lightbox__img--next bg4" onclick="changeLtbx4()"></div>
-    </div>
-  </div>
   
   <nav class="js-menu">
     <img class="menu__close" alt="" src="images/icon-close.svg">
@@ -147,6 +113,39 @@
       <p>Coded by <a href="https://github.com/hcristha" target="_blank">Helen Cristhina</a></p>
     </footer>
   </main>
+  <!-- desktop lightbox (último??? 10/06/2022) -->
+  <div class="js-lightbox">
+    <div class="lightbox__img">
+      <!--button close-->
+      <svg class="js-lightbox__img--svg" width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+        <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/>
+      </svg>
+
+      <!--flexbox img-->
+      <div class="lightbox__img--kit">
+        <img class="js-lightbox__img--kit-main" alt="White and light brown tennis." src="images/image-product-1.jpg">
+
+        <!--flexbox icons-->
+        <div class="js-lightbox__img--kit-icons">
+          <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
+          </svg>
+
+          <svg onclick="ltbxNext()" width="13" height="18" xmlns="http://www.w3.org/2000/svg">
+            <path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/>
+          </svg>
+        </div>
+      </div>
+      
+      <div class="lightbox__img--next bg1" onclick="changeLtbx1()"></div>
+
+      <div class="lightbox__img--next bg2" onclick="changeLtbx2()"></div>
+
+      <div class="lightbox__img--next bg3" onclick="changeLtbx3()"></div>
+
+      <div class="lightbox__img--next bg4" onclick="changeLtbx4()"></div>
+    </div>
+  </div>
   <script src="./script.js"></script>
 </body>
 </html>

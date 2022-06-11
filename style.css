@@ -445,6 +445,12 @@ div.product__img{
         height: 100%;
         position: fixed;
         z-index: 5;
+        /*
+        
+            Editando todo layout HTML: Usar o próprio arquivo HTML(stack order) para evitar usar z-index/position.
+            Por que lightbox não aparece mesmo fora do main?
+
+        */
 
         display: none;
         flex-flow: column nowrap;

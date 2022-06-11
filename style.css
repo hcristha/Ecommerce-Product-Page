@@ -132,6 +132,7 @@ header{
 
 .header-box__options2-avatar{
     width: 30px;
+    border: 1px solid transparent; /*Coloquei uma borda transparente, para depois mostrar a cor ideal com hover*/
 }
 
 .header-box__options2-avatar:hover{

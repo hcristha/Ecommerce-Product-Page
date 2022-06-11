@@ -16,5 +16,5 @@
 
 **Soluções**
 * CSS:
-gap(lacuna) - posso usar em Flexbox.
-seletor &
+gap(lacuna) - posso usar em Flexbox
+transparent(color) - macete para usar em 'border' e não forçar o layout

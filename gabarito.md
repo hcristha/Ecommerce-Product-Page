@@ -1,4 +1,4 @@
-**Dificuldades técnicas:**
+## **Dificuldades técnicas:**
 
 * HTML/CSS Layout: praticar e ver exemplos;
 
@@ -8,15 +8,15 @@
 
 * HTML/CSS Acessiblidade
 
-**O que aprendi com o projeto:**
+## **O que aprendi com o projeto:**
 
 * Flexbox;
 * Grid;
 * Compulsão - Ansiedade/Pressa - Desprazer --> **CURA: RELAXAR >3<**
 
-**Soluções**
+## **Soluções**
 
-* CSS:
+### CSS:
 gap(lacuna) - posso usar em Flexbox
 
 transparent(color) - macete para usar em 'border' e não forçar o layout

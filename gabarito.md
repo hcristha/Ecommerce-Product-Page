@@ -12,4 +12,4 @@
 
 * Flexbox;
 * Grid;
-- Compulsão - Ansiedade/Pressa - Desprazer --> **CURA: RELAXAR >3<**
+* Compulsão - Ansiedade/Pressa - Desprazer --> **CURA: RELAXAR >3<**

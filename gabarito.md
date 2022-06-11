@@ -10,6 +10,6 @@ HTML/CSS Acessiblidade
 
 **- O que aprendi com o projeto:**
 
-Flexbox;
-Grid;
-Compulsão - Ansiedade/Pressa - Desprazer --> **CURA: RELAXAR >3<**
+-Flexbox;
+-Grid;
+-Compulsão - Ansiedade/Pressa - Desprazer --> **CURA: RELAXAR >3<**

@@ -13,3 +13,8 @@
 * Flexbox;
 * Grid;
 * Compulsão - Ansiedade/Pressa - Desprazer --> **CURA: RELAXAR >3<**
+
+**Soluções**
+* CSS:
+gap(lacuna) - posso usar em Flexbox.
+seletor &

@@ -33,14 +33,16 @@ body{
 }
 
 nav{
-    background-color: hsl(0, 0%, 100%);
-    width: 200px;
-    height: 100%;
-    padding: 30px;
-    display: none;
+    background-color: hsl(0, 0%, 0%, 0.75);
+    /* width: 200px; */
+    height: 100vh;
+    /* padding: 30px; */
+    display: block;
 
     position: absolute;
-    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
 .menu__close{
@@ -48,11 +50,14 @@ nav{
 }
 
 .menu__links{
+    background-color:hsl(0, 0%, 100%);
     color: hsl(220, 13%, 13%);
     font-weight: 700;
     margin-top: 25px;
     padding: 0;
     list-style-type: none;
+    width: 50%;
+    height: 100vh;/*AQUI! 15:58, como deixar o icon x dentro desse menu*/
 }
 
 .menu__links a{
@@ -444,7 +449,7 @@ div.product__img{
         width: 100%;
         height: 100%;
         position: fixed;
-        z-index: 5;
+        z-index: 2;
         /*
         
             Editando todo layout HTML: Usar o próprio arquivo HTML(stack order) para evitar usar z-index/position.

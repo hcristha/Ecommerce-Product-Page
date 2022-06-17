@@ -1,11 +1,9 @@
 // MOBILE: mostrar menu
+var btnMenu = document.querySelector(".js-header-box__options-menu");
 var menu = document.querySelector(".js-menu");
-var box = document.querySelector(".js-menu__box");
-var options = document.querySelector(".js-header-box__options-menu");
-options.onclick = function(){
-    // mostrar menu e box
+btnMenu.onclick = function(){//AQUI! Alterando JS conforme novo HTML/CSS
+    // mostrar menu
     menu.style.display = "block";
-    box.style.display = "block";
 
     // ao clicar ícone x, desaparecer menu
     menu.children[0].addEventListener("click", function(){
@@ -14,7 +12,7 @@ options.onclick = function(){
     });
 
     // ao clicar no box, ele some
-    box.onclick = function(){
+    menu.onclick = function(){
         box.style.display = "none";
     }
 }

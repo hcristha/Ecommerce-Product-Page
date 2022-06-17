@@ -13,21 +13,11 @@
 body{
     background-color: lightcoral;
     margin: 0;
-    padding: 0;
+    /* padding: 0; */
     font-size: 16px;
 
     position: relative;
 }
-
-/* .js-menu__box{
-    background-color: hsla(0, 0%, 0%, 0.75);
-    display: none;
-    width: 100%;
-    height: 100%;
-
-    position: fixed;
-    z-index: 2;
-} */
 
 .js-lightbox{
     display: none;
@@ -35,23 +25,11 @@ body{
 
 header{
     background-color: hsl(0, 0%, 100%);
-}
-
-.header-box{
-    background-color: hsl(0, 0%, 100%);
-    box-sizing: border-box;
-    width: 100%;
     height: 80px;
-    padding: 10px 25px;
-
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
 }
 
 .header-box__options{
-    width: 100%;
-
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -64,20 +42,20 @@ header{
     cursor: pointer;
 }
 
-nav{/*AQUI! Nav dentro ou fora de body por causa de vh?*/
+nav{
     background-color: hsl(0, 0%, 0%, 0.75);
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
-    display: block;
-
     position: absolute;
-    /* top: 0;
-    left: 0; */
+    top: 0;
 }
 
 .close-links-group{
-    background-color:hsl(0, 79%, 41%);
-    width: 50%;
+    background-color:hsl(0, 0%, 100%);
+    box-sizing: border-box;
+    width: 70%;
+    height: 100%;
+    padding: 20px 20px 0;
 }
 
 .menu__close{
@@ -87,11 +65,17 @@ nav{/*AQUI! Nav dentro ou fora de body por causa de vh?*/
 .menu__links{
     color: hsl(220, 13%, 13%);
     font-weight: 700;
-    margin-top: 25px;
+    margin: 0;
     padding: 0;
     list-style-type: none;
-    width: 100%;
-    height: 100vh;
+}
+
+.menu__links li:first-child{
+    margin-top: 40px;
+}
+
+.menu__links li{
+    margin-top: 20px;
 }
 
 .menu__links a{
@@ -101,10 +85,6 @@ nav{/*AQUI! Nav dentro ou fora de body por causa de vh?*/
 
 .menu__links a:visited{
     color: hsl(220, 13%, 13%);
-}
-
-.menu__links a li{
-    margin-bottom: 15px;
 }
 
 .header-box__options-cart{

@@ -11,8 +11,20 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <!-- mobile menu box (talvez deletar esse elemento e criar o box de menu em menu???  13/06/2022)-->
-  <!-- <div class="js-menu__box"></div> -->
+  <!--AQUI!-->
+  <nav class="js-menu">
+    <div class="close-links-group">
+      <img class="menu__close" alt="" src="images/icon-close.svg">
+  
+      <ul class="menu__links">
+        <a href="#1"><li>Collections</li></a>
+        <a href="#2"><li>Men</li></a>
+        <a href="#3"><li>Women</li></a>
+        <a href="#4"><li>About</li></a>
+        <a href="#5"><li>Contact</li></a>
+      </ul>
+    </div>
+  </nav>
 
   <!-- desktop lightbox -->
   <div class="js-lightbox">
@@ -49,13 +61,13 @@
   </div>
   
   <header>
-    <div class="header-box">
-      <div class="header-box__options">
-        <img class="js-header-box__options-menu" alt="" src="images/icon-menu.svg">
-        
-        <a href="#6"><img class="header-box__options-logo" alt="" src="images/logo.svg"></a>
+    <div class="header-box__options">
+      <img class="js-header-box__options-menu" alt="" src="images/icon-menu.svg">
+      
+      <a href="#6"><img class="header-box__options-logo" alt="" src="images/logo.svg"></a>
 
-        <nav class="js-menu">
+      <!-- <nav class="js-menu">
+        <div class="close-links-group">
           <img class="menu__close" alt="" src="images/icon-close.svg">
       
           <ul class="menu__links">
@@ -65,31 +77,32 @@
             <a href="#4"><li>About</li></a>
             <a href="#5"><li>Contact</li></a>
           </ul>
-        </nav>
+        </div>
+      </nav> -->
+    </div>
 
-        <svg class="header-box__options-cart" onclick="showCart()" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
-          <path class="js-header-box__options-cart-path" d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#000000" fill-rule="nonzero"/>
-        </svg>
+    <svg class="header-box__options-cart" onclick="showCart()" width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+      <path class="js-header-box__options-cart-path" d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#000000" fill-rule="nonzero"/>
+    </svg>
 
-        <p class="js-header-box__options-cart--number" onclick="showCart()"></p>
-      </div>
+    <p class="js-header-box__options-cart--number" onclick="showCart()"></p>
+  
 
-      <div class="header-box__options2">
-        <a href="#7" target="_blank"><img class="header-box__options2-avatar" alt="" src="images/image-avatar.png"></a>
-      </div>
+    <div class="header-box__options2">
+      <a href="#7" target="_blank"><img class="header-box__options2-avatar" alt="" src="images/image-avatar.png"></a>
     </div>
     <hr>
   </header>
 
-  <main class="product">
+  <!-- <main class="product">
     <div class="js-product__cart">
       <h6>Cart</h6>
       <hr>
 
       <div class="product__cart-info">
-        <!--img product thumbnail-->
-        <!--ul class="product__cart-info--items"-->
-        <!--img delete-->
+        <!--img product thumbnail
+        <!--ul class="product__cart-info--items"
+        <!--img delete
       </div>
 
       <button class="product__cart-button" type="button">Checkout</button>
@@ -146,7 +159,7 @@
       <p>Challenge by <a href="https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6" target="_blank">Frontend Mentor</a></p>
       <p>Coded by <a href="https://github.com/hcristha" target="_blank">Helen Cristhina</a></p>
     </footer>
-  </main>
+  </main> -->
   <script src="./script.js"></script>
 </body>
 </html>

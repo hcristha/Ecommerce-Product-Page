@@ -11,7 +11,7 @@
 }
 
 body{
-    background-color: lightcoral;
+    background-color: hsl(0, 0%, 100%);
     margin: 0;
     /* padding: 0; */
     font-size: 16px;
@@ -23,31 +23,36 @@ body{
     display: none;
 }
 
-header{
-    background-color: hsl(0, 0%, 100%);
-    height: 80px;
+header{/*AQUI! Revisar o que eu fiz >.<!!!*/
+    /* background-color: hsl(89, 84%, 56%); */
     display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
 
 .header-box__options{
+    background-color: lightseagreen;
+    padding: 15px 0 15px 20px;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    gap: 20px;
 
     position: relative;
 }
 
 .js-header-box__options-menu{
-    margin-right: 20px;
     cursor: pointer;
 }
 
 nav{
     background-color: hsl(0, 0%, 0%, 0.75);
-    /* width: 100vw; */
+    width: 100vw;
     height: 100vh;
+    display: none;
     position: absolute;
     top: 0;
+    left: 0;
 }
 
 .close-links-group{
@@ -70,12 +75,12 @@ nav{
     list-style-type: none;
 }
 
-.menu__links li:first-child{
-    margin-top: 40px;
-}
-
 .menu__links li{
     margin-top: 20px;
+}
+
+.menu__links li:first-child{
+    margin-top: 40px;
 }
 
 .menu__links a{
@@ -87,11 +92,18 @@ nav{
     color: hsl(220, 13%, 13%);
 }
 
+.prov{
+    background-color: lightgreen;
+    padding: 15px 20px 15px 15px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .header-box__options-cart{
     cursor: pointer;
     margin-right: 20px;
-    position: absolute;
-    right: 0;
 }
 
 .js-header-box__options-cart--number{
@@ -107,15 +119,6 @@ nav{
     position: absolute;
     top: 0;
     right: 0;
-}
-
-.header-box__options2{
-    width: 40px;
-
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
 }
 
 .header-box__options2-avatar{
@@ -136,6 +139,7 @@ hr{
     width: 100%;
     margin: 0;
     margin-top: 5px;
+    align-self: flex-end;
 }
 
 .product{

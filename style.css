@@ -23,7 +23,7 @@ body{
     display: none;
 }
 
-header{/*AQUI! Revisar o que eu fiz >.<!!!*/
+header{/*17/06/2022*/
     /* background-color: hsl(89, 84%, 56%); */
     display: flex;
     flex-flow: row wrap;
@@ -31,12 +31,12 @@ header{/*AQUI! Revisar o que eu fiz >.<!!!*/
 }
 
 .header-box__options{
-    background-color: lightseagreen;
+    /* background-color: lightseagreen; */
     padding: 15px 0 15px 20px;
     display: flex;
+    gap: 20px;
     flex-flow: row nowrap;
     align-items: center;
-    gap: 20px;
 
     position: relative;
 }
@@ -45,7 +45,7 @@ header{/*AQUI! Revisar o que eu fiz >.<!!!*/
     cursor: pointer;
 }
 
-nav{
+nav{/*AQUI! Header(falta): nav mobile - porquê quando ativei <main> o nav não cobre a tela toda?; nav desktop;*/
     background-color: hsl(0, 0%, 0%, 0.75);
     width: 100vw;
     height: 100vh;
@@ -53,6 +53,7 @@ nav{
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 9999999;
 }
 
 .close-links-group{
@@ -68,7 +69,6 @@ nav{
 }
 
 .menu__links{
-    color: hsl(220, 13%, 13%);
     font-weight: 700;
     margin: 0;
     padding: 0;
@@ -88,22 +88,18 @@ nav{
     text-decoration: none;
 }
 
-.menu__links a:visited{
-    color: hsl(220, 13%, 13%);
-}
-
 .prov{
-    background-color: lightgreen;
-    padding: 15px 20px 15px 15px;
+    /* background-color: lightgreen; */
+    padding: 15px 20px 15px 0;
     display: flex;
+    gap: 20px;
     flex-flow: row nowrap;
-    justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 .header-box__options-cart{
     cursor: pointer;
-    margin-right: 20px;
 }
 
 .js-header-box__options-cart--number{
@@ -112,18 +108,19 @@ nav{
     color: hsl(0, 0%, 100%);
     cursor: pointer;
     display: none;
-    font-size: 0.4rem;
+    font-size: 0.06rem;
     font-weight: 700;
-    margin-right: 20px;
-    padding: 1px 3px;
+    padding: 1px 5px;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
+    transform: translate(50%, 50%);
 }
 
 .header-box__options2-avatar{
-    width: 30px;
     border: 1px solid transparent; /*Coloquei uma borda transparente, para depois mostrar a cor ideal com hover*/
+    width: 30px;
+    cursor: pointer;
 }
 
 .header-box__options2-avatar:hover{
@@ -138,7 +135,6 @@ hr{
     height: 1px;
     width: 100%;
     margin: 0;
-    margin-top: 5px;
     align-self: flex-end;
 }
 
@@ -403,12 +399,6 @@ div.product__img{
     color: hsl(228, 45%, 44%); 
 }
 
-@media screen and (max-width: 374px){ /*Mobile-first, largura até 374px*/
-    .js-header-box__options-cart--number{
-        font-size: 0.7rem;
-    }
-}
-
 @media screen and (min-width: 50px){/*Mobile: não aparecer o lightbox, mesmo depois de ativado em Desktop e diminuido o width para Mobile*/
     .js-lightbox{
         display: none;
@@ -602,10 +592,6 @@ div.product__img{
 
     .js-header-box__options-menu{
         display: none;
-    }
-
-    .js-header-box__options-cart--number{
-        font-size: 0.9rem;
     }
 
     .product{

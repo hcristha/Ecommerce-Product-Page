@@ -13,7 +13,7 @@
 body{
     background-color: hsl(0, 0%, 100%);
     margin: 0;
-    /* padding: 0; */
+    padding: 0;
     font-size: 16px;
 
     position: relative;
@@ -23,7 +23,7 @@ body{
     display: none;
 }
 
-header{/*17/06/2022*/
+header{/*20/06/2022*/
     /* background-color: hsl(89, 84%, 56%); */
     display: flex;
     flex-flow: row wrap;
@@ -45,15 +45,15 @@ header{/*17/06/2022*/
     cursor: pointer;
 }
 
-nav{/*AQUI! Header(falta): nav mobile - porquê quando ativei <main> o nav não cobre a tela toda?; nav desktop;*/
+nav{/*AQUI! falta: nav desktop*/
     background-color: hsl(0, 0%, 0%, 0.75);
     width: 100vw;
     height: 100vh;
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 9999999;
+    z-index: 1;
 }
 
 .close-links-group{

@@ -24,14 +24,15 @@ body{
 }
 
 header{/*20/06/2022*/
-    /* background-color: hsl(89, 84%, 56%); */
+    background-color: hsl(89, 84%, 56%);
     display: flex;
     flex-flow: row wrap;
+    align-items: center;
     justify-content: space-between;
 }
 
 .header-box__options{
-    /* background-color: lightseagreen; */
+    background-color: lightseagreen;
     padding: 15px 0 15px 20px;
     display: flex;
     gap: 20px;
@@ -45,7 +46,7 @@ header{/*20/06/2022*/
     cursor: pointer;
 }
 
-nav{/*AQUI! falta: nav desktop*/
+nav{
     background-color: hsl(0, 0%, 0%, 0.75);
     width: 100vw;
     height: 100vh;
@@ -89,7 +90,7 @@ nav{/*AQUI! falta: nav desktop*/
 }
 
 .prov{
-    /* background-color: lightgreen; */
+    background-color: lightgreen;
     padding: 15px 20px 15px 0;
     display: flex;
     gap: 20px;
@@ -417,10 +418,6 @@ div.product__img{
 }
 
 @media screen and (min-width: 746px){ /*Desktop, largura de 746px e acima*/
-    .js-menu__box{
-        display: none;
-    }
-
     .js-lightbox{
         background-color: rgba(0, 0, 0, 0.75);
         width: 100%;
@@ -428,10 +425,7 @@ div.product__img{
         position: fixed;
         z-index: 2;
         /*
-        
             Editando todo layout HTML: Usar o próprio arquivo HTML(stack order) para evitar usar z-index/position.
-            Por que lightbox não aparece mesmo fora do main?
-
         */
 
         display: none;
@@ -547,17 +541,21 @@ div.product__img{
     }
 
     nav{
-        width: 400px;
-        height: 50px;
-        padding: 0;
+        background-color: lightpink;
+        width: 100%;
+        height: 100%;
         display: block;
-    
-        position: absolute;
-        top: 30px;
-        left: 200px;
-        z-index: 1;
+        position: static;
     }
     
+    .close-links-group{
+        background-color: lightblue;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
     .menu__close{
         display: none;
     }
@@ -567,23 +565,29 @@ div.product__img{
         margin: 0;
 
         display: flex;
+        gap: 2rem;
         flex-flow: row nowrap;
-        justify-content: space-evenly;
+        justify-content: center;
+        align-items: center;
     }
     
-    .menu__links a{
-        color: hsl(219, 9%, 45%);
-    }
-    
-    .menu__links a li{
+    .menu__links li{
+        border: 5px solid transparent;/*AQUI! Editando estilo do nav desktop*/
         box-sizing: border-box;
-        margin-bottom: 0;
-        height: 55px;
+        margin-top: 0;
     }
 
-    .menu__links a li:hover{
+    .menu__links li:hover{
         color: hsl(220, 13%, 13%);
         border-bottom: 5px solid hsl(26, 100%, 55%);
+    }
+
+    .menu__links li:first-child{
+        margin-top: 0;
+    }
+
+    .menu__links a{
+        color: hsl(219, 9%, 45%);
     }
 
     .header-box{

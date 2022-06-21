@@ -542,16 +542,14 @@ div.product__img{
     }
 
     header{/*20/06/2022*/
-        background-color: hsl(89, 84%, 56%);
+        /* background-color: hsl(89, 84%, 56%); */
         padding: 0px 1.5rem 0;
         /* align-items: center; */
     }
     
     .header-box__options{
-        /* background-color: lightseagreen; */
+        background-color: lightseagreen;
         padding: 0;
-        /* padding-bottom: 20px; */
-        justify-content: center; 
     }
     
     .js-header-box__options-menu{
@@ -566,9 +564,12 @@ div.product__img{
     }
     
     .close-links-group{
-        /* background-color: lightblue; */
+        background-color: lightblue;
         width: 100%;
         padding: 0;
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
     }
 
     .menu__close{
@@ -578,8 +579,7 @@ div.product__img{
     .menu__links{/*AQUI! Como deixar ul centralizada para estilizar?*/
         background-color: lightpink;
         font-weight: normal;
-        height: 55px;
-        display: flex;
+        display: flex;/*AQUI! Altura para ul?*/
         gap: 2rem;
         flex-flow: row nowrap;
         justify-content: center;
@@ -587,7 +587,7 @@ div.product__img{
     }
     
     .menu__links li{
-        background-color: lightblue;
+        /* background-color: lightblue; */
         margin-top: 0;
         height: 100%;
     }

@@ -542,8 +542,9 @@ div.product__img{
     }
 
     header{/*20/06/2022*/
-        /* background-color: hsl(89, 84%, 56%); */
-        padding: 20px 1.5rem 0;/*AQUI! padding de header: problema(não se aplica a bottom, então setei padding em .header-box__options, será necessário padding em .prov?*/
+        background-color: hsl(89, 84%, 56%);
+        padding: 0px 1.5rem 0;
+        /* align-items: center; */
     }
     
     .header-box__options{
@@ -574,9 +575,10 @@ div.product__img{
         display: none;
     }
     
-    .menu__links{
-        height: 100%;
+    .menu__links{/*AQUI! Como deixar ul centralizada para estilizar?*/
+        background-color: lightpink;
         font-weight: normal;
+        height: 55px;
         display: flex;
         gap: 2rem;
         flex-flow: row nowrap;
@@ -584,11 +586,9 @@ div.product__img{
         align-items: center;
     }
     
-    .menu__links li{/*AQUI! Em li ou a para aplicar o estilo?*/
-        /* background-color: lightpink; */
-        /* box-sizing: border-box; */
+    .menu__links li{
+        background-color: lightblue;
         margin-top: 0;
-        /* padding-top: 5px;*/
         height: 100%;
     }
 
@@ -597,17 +597,8 @@ div.product__img{
     }
  
     .menu__links a{
-        background-color: lightpink;
+        background-color: lightgreen;
         color: hsl(219, 9%, 45%);
-        border-bottom: 5px solid transparent;
-        box-sizing: border-box;
-        padding-top: 5px;
-        height: 100%;
-    }
-
-    .menu__links a:hover{
-        color: hsl(220, 13%, 13%);
-        border-bottom: 5px solid hsl(26, 100%, 55%);
     }
 
     .prov{

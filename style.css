@@ -120,14 +120,14 @@ nav{
 }
 
 .header-box__options2-avatar{
-    border: 1px solid transparent; /*Coloquei uma borda transparente, para depois mostrar a cor ideal com hover*/
+    border: 2px solid transparent;
     width: 30px;
     cursor: pointer;
 }
 
 .header-box__options2-avatar:hover{
     border-radius: 50%;
-    border: 1px solid var(--color-btn);
+    border: 2px solid var(--color-btn);
 }
 
 hr{
@@ -542,14 +542,14 @@ div.product__img{
     }
 
     header{/*20/06/2022*/
-        background-color: hsl(89, 84%, 56%);
-        padding: 30px 1.5rem 0;
-        /* align-items: center; */
+        background-color: rgb(255, 221, 221);
+        padding: 0 1.5rem;
     }
     
     .header-box__options{
-        background-color: lightseagreen;
+        background-color: rgb(208, 255, 253);
         padding: 0;
+        padding-top: 15px;
         align-items: flex-start;
     }
     
@@ -558,7 +558,7 @@ div.product__img{
     }
 
     nav{
-        background-color: lightcoral;
+        /* background-color: lightcoral; */
         width: 100%;
         height: 100%;
         display: block;
@@ -566,7 +566,7 @@ div.product__img{
     }
     
     .close-links-group{
-        /* background-color: lightblue; */
+        background-color: rgb(255, 255, 200);
         width: 100%;
         padding: 0;
         display: flex;
@@ -576,21 +576,17 @@ div.product__img{
         display: none;
     }
     
-    .menu__links{/*AQUI! Como deixar ul centralizada para estilizar?*/
-        background-color: lightpink;
+    .menu__links{
+        /* background-color: lightpink; */
         font-weight: normal;
         display: flex;
         gap: 2rem;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: flex-start;
     }
     
     .menu__links li{
-        background-color: lightblue;
+        /* background-color: lightgreen; */
         box-sizing: border-box;
         border-bottom: 5px solid transparent;
-        height: 100%;
         margin-top: 0;
     }
 
@@ -603,14 +599,26 @@ div.product__img{
     }
  
     .menu__links a{
-        /* background-color: lightgreen; */
         color: hsl(219, 9%, 45%);
     }
 
+    .menu__links a:hover{
+        color: hsl(220, 13%, 13%);
+    }
+
     .prov{
-        /* background-color: lightgreen; */
+        background-color: rgb(201, 255, 201);
         padding: 0;
-        align-items: flex-start;/*AQUI! Revisar o que eu fiz em .header-box__options*/
+        align-items: flex-start;
+    }
+
+    .header-box__options-cart{
+        padding-top: 15px;/*AQUI! Ver como ficou sem os background*/
+    }
+
+    .header-box__options2-avatar{
+        width: 35px;
+        cursor: pointer;
     }
 
     .product{

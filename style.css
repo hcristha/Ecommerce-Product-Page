@@ -542,14 +542,14 @@ div.product__img{
     }
 
     header{/*20/06/2022*/
-        background-color: rgb(255, 221, 221);
+        /* background-color: rgb(255, 221, 221); */
         padding: 0 1.5rem;
     }
     
     .header-box__options{
-        background-color: rgb(208, 255, 253);
+        /* background-color: rgb(208, 255, 253); */
         padding: 0;
-        padding-top: 15px;
+        padding: 25px 0 0;
         align-items: flex-start;
     }
     
@@ -566,7 +566,7 @@ div.product__img{
     }
     
     .close-links-group{
-        background-color: rgb(255, 255, 200);
+        /* background-color: rgb(255, 255, 200); */
         width: 100%;
         padding: 0;
         display: flex;
@@ -582,44 +582,42 @@ div.product__img{
         display: flex;
         gap: 2rem;
     }
-    
-    .menu__links li{
-        /* background-color: lightgreen; */
+
+    .menu__links a{
         box-sizing: border-box;
         border-bottom: 5px solid transparent;
-        margin-top: 0;
+        color: hsl(219, 9%, 45%);
     }
 
-    .menu__links li:hover{
+    .menu__links a:hover{
         border-bottom: 5px solid orange;
+        color: hsl(220, 13%, 13%);
+    }
+    
+    .menu__links li{
+        margin-top: 0;
     }
 
     .menu__links li:first-child{
         margin-top: 0;
     }
- 
-    .menu__links a{
-        color: hsl(219, 9%, 45%);
-    }
-
-    .menu__links a:hover{
-        color: hsl(220, 13%, 13%);
-    }
 
     .prov{
-        background-color: rgb(201, 255, 201);
+        /* background-color: rgb(201, 255, 201); */
         padding: 0;
         align-items: flex-start;
     }
 
     .header-box__options-cart{
-        padding-top: 15px;/*AQUI! Ver como ficou sem os background*/
+        padding: 25px 0;
     }
 
     .header-box__options2-avatar{
+        margin: 15px 0;
         width: 35px;
-        cursor: pointer;
     }
+
+    /*AQUI! Revisar novo código header inteiro!!*/
 
     .product{
         background-color:hsl(0, 0%, 100%);

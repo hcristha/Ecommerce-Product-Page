@@ -78,7 +78,7 @@ nav{
     margin-top: 20px;
 }
 
-.menu__links li:first-child{
+.menu__links a:first-child li{
     margin-top: 40px;
 }
 
@@ -548,7 +548,6 @@ div.product__img{
     
     .header-box__options{
         /* background-color: rgb(208, 255, 253); */
-        padding: 0;
         padding: 25px 0 0;
         align-items: flex-start;
     }
@@ -558,7 +557,7 @@ div.product__img{
     }
 
     nav{
-        /* background-color: lightcoral; */
+        background-color: lightcoral;
         width: 100%;
         height: 100%;
         display: block;
@@ -598,7 +597,7 @@ div.product__img{
         margin-top: 0;
     }
 
-    .menu__links li:first-child{
+    .menu__links a:first-child li{
         margin-top: 0;
     }
 
@@ -613,11 +612,9 @@ div.product__img{
     }
 
     .header-box__options2-avatar{
-        margin: 15px 0;
+        margin: 10px 0;
         width: 35px;
     }
-
-    /*AQUI! Revisar novo código header inteiro!!*/
 
     .product{
         background-color:hsl(0, 0%, 100%);

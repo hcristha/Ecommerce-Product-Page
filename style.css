@@ -425,10 +425,6 @@ div.product__img{
         height: 100%;
         position: fixed;
         z-index: 2;
-        /*
-            Editando todo layout HTML: Usar o próprio arquivo HTML(stack order) para evitar usar z-index/position.
-        */
-
         display: none;
         flex-flow: column nowrap;
         justify-content: center;
@@ -541,7 +537,7 @@ div.product__img{
         background: black url("images/image-product-4.jpg") center/cover no-repeat;
     }
 
-    header{/*20/06/2022*/
+    header{
         /* background-color: rgb(255, 221, 221); */
         padding: 0 1.5rem;
     }
@@ -556,6 +552,12 @@ div.product__img{
         display: none;
     }
 
+    /*
+        22/06/2022
+        Como aparecer nav em Desktop mesmo se eu fechar ele antes em mobile?
+        Ordem das medias queries - ok
+        JS - subescrevendo propriedade CSS display direto em HTML, pista...
+    */
     nav{
         background-color: lightcoral;
         width: 100%;

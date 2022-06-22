@@ -1,7 +1,6 @@
 // MOBILE: mostrar menu
-var btnMenu = document.querySelector(".js-header-box__options-menu");
 var menu = document.querySelector(".js-menu");
-btnMenu.onclick = function(){
+function showMenu(){
     // mostrar menu
     menu.style.display = "block";
 

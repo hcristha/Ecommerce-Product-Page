@@ -547,6 +547,7 @@ div.product__img{
     
     .header-box__options{
         padding: 25px 0 0;
+        gap: 35px;
         align-items: flex-start;
     }
     

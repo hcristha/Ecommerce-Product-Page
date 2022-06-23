@@ -3,10 +3,14 @@ var menu = document.querySelector(".js-menu");
 function showMenu(){
     // mostrar menu
     menu.style.display = "block";
+    const menuParent = menu.parentElement;
+    console.log("PENSAR");
 
     // ao clicar ícone x, desaparecer menu
     menu.children[0].children[0].addEventListener("click", function(){
         menu.style.display = "none";
+        menuParent.innerHTML += "<nav class='teste'></nav>";
+        // 22/06/2022 AQUI!! Por que quando crio novo nav em JS, o nav .js-menu só aparece uma vez e depois fica display: none para sempre? */
     });
 }
 

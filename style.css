@@ -91,6 +91,10 @@ nav{
     color: hsl(220, 13%, 13%);
 }
 
+.teste{
+    /* display: none; 22/06/2022 AQUI!! Por que quando crio novo nav em JS, o nav .js-menu só aparece uma vez e depois fica display: none para sempre? */
+}
+
 .prov{
     padding: 15px 20px 15px 0;
     display: flex;
@@ -601,6 +605,13 @@ div.product__img{
 
     .menu__links a:first-child li{
         margin-top: 0;
+    }
+
+    .teste{
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        display: block;
     }
 
     .prov{

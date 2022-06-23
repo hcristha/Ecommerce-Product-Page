@@ -542,12 +542,10 @@ div.product__img{
     }
 
     header{
-        /* background-color: rgb(255, 221, 221); */
         padding: 0 1.5rem;
     }
     
     .header-box__options{
-        /* background-color: rgb(208, 255, 253); */
         padding: 25px 0 0;
         align-items: flex-start;
     }
@@ -556,12 +554,6 @@ div.product__img{
         display: none;
     }
 
-    /*
-        22/06/2022
-        Como aparecer nav em Desktop mesmo se eu fechar ele antes em mobile?
-        Ordem das medias queries - ok
-        JS - subescrevendo propriedade CSS display direto em HTML, pista...
-    */
     nav{
         background-color: lightcoral;
         width: 100%;
@@ -571,7 +563,6 @@ div.product__img{
     }
     
     .close-links-group{
-        /* background-color: rgb(255, 255, 200); */
         width: 100%;
         padding: 0;
         display: flex;
@@ -582,7 +573,6 @@ div.product__img{
     }
     
     .menu__links{
-        /* background-color: lightpink; */
         font-weight: normal;
         display: flex;
         gap: 2rem;
@@ -608,7 +598,6 @@ div.product__img{
     }
 
     .prov{
-        /* background-color: rgb(201, 255, 201); */
         padding: 0;
         align-items: flex-start;
     }
@@ -808,6 +797,10 @@ div.product__img{
 }
 
 @media screen and (min-width: 1440px){/*desktop, largura de 1440px e acima*/
+    header{
+        padding: 0 8rem;
+    }
+
     .product{ 
         grid-gap: 100px;
     } 

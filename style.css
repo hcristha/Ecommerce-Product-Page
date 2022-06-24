@@ -11,7 +11,8 @@
 }
 
 body{
-    background-color: hsl(0, 0%, 100%);
+    /* background-color: hsl(0, 100%, 58%); */
+    /* box-sizing: border-box; */
     margin: 0;
     padding: 0;
     font-size: 16px;
@@ -425,11 +426,12 @@ div.product__img{
 @media screen and (min-width: 746px){ /*Desktop, largura de 746px e acima*/
     .js-lightbox{
         background-color: rgba(0, 0, 0, 0.75);
-        width: 100%;/*AQUI! Mudar para vw*/
-        height: 100%;
+        box-sizing: border-box;
+        width: 100vw;
+        height: 100vh;/*vh não  está funcionando, porquê?*/
         position: fixed;
         z-index: 2;
-        display: none;
+        display: block;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
@@ -802,7 +804,7 @@ div.product__img{
         padding: 0 8rem;
     }
 
-    .product{ 
+    .product{
         grid-gap: 100px;
     } 
 

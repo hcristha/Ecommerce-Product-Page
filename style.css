@@ -426,10 +426,10 @@ div.product__img{
 @media screen and (min-width: 746px){ /*Desktop, largura de 746px e acima*/
     .js-lightbox{
         background-color: rgba(0, 0, 0, 0.75);
-        box-sizing: border-box;
-        width: 100vw;
-        height: 100vh;/*vh não  está funcionando, porquê?*/
+        width: 100%;
+        height: 100%;
         position: fixed;
+        top: 0;
         z-index: 2;
         display: block;
         flex-flow: column nowrap;
@@ -443,6 +443,7 @@ div.product__img{
         height: 600px;
 
         display: flex;
+        gap: 20px;
         flex-flow: row wrap;
         justify-content: center;
         align-items: center;
@@ -450,12 +451,11 @@ div.product__img{
         position: relative;
     }
 
-    .js-lightbox__img--svg{
+    .js-lightbox__img--svg{/*AQUI! Editar flexbox de lightbox*/
         cursor: pointer;
         padding: 10px;
         position: absolute;
         top: 0;
-        right: 10px;
     }
     
     .js-lightbox__img--svg path:hover{
@@ -463,9 +463,9 @@ div.product__img{
     }
 
     .lightbox__img--kit{
+        background-color: lightcoral;
         width: 100%;
         height: 450px;
-        margin-top: 40px;
 
         display: flex;
         flex-flow: column wrap;
@@ -502,28 +502,17 @@ div.product__img{
         stroke: var(--color-btn);
     }
 
+    .group-img{
+        background-color: lightblue;
+        display: flex;
+    }
+
     .lightbox__img--next{
         background: black url("images/image-product-1.jpg") center/cover no-repeat;
-        display: inline-block;
         width: 75px;
         height: 75px;
         border-radius: 10%;
         cursor: pointer;
-        margin: 20px 0 0 15px;
-    }
-
-    .lightbox__img--next::after{
-        content: "";
-        background-color: hsla(0, 0%, 100%, 0.586);
-        box-sizing: border-box;
-        border-radius: 10%;
-        display: none;
-        width: 100%;
-        height: 100%;
-    }
-
-    .lightbox__img--next:hover::after{
-        display: block;
     }
 
     .bg1::after{

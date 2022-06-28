@@ -431,21 +431,20 @@ div.product__img{
         position: fixed;
         top: 0;
         z-index: 2;
-        display: block;
-        flex-flow: column nowrap;
+        display: flex;
+        flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
     
     }
 
     .lightbox__img{
+        /* background-color: lightblue; */
         width: 500px;
-        height: 600px;
 
         display: flex;
-        gap: 20px;
-        flex-flow: row wrap;
-        justify-content: center;
+        gap: 2rem;
+        flex-flow: column wrap;
         align-items: center;
 
         position: relative;
@@ -453,9 +452,9 @@ div.product__img{
 
     .js-lightbox__img--svg{/*AQUI! Editar flexbox de lightbox*/
         cursor: pointer;
-        padding: 10px;
-        position: absolute;
-        top: 0;
+        margin-right: 20px;
+        transform: translateY(100%);
+        align-self: flex-end;
     }
     
     .js-lightbox__img--svg path:hover{
@@ -463,7 +462,7 @@ div.product__img{
     }
 
     .lightbox__img--kit{
-        background-color: lightcoral;
+        /* background-color: lightcoral; */
         width: 100%;
         height: 450px;
 
@@ -485,7 +484,6 @@ div.product__img{
         width: 100%;
         cursor: pointer;
         display: flex;
-        flex-flow: row nowrap;
         justify-content: space-between;
 
         position: absolute;
@@ -503,33 +501,16 @@ div.product__img{
     }
 
     .group-img{
-        background-color: lightblue;
+        /* background-color: lightblue; */
         display: flex;
+        gap: 1.2rem;
     }
 
     .lightbox__img--next{
-        background: black url("images/image-product-1.jpg") center/cover no-repeat;
         width: 75px;
         height: 75px;
         border-radius: 10%;
         cursor: pointer;
-    }
-
-    .bg1::after{
-        display: block;
-        border: 4px solid var(--color-btn);
-    }
-
-    .bg2{
-        background: black url("images/image-product-2.jpg") center/cover no-repeat;
-    }
-
-   .bg3{
-        background: black url("images/image-product-3.jpg") center/cover no-repeat;
-    }
-
-    .bg4{
-        background: black url("images/image-product-4.jpg") center/cover no-repeat;
     }
 
     header{

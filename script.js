@@ -196,19 +196,13 @@ ltbxClose.onclick = function(){
     ltbx.style.display = "none";
 }
 
+
 // ao clicar na img, muda a a imagem principal do Lightbox
-function changeLtbx1(){
-    ltbxImgKit.src = "images/image-product-1.jpg"; // muda img
+function changeLtbx(element){
+    let currentImg = element.src;
+    ltbxImgKit.src = currentImg; // mudei src da img principal, AQUI! Revisar código CSS lightbox 
 }
-function changeLtbx2(){
-    ltbxImgKit.src = "images/image-product-2.jpg"; // muda img
-}
-function changeLtbx3(){
-    ltbxImgKit.src = "images/image-product-3.jpg"; // muda img
-}
-function changeLtbx4(){
-    ltbxImgKit.src = "images/image-product-4.jpg"; // muda img
-}
+
 
 // anterior/próxima imagem lightbox
 var ltbxClick = 1; // contador de cliques do ícone

@@ -200,7 +200,7 @@ ltbxClose.onclick = function(){
 // ao clicar na img, muda a a imagem principal do Lightbox
 function changeLtbx(element){
     let currentImg = element.src;
-    ltbxImgKit.src = currentImg; // mudei src da img principal, AQUI! Revisar código CSS lightbox 
+    ltbxImgKit.src = currentImg; // mudei src da img principal
 }
 
 
@@ -227,8 +227,9 @@ function ltbxNext(){
 
 //// PÁGINA DESKTOP
 ////// mudar imagem principal da página
-function changeImg1(){
-    img.src = "images/image-product-1.jpg"; // muda img
+function changeImg(element){
+    let currentImg = element.src;
+    img.src = currentImg; // muda img
 }
 
 function changeImg2(){

@@ -513,14 +513,13 @@ div.product__img{
         position: fixed;
         top: 0;
         z-index: 2;
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
-    
     }
 
     .lightbox__img{
-        width: 550px;
+        width: 500px;
 
         display: flex;
         gap: 2rem;
@@ -578,23 +577,23 @@ div.product__img{
 
     .group-img{
         /* background-color: lightblue; */
+        box-sizing: border-box;
         display: flex;
         gap: 1.2rem;
+        height: 100px;
     }
 
     .lightbox__img--next{
         box-sizing: border-box;
-        border: 2px solid transparent;
-        width: 80px;
-        height: 80px;
+        outline: 3px solid transparent;
+        width: 76px;
+        height: 76px;
         border-radius: 10%;
         cursor: pointer;
-        padding: 0;
     }
 
     .lightbox__img--next:first-child{
-        border: 2px solid hsl(26, 100%, 55%);
-        padding: 0; /*AQUI! Por que há espaço entre a borda e o elemento?*/
+        outline: 3px solid hsl(26, 100%, 55%);
     }
 
     .lightbox__img--next:hover{
@@ -621,7 +620,8 @@ div.product__img{
         justify-content: flex-start;
     }
 
-    div.product__img{
+    div.product__img{/*AQUI 29/06/2022*/
+        background-color: lightcoral;
         height: 650px;
         padding: 0;
         
@@ -645,44 +645,12 @@ div.product__img{
         grid-column-end: span 4;
     }
 
-    .product__img .desktop{
-        background: black url("images/image-product-1.jpg") center/cover no-repeat;
+    .product__img .desktop{/*AQUI! Por que essa img não fica no local correto da grid?*/
         border-radius: 15%;
         cursor: pointer;
         display: inline-block;
         width: 80px;
         height: 80px;
-    }
-
-    .product__img .desktop::after{
-        content: "";
-        background-color:hsla(0, 0%, 100%, 0.5);
-        box-sizing: border-box;
-        border-radius: 13%;
-        display: none;
-        width: 100%;
-        height: 100%;
-    }
-
-    .desktop:hover::after{
-        display: block;
-    }
-
-    .product__img .bcg1::after{
-        display: block;
-        border: 3px solid var(--color-btn);
-    }
-
-    .product__img .bcg2{
-        background: black url("images/image-product-2.jpg") center/cover no-repeat;
-    }
-
-    .product__img .bcg3{
-        background: black url("images/image-product-3.jpg") center/cover no-repeat;
-    }
-
-    .product__img .bcg4{
-        background: black url("images/image-product-4.jpg") center/cover no-repeat;
     }
     
     .js-product__img-icons{    
@@ -758,6 +726,10 @@ div.product__img{
         grid-template: auto auto / auto auto;
     }
 
+    .lightbox__img{
+        width: 520px;
+    }
+
     .js-product__cart{
         right: 50px;
     }
@@ -793,7 +765,7 @@ div.product__img{
     }
 }
 
-/*       09/06/2022
+/*       29/06/2022
     1. REVISAR CONTEÚDO JS ok
     1.1 REVISAR CÓDIGO JS ok
 

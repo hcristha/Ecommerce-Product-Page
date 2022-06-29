@@ -423,7 +423,7 @@ div.product__img{
     }
 }
 
-@media screen and (min-width: 746px){ /*Desktop, largura de 746px e acima*/
+@media screen and (min-width: 746px){ /*Desktop, largura de 746px e acima, ordem de classes ok*/
     header{
         padding: 0 1.5rem;
     }
@@ -493,7 +493,7 @@ div.product__img{
     .header-box__options2-avatar{
         margin: 10px 0;
         width: 35px;
-    }/*AQUI! Organizando classes*/
+    }
 
     .product{
         background-color:hsl(0, 0%, 100%);
@@ -577,21 +577,24 @@ div.product__img{
     }
 
     .group-img{
+        /* background-color: lightblue; */
         display: flex;
         gap: 1.2rem;
     }
 
     .lightbox__img--next{
         box-sizing: border-box;
-        border: 3px solid transparent;
+        border: 2px solid transparent;
         width: 80px;
         height: 80px;
         border-radius: 10%;
         cursor: pointer;
+        padding: 0;
     }
 
     .lightbox__img--next:first-child{
-        border: 3px solid hsl(26, 100%, 55%);
+        border: 2px solid hsl(26, 100%, 55%);
+        padding: 0; /*AQUI! Por que há espaço entre a borda e o elemento?*/
     }
 
     .lightbox__img--next:hover{

@@ -425,14 +425,13 @@ div.product__img{
 
 @media screen and (min-width: 746px){ /*Desktop, largura de 746px e acima*/
     .js-lightbox{
-        background-color: rgba(0, 0, 0, 0.75);
+        background-color: hsla(0, 0%, 0%, 0.75);
         width: 100%;
         height: 100%;
         position: fixed;
         top: 0;
         z-index: 2;
         display: flex;
-        flex-flow: row nowrap;
         justify-content: center;
         align-items: center;
     
@@ -440,17 +439,15 @@ div.product__img{
 
     .lightbox__img{
         /* background-color: lightblue; */
-        width: 500px;
+        width: 550px;
 
         display: flex;
         gap: 2rem;
         flex-flow: column wrap;
         align-items: center;
-
-        position: relative;
     }
 
-    .js-lightbox__img--svg{/*AQUI! Editar flexbox de lightbox*/
+    .js-lightbox__img--svg{
         cursor: pointer;
         margin-right: 20px;
         transform: translateY(100%);
@@ -462,7 +459,7 @@ div.product__img{
     }
 
     .lightbox__img--kit{
-        /* background-color: lightcoral; */
+        background-color: rgb(143, 240, 128);
         width: 100%;
         height: 450px;
 
@@ -481,11 +478,11 @@ div.product__img{
     }
 
     .js-lightbox__img--kit-icons {
+        background-color: lightcoral;
         width: 100%;
         cursor: pointer;
         display: flex;
         justify-content: space-between;
-
         position: absolute;
     }
 
@@ -493,7 +490,12 @@ div.product__img{
         background-color:hsl(0, 0%, 100%);
         border-radius: 50%;
         cursor: pointer;
-        padding: 12px;
+        padding: 15px 18px;
+    }
+
+    .js-lightbox__img--kit-icons svg:first-child{
+        background-color:hsl(0, 39%, 49%);
+        /* transform: translateX(-5%); AQUI! Deixar reto os stroke de svg com a img main*/
     }
 
     .js-lightbox__img--kit-icons svg:hover path{
@@ -501,16 +503,30 @@ div.product__img{
     }
 
     .group-img{
-        /* background-color: lightblue; */
+        /* background-color: rgb(255, 255, 255); */
         display: flex;
         gap: 1.2rem;
     }
 
     .lightbox__img--next{
-        width: 75px;
-        height: 75px;
+        box-sizing: border-box;
+        border: 3px solid transparent;
+        width: 80px;
+        height: 80px;
         border-radius: 10%;
         cursor: pointer;
+    }
+
+    .lightbox__img--next:first-child{
+        border: 3px solid hsl(26, 100%, 55%);
+    }
+
+    .lightbox__img--next:hover{
+        opacity: 0.5;
+    }
+
+    .lightbox__img--next:first-child:hover{
+        opacity: 1;
     }
 
     header{

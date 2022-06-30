@@ -231,15 +231,3 @@ function changeImg(element){
     let currentImg = element.src;
     img.src = currentImg; // muda img
 }
-
-function changeImg2(){
-    img.src = "images/image-product-2.jpg"; // muda img
-}
-
-function changeImg3(){
-    img.src = "images/image-product-3.jpg"; // muda img
-}
-
-function changeImg4(){
-    img.src = "images/image-product-4.jpg"; // muda img
-}

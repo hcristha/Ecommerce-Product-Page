@@ -92,10 +92,6 @@ nav{
     color: hsl(220, 13%, 13%);
 }
 
-.teste{
-    display: none; /*22/06/2022 AQUI!! Por que quando crio novo nav em JS, o nav .js-menu só aparece uma vez e depois fica display: none para sempre? */
-}
-
 .prov{
     padding: 15px 20px 15px 0;
     display: flex;
@@ -329,28 +325,29 @@ div.product__img{
     justify-content: space-between;
 }
 
-.product__info--price div{
-    width: 9rem;
-
+.test{
+    /* background-color: lightblue; */
+    padding: 0;
+    list-style-type: none;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
+    gap: 20px;
 }
 
-.product__info--price li:nth-of-type(1){/*$125.00*/
+.test li:first-child{/*$125.00*/
     font-size: 1.3rem;
     font-weight: 700;
 }
 
-.product__info--price li:nth-of-type(2){/*50%*/
+.test li:nth-of-type(2){/*50%*/
     color:hsl(26, 100%, 55%);
     background-color: hsl(25, 100%, 94%);
+    border-radius: 15%;
     font-size: 1rem;
     font-weight: 700;
     padding: 2px 7px;
 }
 
-.product__info--price > li:nth-of-type(1){/*250.00*/
+.product__info--price > li:nth-of-type(2){/*250.00*/
     color: hsl(220, 14%, 75%);
     font-size: 1rem;
     font-weight: 700;
@@ -621,7 +618,7 @@ div.product__img{
     }
 
     div.product__img{
-        background-color: lightcoral;
+        /* background-color: lightcoral; */
         height: 650px;
         padding: 0;
         
@@ -670,6 +667,7 @@ div.product__img{
     }
 
     .product__info{
+        /* background-color: lightblue; */
         height: 500px;
         padding: 0;
 
@@ -692,21 +690,12 @@ div.product__img{
     .product__info--price{
         height: 60px;
         padding: 0;
-        margin: 0;
-    
-        display: flex;
         flex-flow: row wrap;
-
         grid-row-start: 2;
-    }
-    
-    .product__info--price li:nth-of-type(1){/*$125.00*/
-        margin-right: 5px;
     }
     
     .product__info--amount{
         padding: 0 20px;
-
         grid-row-start: 3;
     }
        
@@ -778,12 +767,5 @@ div.product__img{
 }
 
 /*       29/06/2022
-    1. REVISAR CONTEÚDO JS ok
-    1.1 REVISAR CÓDIGO JS ok
-
-    2. REVISAR CONTÉUDO CSS ok
-    2.1 REVISAR CÓDIGO CSS ok
-
-    3. REVISAR CONTEÚDO HTML ok
-    3.1 REVISAR CÓDIGO HTML
+    Verificar ordem das classes, renomear classes e limpar código repetido.
 */

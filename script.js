@@ -231,3 +231,4 @@ function changeImg(element){
     let currentImg = element.src;
     img.src = currentImg; // muda img
 }
+//// verificar ordem do código
